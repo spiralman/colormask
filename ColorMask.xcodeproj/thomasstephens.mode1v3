@@ -216,14 +216,13 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>FA6401A01368F98400C7CC78</string>
+						<string>FADB37A1139ADF68000C87AC</string>
 						<key>history</key>
 						<array>
-							<string>FAC05FFA135FE2CD0028CBDD</string>
 							<string>FA6400A81368E3A300C7CC78</string>
 							<string>FA6400A91368E3A300C7CC78</string>
 							<string>FA6400AA1368E3A300C7CC78</string>
-							<string>FA6400961368E32200C7CC78</string>
+							<string>FA6401A01368F98400C7CC78</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -330,7 +329,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 254}, {186, 426}}</string>
+							<string>{{0, 196}, {186, 426}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -377,13 +376,12 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>FA64019F1368F98400C7CC78</string>
+										<string>FADB379E139ADF68000C87AC</string>
 										<key>history</key>
 										<array>
 											<string>FAC354F71351363C005E8A1C</string>
 											<string>FAC05FD2135FCE560028CBDD</string>
-											<string>FAAE0FAD13646159006C8064</string>
-											<string>FA6400A61368E3A300C7CC78</string>
+											<string>FA64019F1368F98400C7CC78</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -395,14 +393,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {672, 132}}</string>
+								<string>{{0, 0}, {672, 117}}</string>
 								<key>RubberWindowFrame</key>
 								<string>95 224 880 485 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>132pt</string>
+							<string>117pt</string>
 						</dict>
 						<dict>
 							<key>BecomeActive</key>
@@ -417,14 +415,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 137}, {672, 307}}</string>
+								<string>{{0, 122}, {672, 322}}</string>
 								<key>RubberWindowFrame</key>
 								<string>95 224 880 485 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>307pt</string>
+							<string>322pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -443,9 +441,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>FA6400841368E1F300C7CC78</string>
+				<string>FADB379F139ADF68000C87AC</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>FA6400851368E1F300C7CC78</string>
+				<string>FADB37A0139ADF68000C87AC</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -585,12 +583,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>FA6400901368E1F300C7CC78</string>
-		<string>FA6400911368E1F300C7CC78</string>
-		<string>1C78EAAD065D492600B07095</string>
-		<string>1CD10A99069EF8BA00B06720</string>
-		<string>FAC05FD1135FCE4B0028CBDD</string>
 		<string>FAF294E01342BCB700506FA5</string>
+		<string>FAC05FD1135FCE4B0028CBDD</string>
 		<string>/Users/thomasstephens/Documents/ColorMask/ColorMask.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -632,8 +626,6 @@
 							<string>218pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -673,7 +665,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>FAF294E01342BCB700506FA5</string>
-				<string>FA6400871368E1F300C7CC78</string>
+				<string>FADB37A2139ADF68000C87AC</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -686,7 +678,7 @@
 			<key>WindowToolGUID</key>
 			<string>FAF294E01342BCB700506FA5</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
