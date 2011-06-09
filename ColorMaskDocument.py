@@ -40,6 +40,7 @@ class ColorMaskDocument(NSPersistentDocument):
         """
         CIPlugIn.loadAllPlugIns()
         self.colorTransformer = CIColorToNSColorTransformer.alloc().init()
+        self.model = None
         NSValueTransformer.setValueTransformer_forName_(self.colorTransformer, 'CIColorToNSColorTransformer')
         
     def init(self):
@@ -52,6 +53,32 @@ class ColorMaskDocument(NSPersistentDocument):
         self.image = None
         
         return self
+    
+    # Almost 20 lines of code to get the "automatic" file version upgrade working...
+    def managedObjectModel(self):
+        """ The default implementation tries to merge the 2 versions of the models together,
+        which doesn't work. Instead, we return the "current" version.
+        """
+        if self.__class__.model == None:
+            bundle = NSBundle.bundleForClass_(self.class__())
+            url = bundle.URLForResource_withExtension_('ColorMaskDocument', 'momd')
+            self.__class__.model = NSManagedObjectModel.alloc().initWithContentsOfURL_(url)
+        
+        return self.__class__.model
+    
+    def configurePersistentStoreCoordinatorForURL_ofType_modelConfiguration_storeOptions_error_(self, url, fileType, configuration, storeOptions, error):
+        """ The default implementation doesn't turn on the auto-migration feature. 
+        This version does.
+        """
+        if storeOptions != None:
+            mutableOptions = storeOptions.mutableCopyWithZone_(None)
+        else:
+            mutableOptions = NSMutableDictionary.dictionaryWithCapacity_(2)
+        
+        mutableOptions.setObject_forKey_(True,'NSMigratePersistentStoresAutomaticallyOption')
+        mutableOptions.setObject_forKey_(True,'NSInferMappingModelAutomaticallyOption')
+        
+        return super(ColorMaskDocument,self).configurePersistentStoreCoordinatorForURL_ofType_modelConfiguration_storeOptions_error_(url, fileType, configuration, mutableOptions, error)
     
     def initWithType_error_(self,typeName,outError):
         self,error = super(ColorMaskDocument, self).initWithType_error_(typeName, outError)

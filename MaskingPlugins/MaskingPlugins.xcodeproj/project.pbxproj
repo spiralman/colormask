@@ -10,20 +10,22 @@
 		011CF8670A3B1433006B162D /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011CF8660A3B1433006B162D /* ApplicationServices.framework */; };
 		01207E3F0A42360100D047C5 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 01207E3E0A42360100D047C5 /* index.html */; };
 		019B76F906B5B49B000EAC1F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 019B76F806B5B49B000EAC1F /* QuartzCore.framework */; };
-		01A864A8066FDF20005BB3E4 /* MaskingPluginsFilterKernel.cikernel in Resources */ = {isa = PBXBuildFile; fileRef = 01A864A7066FDF20005BB3E4 /* MaskingPluginsFilterKernel.cikernel */; };
 		01DC14E4071DFB0300341A39 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01DC14E1071DFB0300341A39 /* Foundation.framework */; };
 		01EF2744065982E90035FD02 /* Description.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01EF2743065982E90035FD02 /* Description.plist */; };
 		01EF28860659A5DC0035FD02 /* Description.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01EF28850659A5DC0035FD02 /* Description.strings */; };
 		8D576314048677EA00EA77CD /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */; };
 		8D5B49A804867FD3000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D5B49A704867FD3000E48DA /* InfoPlist.strings */; };
-		FA24CEEF139B2C96009F0B92 /* MaskingKernels.cikernel in Sources */ = {isa = PBXBuildFile; fileRef = FA24CEEE139B2C96009F0B92 /* MaskingKernels.cikernel */; };
+		FA1E072213A0564100442B1D /* PerceptualDistance.cikernel in Resources */ = {isa = PBXBuildFile; fileRef = FA1E072113A0564100442B1D /* PerceptualDistance.cikernel */; };
+		FAE4472B139BE3F0001A8051 /* MaskingPluginsLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = FAE44729139BE3F0001A8051 /* MaskingPluginsLoader.h */; };
+		FAE4472C139BE3F0001A8051 /* MaskingPluginsLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE4472A139BE3F0001A8051 /* MaskingPluginsLoader.m */; };
+		FAE447C6139BEC87001A8051 /* ColorDistance.cikernel in Resources */ = {isa = PBXBuildFile; fileRef = FAE44768139BE4D6001A8051 /* ColorDistance.cikernel */; };
+		FAE4484A139C5630001A8051 /* LuminanceDistance.cikernel in Resources */ = {isa = PBXBuildFile; fileRef = FAE44849139C5630001A8051 /* LuminanceDistance.cikernel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		011CF8660A3B1433006B162D /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
 		01207E3C0A4235F400D047C5 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; name = English; path = English.lproj/index.html; sourceTree = "<group>"; };
 		019B76F806B5B49B000EAC1F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = /System/Library/Frameworks/QuartzCore.framework; sourceTree = "<absolute>"; };
-		01A864A7066FDF20005BB3E4 /* MaskingPluginsFilterKernel.cikernel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MaskingPluginsFilterKernel.cikernel; sourceTree = "<group>"; };
 		01DC14E1071DFB0300341A39 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		01EF2743065982E90035FD02 /* Description.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Description.plist; sourceTree = "<group>"; };
 		01EF28710659A5A50035FD02 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Description.strings; sourceTree = "<group>"; };
@@ -31,7 +33,11 @@
 		0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
 		8D576316048677EA00EA77CD /* MaskingPlugins.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MaskingPlugins.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D576317048677EA00EA77CD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		FA24CEEE139B2C96009F0B92 /* MaskingKernels.cikernel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = MaskingKernels.cikernel; sourceTree = "<group>"; };
+		FA1E072113A0564100442B1D /* PerceptualDistance.cikernel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = PerceptualDistance.cikernel; sourceTree = "<group>"; };
+		FAE44729139BE3F0001A8051 /* MaskingPluginsLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskingPluginsLoader.h; sourceTree = "<group>"; };
+		FAE4472A139BE3F0001A8051 /* MaskingPluginsLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaskingPluginsLoader.m; sourceTree = "<group>"; };
+		FAE44768139BE4D6001A8051 /* ColorDistance.cikernel */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; path = ColorDistance.cikernel; sourceTree = "<group>"; };
+		FAE44849139C5630001A8051 /* LuminanceDistance.cikernel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = LuminanceDistance.cikernel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,12 +80,14 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FAE44768139BE4D6001A8051 /* ColorDistance.cikernel */,
 				01207E3E0A42360100D047C5 /* index.html */,
 				8D576317048677EA00EA77CD /* Info.plist */,
 				8D5B49A704867FD3000E48DA /* InfoPlist.strings */,
 				01EF28850659A5DC0035FD02 /* Description.strings */,
-				01A864A7066FDF20005BB3E4 /* MaskingPluginsFilterKernel.cikernel */,
 				01EF2743065982E90035FD02 /* Description.plist */,
+				FAE44849139C5630001A8051 /* LuminanceDistance.cikernel */,
+				FA1E072113A0564100442B1D /* PerceptualDistance.cikernel */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -87,7 +95,8 @@
 		08FB77AFFE84173DC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				FA24CEEE139B2C96009F0B92 /* MaskingKernels.cikernel */,
+				FAE44729139BE3F0001A8051 /* MaskingPluginsLoader.h */,
+				FAE4472A139BE3F0001A8051 /* MaskingPluginsLoader.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -107,6 +116,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAE4472B139BE3F0001A8051 /* MaskingPluginsLoader.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,10 +172,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1E072213A0564100442B1D /* PerceptualDistance.cikernel in Resources */,
+				FAE447C6139BEC87001A8051 /* ColorDistance.cikernel in Resources */,
+				FAE4484A139C5630001A8051 /* LuminanceDistance.cikernel in Resources */,
 				8D5B49A804867FD3000E48DA /* InfoPlist.strings in Resources */,
 				01EF2744065982E90035FD02 /* Description.plist in Resources */,
 				01EF28860659A5DC0035FD02 /* Description.strings in Resources */,
-				01A864A8066FDF20005BB3E4 /* MaskingPluginsFilterKernel.cikernel in Resources */,
 				01207E3F0A42360100D047C5 /* index.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,7 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA24CEEF139B2C96009F0B92 /* MaskingKernels.cikernel in Sources */,
+				FAE4472C139BE3F0001A8051 /* MaskingPluginsLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

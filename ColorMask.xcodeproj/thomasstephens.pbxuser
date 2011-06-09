@@ -32,13 +32,13 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					138,
+					213,
 					20,
 					48,
 					43,
 					43,
 					20,
-					291,
+					222,
 				);
 				PBXFileTableDataSourceColumnsKey = (
 					PBXFileDataSource_FiletypeID,
@@ -56,7 +56,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					393,
+					399,
 					60,
 					20,
 					48,
@@ -73,21 +73,26 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 328917114;
-			PBXWorkspaceStateSaveDate = 328917114;
+			PBXPerProjectTemplateStateSaveDate = 329274340;
+			PBXWorkspaceStateSaveDate = 329274340;
 		};
 		perUserProjectItems = {
-			FA24CE75139AE093009F0B92 /* PlistBookmark */ = FA24CE75139AE093009F0B92 /* PlistBookmark */;
-			FA24CE78139AE093009F0B92 /* PBXTextBookmark */ = FA24CE78139AE093009F0B92 /* PBXTextBookmark */;
-			FA6400A81368E3A300C7CC78 = FA6400A81368E3A300C7CC78 /* PlistBookmark */;
-			FA6400A91368E3A300C7CC78 = FA6400A91368E3A300C7CC78 /* PBXTextBookmark */;
+			FA24CEF4139B34A0009F0B92 = FA24CEF4139B34A0009F0B92 /* PlistBookmark */;
+			FA24CEF5139B34A0009F0B92 = FA24CEF5139B34A0009F0B92 /* PBXTextBookmark */;
+			FA24CEF6139B34A0009F0B92 = FA24CEF6139B34A0009F0B92 /* PBXTextBookmark */;
 			FA6400AA1368E3A300C7CC78 = FA6400AA1368E3A300C7CC78 /* PBXTextBookmark */;
-			FA64019F1368F98400C7CC78 = FA64019F1368F98400C7CC78 /* PlistBookmark */;
-			FA6401A01368F98400C7CC78 = FA6401A01368F98400C7CC78 /* PBXTextBookmark */;
 			FAC05FD2135FCE560028CBDD = FAC05FD2135FCE560028CBDD /* PBXTextBookmark */;
-			FAC354F71351363C005E8A1C = FAC354F71351363C005E8A1C /* PBXTextBookmark */;
-			FADB37A9139AE06E000C87AC = FADB37A9139AE06E000C87AC /* PlistBookmark */;
-			FADB37AA139AE06E000C87AC = FADB37AA139AE06E000C87AC /* PBXTextBookmark */;
+			FAE4487E139C79EE001A8051 = FAE4487E139C79EE001A8051 /* PBXTextBookmark */;
+			FAE4487F139C79EE001A8051 = FAE4487F139C79EE001A8051 /* XDModelBookmark */;
+			FAE44880139C79EE001A8051 = FAE44880139C79EE001A8051 /* XDModelBookmark */;
+			FAE44882139C79EE001A8051 = FAE44882139C79EE001A8051 /* PBXTextBookmark */;
+			FAE44883139C79EE001A8051 = FAE44883139C79EE001A8051 /* XDModelBookmark */;
+			FAE44884139C79EE001A8051 = FAE44884139C79EE001A8051 /* PBXTextBookmark */;
+			FAE44885139C79EE001A8051 = FAE44885139C79EE001A8051 /* PlistBookmark */;
+			FAE44886139C79EE001A8051 = FAE44886139C79EE001A8051 /* XDModelBookmark */;
+			FAE44887139C79EE001A8051 = FAE44887139C79EE001A8051 /* PBXTextBookmark */;
+			FAE4489C139C825F001A8051 = FAE4489C139C825F001A8051 /* XDModelBookmark */;
+			FAE4489D139C825F001A8051 = FAE4489D139C825F001A8051 /* PBXTextBookmark */;
 		};
 		sourceControlManager = FA8E7A5913400C53000CFDB5 /* Source Control */;
 		userBuildSettings = {
@@ -104,7 +109,7 @@
 		uiCtxt = {
 			"Xdesign Model Editor Bookmark Key" = {
 				UIContextForDetailArea = {
-					_indexOfSelectedPane = 0;
+					_indexOfSelectedPane = 2;
 					_indexOfSelectedView = 1;
 				};
 				UIContextForEntityArea = {
@@ -136,8 +141,8 @@
 						_percentageOfCollapsedView = 0;
 						isCollapsed = yes;
 						sizes = (
-							"{{0, 0}, {435, 80}}",
-							"{{440, 0}, {230, 80}}",
+							"{{0, 0}, {439, 127}}",
+							"{{444, 0}, {232, 127}}",
 						);
 					};
 					diagramSplitGeometry = {
@@ -146,8 +151,8 @@
 						_percentageOfCollapsedView = 0;
 						isCollapsed = yes;
 						sizes = (
-							"{{0, 0}, {670, 80}}",
-							"{{0, 85}, {670, 0}}",
+							"{{0, 0}, {676, 127}}",
+							"{{0, 132}, {676, 0}}",
 						);
 					};
 					tableSplitGeometry = {
@@ -156,8 +161,8 @@
 						_percentageOfCollapsedView = 0;
 						isCollapsed = yes;
 						sizes = (
-							"{{0, 0}, {142, 80}}",
-							"{{147, 0}, {286, 80}}",
+							"{{0, 0}, {143, 125}}",
+							"{{148, 0}, {289, 125}}",
 						);
 					};
 				};
@@ -254,7 +259,7 @@
 					);
 				};
 				"xdesign model browser state key - shown/hidden" = 1;
-				"xdesign model diagram view visible rect key" = "{{-4, 0}, {655, 0}}";
+				"xdesign model diagram view visible rect key" = "{{-7, 0}, {661, 0}}";
 			};
 			sepNavWindowFrame = "{{15, 165}, {779, 608}}";
 		};
@@ -269,9 +274,9 @@
 	};
 	7791B6CD0C2C702F0002D3F1 /* ColorMaskDocument.py */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {992, 3562}}";
-			sepNavSelRange = "{5488, 0}";
-			sepNavVisRange = "{5111, 1209}";
+			sepNavIntBoundsRect = "{{0, 0}, {1307, 4030}}";
+			sepNavSelRange = "{2644, 0}";
+			sepNavVisRange = "{613, 1621}";
 			sepNavWindowFrame = "{{42, 167}, {779, 608}}";
 		};
 	};
@@ -286,32 +291,11 @@
 			sepNavWindowFrame = "{{42, 167}, {779, 608}}";
 		};
 	};
-	FA24CE75139AE093009F0B92 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 8D15AC360486D014006FF6A4 /* Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-		);
-		name = /Users/thomasstephens/Documents/ColorMask/Info.plist;
-		rLen = 0;
-		rLoc = 9223372036854775807;
-	};
-	FA24CE78139AE093009F0B92 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 7791B6CA0C2C70110002D3F1 /* main.py */;
-		name = "main.py: 17";
-		rLen = 0;
-		rLoc = 363;
-		rType = 0;
-		vrLen = 415;
-		vrLoc = 0;
-	};
 	FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {611, 6110}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 141}";
+			sepNavIntBoundsRect = "{{0, 0}, {754, 3146}}";
+			sepNavSelRange = "{5096, 0}";
+			sepNavVisRange = "{3790, 1780}";
 		};
 	};
 	FA24CE9C139AF9D8009F0B92 /* center_icon.svg */ = {
@@ -321,27 +305,194 @@
 			sepNavVisRange = "{0, 211}";
 		};
 	};
-	FA6400A81368E3A300C7CC78 /* PlistBookmark */ = {
+	FA24CEAD139B162E009F0B92 /* ColorMaskDocument 2.xcdatamodel */ = {
+		uiCtxt = {
+			"Xdesign Model Editor Bookmark Key" = {
+				UIContextForDetailArea = {
+					_indexOfSelectedPane = 0;
+					_indexOfSelectedView = 0;
+				};
+				UIContextForEntityArea = {
+					_indexOfSelectedView = 0;
+					chosenTableColumnns = (
+						"ET Entity",
+						"ET Abstract",
+						"ET Class",
+					);
+					chosenTableColumnns_sortDirections = (
+						YES,
+					);
+					chosenTableColumnns_sortKeys = (
+						name,
+					);
+					chosenTableColumnns_sortSelectors = (
+						"_xdcaseInsensitiveNumericCompare:",
+					);
+					chosenTableWidths = (
+						103.000000,
+						22.000000,
+						32.080078,
+					);
+				};
+				UIContextForLayoutManager = {
+					detailSplitGeometry = {
+						_collapsingFrameDimension = 0;
+						_indexOfCollapsedView = 0;
+						_percentageOfCollapsedView = 0;
+						isCollapsed = yes;
+						sizes = (
+							"{{0, 0}, {440, 125}}",
+							"{{445, 0}, {231, 125}}",
+						);
+					};
+					diagramSplitGeometry = {
+						_collapsingFrameDimension = 0;
+						_indexOfCollapsedView = 0;
+						_percentageOfCollapsedView = 0;
+						isCollapsed = yes;
+						sizes = (
+							"{{0, 0}, {676, 127}}",
+							"{{0, 132}, {676, 0}}",
+						);
+					};
+					tableSplitGeometry = {
+						_collapsingFrameDimension = 0;
+						_indexOfCollapsedView = 0;
+						_percentageOfCollapsedView = 0;
+						isCollapsed = yes;
+						sizes = (
+							"{{0, 0}, {143, 125}}",
+							"{{148, 0}, {292, 125}}",
+						);
+					};
+				};
+				UIContextForPropertyArea = {
+					_indexOfSelectedView = 0;
+					chosenTableColumnnFRTs = (
+						"FT Fetch Request",
+						"FT Predicate",
+					);
+					chosenTableColumnnFRTs_sortDirections = (
+						YES,
+					);
+					chosenTableColumnnFRTs_sortKeys = (
+						name,
+					);
+					chosenTableColumnnFRTs_sortSelectors = (
+						"_xdcaseInsensitiveNumericCompare:",
+					);
+					chosenTableColumnnsAT = (
+						"AT Attribute",
+						"AT Type",
+					);
+					chosenTableColumnnsAT_sortDirections = (
+						YES,
+					);
+					chosenTableColumnnsAT_sortKeys = (
+						name,
+					);
+					chosenTableColumnnsAT_sortSelectors = (
+						"_xdcaseInsensitiveNumericCompare:",
+					);
+					chosenTableColumnnsFPT = (
+						"FP FetchedProperty",
+						"FP Destination",
+						"FP Predicate",
+					);
+					chosenTableColumnnsFPT_sortDirections = (
+						YES,
+					);
+					chosenTableColumnnsFPT_sortKeys = (
+						name,
+					);
+					chosenTableColumnnsFPT_sortSelectors = (
+						"_xdcaseInsensitiveNumericCompare:",
+					);
+					chosenTableColumnnsPT = (
+						"PT Property",
+						"PT Kind",
+						"PT SharedKeyOne",
+					);
+					chosenTableColumnnsPT_sortDirections = (
+						YES,
+					);
+					chosenTableColumnnsPT_sortKeys = (
+						name,
+					);
+					chosenTableColumnnsPT_sortSelectors = (
+						"_xdcaseInsensitiveNumericCompare:",
+					);
+					chosenTableColumnnsRT = (
+						"RT Relationship",
+						"RT Destination",
+					);
+					chosenTableColumnnsRT_sortDirections = (
+						YES,
+					);
+					chosenTableColumnnsRT_sortKeys = (
+						name,
+					);
+					chosenTableColumnnsRT_sortSelectors = (
+						"_xdcaseInsensitiveNumericCompare:",
+					);
+					chosenTableWidthsAT = (
+						128.000000,
+						64.000000,
+					);
+					chosenTableWidthsFPT = (
+						128.000000,
+						64.000000,
+						144.764160,
+					);
+					chosenTableWidthsFRT = (
+						128.000000,
+						249.764160,
+					);
+					chosenTableWidthsPT = (
+						128.000000,
+						108.110840,
+						96.570801,
+					);
+					chosenTableWidthsRT = (
+						128.000000,
+						64.000000,
+					);
+				};
+				"xdesign model browser state key - shown/hidden" = 1;
+				"xdesign model diagram view visible rect key" = "{{-7, 36}, {661, 0}}";
+			};
+		};
+	};
+	FA24CEF4139B34A0009F0B92 /* PlistBookmark */ = {
 		isa = PlistBookmark;
 		fRef = 8D15AC360486D014006FF6A4 /* Info.plist */;
 		fallbackIsa = PBXBookmark;
 		isK = 0;
 		kPath = (
-			CFBundleDevelopmentRegion,
 		);
 		name = /Users/thomasstephens/Documents/ColorMask/Info.plist;
 		rLen = 0;
 		rLoc = 9223372036854775808;
 	};
-	FA6400A91368E3A300C7CC78 /* PBXTextBookmark */ = {
+	FA24CEF5139B34A0009F0B92 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 7791B6CD0C2C702F0002D3F1 /* ColorMaskDocument.py */;
-		name = "ColorMaskDocument.py: 74";
+		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
+		name = "ColorMaskItems.py: 1";
 		rLen = 0;
-		rLoc = 305;
+		rLoc = 0;
 		rType = 0;
-		vrLen = 1534;
-		vrLoc = 10705;
+		vrLen = 141;
+		vrLoc = 0;
+	};
+	FA24CEF6139B34A0009F0B92 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA24CE9C139AF9D8009F0B92 /* center_icon.svg */;
+		name = "center_icon.svg: 100";
+		rLen = 0;
+		rLoc = 3878;
+		rType = 0;
+		vrLen = 211;
+		vrLoc = 0;
 	};
 	FA6400AA1368E3A300C7CC78 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -352,27 +503,6 @@
 		rType = 0;
 		vrLen = 1595;
 		vrLoc = 223;
-	};
-	FA64019F1368F98400C7CC78 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 8D15AC360486D014006FF6A4 /* Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-		);
-		name = /Users/thomasstephens/Documents/ColorMask/Info.plist;
-		rLen = 0;
-		rLoc = 9223372036854775808;
-	};
-	FA6401A01368F98400C7CC78 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 7791B6CA0C2C70110002D3F1 /* main.py */;
-		name = "main.py: 17";
-		rLen = 0;
-		rLoc = 363;
-		rType = 0;
-		vrLen = 415;
-		vrLoc = 0;
 	};
 	FA8E7A4B13400C32000CFDB5 /* ColorMask */ = {
 		isa = PBXExecutable;
@@ -433,28 +563,42 @@
 		vrLen = 128;
 		vrLoc = 2;
 	};
-	FAC354F71351363C005E8A1C /* PBXTextBookmark */ = {
+	FAE4487E139C79EE001A8051 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 7791B6CD0C2C702F0002D3F1 /* ColorMaskDocument.py */;
-		name = "ColorMaskDocument.py: 93";
+		name = "ColorMaskDocument.py: 20";
 		rLen = 0;
 		rLoc = 305;
 		rType = 0;
-		vrLen = 347;
-		vrLoc = 922;
+		vrLen = 392;
+		vrLoc = 882;
 	};
-	FADB37A9139AE06E000C87AC /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 8D15AC360486D014006FF6A4 /* Info.plist */;
+	FAE4487F139C79EE001A8051 /* XDModelBookmark */ = {
+		isa = XDModelBookmark;
+		fRef = 775BDEF0067A8BF0009058FE /* ColorMaskDocument.xcdatamodel */;
 		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-		);
-		name = /Users/thomasstephens/Documents/ColorMask/Info.plist;
-		rLen = 0;
-		rLoc = 9223372036854775808;
 	};
-	FADB37AA139AE06E000C87AC /* PBXTextBookmark */ = {
+	FAE44880139C79EE001A8051 /* XDModelBookmark */ = {
+		isa = XDModelBookmark;
+		fRef = FA24CEAD139B162E009F0B92 /* ColorMaskDocument 2.xcdatamodel */;
+		fallbackIsa = PBXBookmark;
+	};
+	FAE44882139C79EE001A8051 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
+		name = "ColorMaskItems.py: 168";
+		rLen = 0;
+		rLoc = 5096;
+		rType = 0;
+		vrLen = 1780;
+		vrLoc = 3790;
+	};
+	FAE44883139C79EE001A8051 /* XDModelBookmark */ = {
+		isa = XDModelBookmark;
+		fRef = 775BDEF0067A8BF0009058FE /* ColorMaskDocument.xcdatamodel */;
+		fallbackIsa = PBXBookmark;
+	};
+	FAE44884139C79EE001A8051 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 7791B6CA0C2C70110002D3F1 /* main.py */;
 		name = "main.py: 17";
@@ -463,5 +607,49 @@
 		rType = 0;
 		vrLen = 415;
 		vrLoc = 0;
+	};
+	FAE44885139C79EE001A8051 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D15AC360486D014006FF6A4 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			UTExportedTypeDeclarations,
+			0,
+			UTTypeIdentifier,
+		);
+		name = /Users/thomasstephens/Documents/ColorMask/Info.plist;
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	FAE44886139C79EE001A8051 /* XDModelBookmark */ = {
+		isa = XDModelBookmark;
+		fRef = FA24CEAD139B162E009F0B92 /* ColorMaskDocument 2.xcdatamodel */;
+		fallbackIsa = PBXBookmark;
+	};
+	FAE44887139C79EE001A8051 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7791B6CD0C2C702F0002D3F1 /* ColorMaskDocument.py */;
+		name = "ColorMaskDocument.py: 135";
+		rLen = 20;
+		rLoc = 5627;
+		rType = 0;
+		vrLen = 1176;
+		vrLoc = 277;
+	};
+	FAE4489C139C825F001A8051 /* XDModelBookmark */ = {
+		isa = XDModelBookmark;
+		fRef = FA24CEAD139B162E009F0B92 /* ColorMaskDocument 2.xcdatamodel */;
+		fallbackIsa = PBXBookmark;
+	};
+	FAE4489D139C825F001A8051 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7791B6CD0C2C702F0002D3F1 /* ColorMaskDocument.py */;
+		name = "ColorMaskDocument.py: 59";
+		rLen = 0;
+		rLoc = 2644;
+		rType = 0;
+		vrLen = 1344;
+		vrLoc = 715;
 	};
 }

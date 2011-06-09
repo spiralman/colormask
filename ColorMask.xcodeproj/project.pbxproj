@@ -358,7 +358,7 @@
 				775BDEF0067A8BF0009058FE /* ColorMaskDocument.xcdatamodel */,
 				FA24CEAD139B162E009F0B92 /* ColorMaskDocument 2.xcdatamodel */,
 			);
-			currentVersion = 775BDEF0067A8BF0009058FE /* ColorMaskDocument.xcdatamodel */;
+			currentVersion = FA24CEAD139B162E009F0B92 /* ColorMaskDocument 2.xcdatamodel */;
 			path = ColorMaskDocument.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

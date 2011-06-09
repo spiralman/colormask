@@ -134,10 +134,15 @@ class ColorListItem(NSObject):
 
 class MaskItem(ItemWithImage):
     name_input = objc.IBOutlet()
+    show_source = objc.IBOutlet()
+    
+    selection_menu = objc.IBOutlet()
     color_picker = objc.IBOutlet()
     chroma_slider = objc.IBOutlet()
-    show_source = objc.IBOutlet()
+    falloff_slider = objc.IBOutlet()
     invert = objc.IBOutlet()
+    
+    halftone_menu = objc.IBOutlet()
     
     view_controller = objc.IBOutlet()
     tool_panel = objc.IBOutlet()
@@ -149,16 +154,19 @@ class MaskItem(ItemWithImage):
         
         self.colorTransformer = NSValueTransformer.valueTransformerForName_('CIColorToNSColorTransformer')
         
-        self.mask_filter = self.createFilterWithCurrentSettings()
+        self.mask_filter = self.createColorFilterWithCurrentSettings()
+        self.luminance_filter = self.createLuminanceFilterWithCurrentSettings()
         self.inverter = CIFilter.filterWithName_keysAndValues_('CIColorInvert',
             'name','inverter')
         
         self.mask.addObserver_forKeyPath_options_context_(self, 'name', 0, None)
+        self.mask.addObserver_forKeyPath_options_context_(self, 'selectionMode', 0, None)
         self.mask.addObserver_forKeyPath_options_context_(self, 'color', 0, None)
         self.mask.addObserver_forKeyPath_options_context_(self, 'chromaTolerance', 0, None)
         self.mask.addObserver_forKeyPath_options_context_(self, 'invert', 0, None)
         
         self.name_input.bind_toObject_withKeyPath_options_('value', self.mask, 'name', None)
+        self.selection_menu.bind_toObject_withKeyPath_options_('tag', self.mask, 'selectionMode', None)
         self.chroma_slider.bind_toObject_withKeyPath_options_('value', self.mask, 'chromaTolerance', None)
         self.color_picker.bind_toObject_withKeyPath_options_('value', self.mask, 'color', None)
         self.invert.bind_toObject_withKeyPath_options_('value', self.mask, 'invert', None)
@@ -169,9 +177,15 @@ class MaskItem(ItemWithImage):
         # lets the ColorMaskList item get at the instance created in the Nib
         self.view_controller.setRepresentedObject_(self)
     
-    def createFilterWithCurrentSettings(self):
-        return CIFilter.filterWithName_keysAndValues_('ColorMaskFilterFilter',
-            'name', 'colorMask',
+    def createColorFilterWithCurrentSettings(self):
+        return CIFilter.filterWithName_keysAndValues_('ColorDistance',
+            'name', 'colorDistance',
+            'inputColor', self.colorTransformer.transformedValue_(self.mask.valueForKey_('color')),
+            'inputChromaTolerance', self.mask.valueForKey_('chromaTolerance'), None)
+    
+    def createLuminanceFilterWithCurrentSettings(self):
+        return CIFilter.filterWithName_keysAndValues_('LuminanceDistance',
+            'name', 'luminanceDistance',
             'inputColor', self.colorTransformer.transformedValue_(self.mask.valueForKey_('color')),
             'inputChromaTolerance', self.mask.valueForKey_('chromaTolerance'), None)
     
@@ -190,17 +204,21 @@ class MaskItem(ItemWithImage):
         elif keyPath == 'name':
             self.name = self.mask.valueForKey_('name')
             self.doc.source_list.reloadItem_(self)
+        elif keyPath == 'selectionMode':
+            self.updateImage()
     
     def unbind(self):
         self.mask.removeObserver_forKeyPath_(self, 'name')
         self.mask.removeObserver_forKeyPath_(self, 'color')
         self.mask.removeObserver_forKeyPath_(self, 'chromaTolerance')
         self.mask.removeObserver_forKeyPath_(self, 'invert')
+        self.mask.removeObserver_forKeyPath_(self, 'selectionMode')
         
         self.name_input.unbind_('value')
         self.chroma_slider.unbind_('value')
         self.color_picker.unbind_('value')
         self.invert.unbind_('value')
+        self.selection_menu.unbind_('tag')
     
     def selected(self):
         self.updateImage()
