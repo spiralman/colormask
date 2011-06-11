@@ -73,8 +73,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 329274340;
-			PBXWorkspaceStateSaveDate = 329274340;
+			PBXPerProjectTemplateStateSaveDate = 329453904;
+			PBXWorkspaceStateSaveDate = 329453904;
 		};
 		perUserProjectItems = {
 			FA24CEF4139B34A0009F0B92 = FA24CEF4139B34A0009F0B92 /* PlistBookmark */;
@@ -93,6 +93,8 @@
 			FAE44887139C79EE001A8051 = FAE44887139C79EE001A8051 /* PBXTextBookmark */;
 			FAE4489C139C825F001A8051 = FAE4489C139C825F001A8051 /* XDModelBookmark */;
 			FAE4489D139C825F001A8051 = FAE4489D139C825F001A8051 /* PBXTextBookmark */;
+			FAF1555013A3116A00FDFDCF /* XDModelBookmark */ = FAF1555013A3116A00FDFDCF /* XDModelBookmark */;
+			FAF1555313A3116A00FDFDCF /* PBXTextBookmark */ = FAF1555313A3116A00FDFDCF /* PBXTextBookmark */;
 		};
 		sourceControlManager = FA8E7A5913400C53000CFDB5 /* Source Control */;
 		userBuildSettings = {
@@ -274,9 +276,9 @@
 	};
 	7791B6CD0C2C702F0002D3F1 /* ColorMaskDocument.py */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1307, 4030}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1307, 4017}}";
 			sepNavSelRange = "{2644, 0}";
-			sepNavVisRange = "{613, 1621}";
+			sepNavVisRange = "{630, 1592}";
 			sepNavWindowFrame = "{{42, 167}, {779, 608}}";
 		};
 	};
@@ -341,8 +343,8 @@
 						_percentageOfCollapsedView = 0;
 						isCollapsed = yes;
 						sizes = (
-							"{{0, 0}, {440, 125}}",
-							"{{445, 0}, {231, 125}}",
+							"{{0, 0}, {440, 102}}",
+							"{{445, 0}, {231, 102}}",
 						);
 					};
 					diagramSplitGeometry = {
@@ -351,8 +353,8 @@
 						_percentageOfCollapsedView = 0;
 						isCollapsed = yes;
 						sizes = (
-							"{{0, 0}, {676, 127}}",
-							"{{0, 132}, {676, 0}}",
+							"{{0, 0}, {676, 104}}",
+							"{{0, 109}, {676, 0}}",
 						);
 					};
 					tableSplitGeometry = {
@@ -361,8 +363,8 @@
 						_percentageOfCollapsedView = 0;
 						isCollapsed = yes;
 						sizes = (
-							"{{0, 0}, {143, 125}}",
-							"{{148, 0}, {292, 125}}",
+							"{{0, 0}, {142, 102}}",
+							"{{147, 0}, {291, 102}}",
 						);
 					};
 				};
@@ -651,5 +653,178 @@
 		rType = 0;
 		vrLen = 1344;
 		vrLoc = 715;
+	};
+	FAF1555013A3116A00FDFDCF /* XDModelBookmark */ = {
+		isa = XDModelBookmark;
+		fRef = FA24CEAD139B162E009F0B92 /* ColorMaskDocument 2.xcdatamodel */;
+		fallbackIsa = PBXBookmark;
+		uiCtxt = {
+			UIContextForDetailArea = {
+				_indexOfSelectedPane = 0;
+				_indexOfSelectedView = 0;
+			};
+			UIContextForEntityArea = {
+				_indexOfSelectedView = 0;
+				chosenTableColumnns = (
+					"ET Entity",
+					"ET Abstract",
+					"ET Class",
+				);
+				chosenTableColumnns_sortDirections = (
+					YES,
+				);
+				chosenTableColumnns_sortKeys = (
+					name,
+				);
+				chosenTableColumnns_sortSelectors = (
+					"_xdcaseInsensitiveNumericCompare:",
+				);
+				chosenTableWidths = (
+					103.000000,
+					22.000000,
+					32.080078,
+				);
+			};
+			UIContextForLayoutManager = {
+				detailSplitGeometry = {
+					_collapsingFrameDimension = 0;
+					_indexOfCollapsedView = 0;
+					_percentageOfCollapsedView = 0;
+					isCollapsed = yes;
+					sizes = (
+						"{{0, 0}, {440, 102}}",
+						"{{445, 0}, {231, 102}}",
+					);
+				};
+				diagramSplitGeometry = {
+					_collapsingFrameDimension = 0;
+					_indexOfCollapsedView = 0;
+					_percentageOfCollapsedView = 0;
+					isCollapsed = yes;
+					sizes = (
+						"{{0, 0}, {676, 104}}",
+						"{{0, 109}, {676, 0}}",
+					);
+				};
+				tableSplitGeometry = {
+					_collapsingFrameDimension = 0;
+					_indexOfCollapsedView = 0;
+					_percentageOfCollapsedView = 0;
+					isCollapsed = yes;
+					sizes = (
+						"{{0, 0}, {142, 102}}",
+						"{{147, 0}, {291, 102}}",
+					);
+				};
+			};
+			UIContextForPropertyArea = {
+				_indexOfSelectedView = 0;
+				chosenTableColumnnFRTs = (
+					"FT Fetch Request",
+					"FT Predicate",
+				);
+				chosenTableColumnnFRTs_sortDirections = (
+					YES,
+				);
+				chosenTableColumnnFRTs_sortKeys = (
+					name,
+				);
+				chosenTableColumnnFRTs_sortSelectors = (
+					"_xdcaseInsensitiveNumericCompare:",
+				);
+				chosenTableColumnnsAT = (
+					"AT Attribute",
+					"AT Type",
+				);
+				chosenTableColumnnsAT_sortDirections = (
+					YES,
+				);
+				chosenTableColumnnsAT_sortKeys = (
+					name,
+				);
+				chosenTableColumnnsAT_sortSelectors = (
+					"_xdcaseInsensitiveNumericCompare:",
+				);
+				chosenTableColumnnsFPT = (
+					"FP FetchedProperty",
+					"FP Destination",
+					"FP Predicate",
+				);
+				chosenTableColumnnsFPT_sortDirections = (
+					YES,
+				);
+				chosenTableColumnnsFPT_sortKeys = (
+					name,
+				);
+				chosenTableColumnnsFPT_sortSelectors = (
+					"_xdcaseInsensitiveNumericCompare:",
+				);
+				chosenTableColumnnsPT = (
+					"PT Property",
+					"PT Kind",
+					"PT SharedKeyOne",
+				);
+				chosenTableColumnnsPT_sortDirections = (
+					YES,
+				);
+				chosenTableColumnnsPT_sortKeys = (
+					name,
+				);
+				chosenTableColumnnsPT_sortSelectors = (
+					"_xdcaseInsensitiveNumericCompare:",
+				);
+				chosenTableColumnnsRT = (
+					"RT Relationship",
+					"RT Destination",
+				);
+				chosenTableColumnnsRT_sortDirections = (
+					YES,
+				);
+				chosenTableColumnnsRT_sortKeys = (
+					name,
+				);
+				chosenTableColumnnsRT_sortSelectors = (
+					"_xdcaseInsensitiveNumericCompare:",
+				);
+				chosenTableWidthsAT = (
+					128.000000,
+					64.000000,
+				);
+				chosenTableWidthsFPT = (
+					128.000000,
+					64.000000,
+					144.764160,
+				);
+				chosenTableWidthsFRT = (
+					128.000000,
+					249.764160,
+				);
+				chosenTableWidthsPT = (
+					128.000000,
+					108.110840,
+					96.570801,
+				);
+				chosenTableWidthsRT = (
+					128.000000,
+					64.000000,
+				);
+			};
+			"xdesign model browser state key - shown/hidden" = 1;
+			"xdesign model diagram view visible rect key" = "{{-7, 36}, {661, 0}}";
+			"xdesign model selected entities key" = (
+			);
+			"xdesign model selected properties key" = (
+			);
+		};
+	};
+	FAF1555313A3116A00FDFDCF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7791B6CD0C2C702F0002D3F1 /* ColorMaskDocument.py */;
+		name = "ColorMaskDocument.py: 81";
+		rLen = 0;
+		rLoc = 2644;
+		rType = 0;
+		vrLen = 1592;
+		vrLoc = 630;
 	};
 }

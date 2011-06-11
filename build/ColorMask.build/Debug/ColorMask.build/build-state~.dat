@@ -1,0 +1,362 @@
+TColorMask
+v7
+r0
+t329453921.716864
+cCheck dependencies
+cProcessInfoPlistFile /Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Info.plist Info.plist
+cCpResource build/Debug/ColorMask.app/Contents/Resources/English.lproj/Credits.rtf English.lproj/Credits.rtf
+cCopyStringsFile /Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
+cCpResource build/Debug/ColorMask.app/Contents/Resources/main.py main.py
+cCpResource build/Debug/ColorMask.app/Contents/Resources/ColorMaskDocument.py ColorMaskDocument.py
+cCompileXIB /Users/thomasstephens/Documents/ColorMask/English.lproj/MainMenu.xib
+cCompileXIB /Users/thomasstephens/Documents/ColorMask/English.lproj/ColorMaskDocument.xib
+cCompileXIB /Users/thomasstephens/Documents/ColorMask/ColorMaskView.xib
+cCpResource build/Debug/ColorMask.app/Contents/Resources/ColorMaskIcon.icns ColorMaskIcon.icns
+cCpResource build/Debug/ColorMask.app/Contents/Resources/ColorMaskItems.py ColorMaskItems.py
+cCpResource build/Debug/ColorMask.app/Contents/Resources/center_icon.png center_icon.png
+cProcessPCH /var/folders/Of/OffUW+PtHi0U0XlRSYTfUE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ColorMask_Prefix-cslofdfuxiwruudaahgnabmisjqf/ColorMask_Prefix.pch.gch ColorMask_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cDataModelVersionCompile /Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Resources/ColorMaskDocument.momd /Users/thomasstephens/Documents/ColorMask/ColorMaskDocument.xcdatamodeld
+cCompileC build/ColorMask.build/Debug/ColorMask.build/Objects-normal/i386/main.o /Users/thomasstephens/Documents/ColorMask/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/MacOS/ColorMask normal i386
+cTouch /Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app
+
+N/Developer/SDKs/MacOSX10.5.sdk
+c000000004D8D434E00000000000000EE
+t1301103438
+s238
+
+N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
+c0000000040C4AA6800000000000001E5
+t1086630504
+s485
+
+N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.h
+c0000000047BADA0D0000000000000422
+t1203427853
+s1058
+
+N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004864A1C900000000000012EE
+t1214554569
+s4846
+
+N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/Python.framework/Headers/Python.h
+c000000004864C5EF000000000000106C
+t1214563823
+s4204
+
+N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/Python.framework/Python
+c000000004B760CD500000000000428B4
+t1266027733
+s272564
+
+N/System/Library/Frameworks/Cocoa.framework/Cocoa
+c000000004A1F2D63000000000000A5E0
+t1243557219
+s42464
+
+N/Users/thomasstephens/Documents/ColorMask/ColorMaskDocument.py
+c000000004DF2D9B40000000000002BAD
+t1307761076
+s11181
+
+N/Users/thomasstephens/Documents/ColorMask/ColorMaskDocument.xcdatamodeld
+c000000004DF2D9B40000000000000088
+t1307761076
+s136
+
+N/Users/thomasstephens/Documents/ColorMask/ColorMaskIcon.icns
+c000000004DF2D9B4000000000000ECA9
+t1307761076
+s60585
+
+N/Users/thomasstephens/Documents/ColorMask/ColorMaskItems.py
+c000000004DF2D9B400000000000024A9
+t1307761076
+s9385
+
+N/Users/thomasstephens/Documents/ColorMask/ColorMaskView.xib
+c000000004DF2D9B4000000000001B401
+t1307761076
+s111617
+
+N/Users/thomasstephens/Documents/ColorMask/ColorMask_Prefix.pch
+c000000004DF2D9B40000000000000155
+t1307761076
+s341
+i<Foundation/Foundation.h>
+i<CoreData/CoreData.h>
+i<Cocoa/Cocoa.h>
+
+N/Users/thomasstephens/Documents/ColorMask/English.lproj/ColorMaskDocument.xib
+c000000004DF2D9B4000000000000F925
+t1307761076
+s63781
+
+N/Users/thomasstephens/Documents/ColorMask/English.lproj/Credits.rtf
+c000000004DF2D9B400000000000001B4
+t1307761076
+s436
+
+N/Users/thomasstephens/Documents/ColorMask/English.lproj/InfoPlist.strings
+c000000004DF2D9B400000000000000CA
+t1307761076
+s202
+
+N/Users/thomasstephens/Documents/ColorMask/English.lproj/MainMenu.xib
+c000000004DF2D9B400000000000184DB
+t1307761076
+s99547
+
+N/Users/thomasstephens/Documents/ColorMask/build/ColorMask.build/Debug/ColorMask.build/Objects-normal/i386/ColorMask.LinkFileList
+c000000004DF2D9D70000000000000071
+t1307761111
+s113
+
+N/Users/thomasstephens/Documents/ColorMask/build/ColorMask.build/Debug/ColorMask.build/Objects-normal/i386/main.o
+t1307761120
+s10804
+
+N/Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app
+t1307761121
+s102
+
+N/Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Info.plist
+t1307761111
+s2448
+
+N/Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/MacOS/ColorMask
+t1307761121
+s18032
+
+N/Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/PkgInfo
+t1307761111
+s8
+
+N/Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Resources/ColorMaskDocument.momd
+t1307761120
+s136
+
+N/Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Resources/ColorMaskDocument.py
+t1307761111
+s11181
+
+N/Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Resources/ColorMaskIcon.icns
+t1307761114
+s60585
+
+N/Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Resources/ColorMaskItems.py
+t1307761114
+s9385
+
+N/Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Resources/ColorMaskView.nib
+t1307761114
+s18208
+
+N/Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Resources/English.lproj/ColorMaskDocument.nib
+t1307761114
+s10318
+
+N/Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Resources/English.lproj/Credits.rtf
+t1307761111
+s436
+
+N/Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Resources/English.lproj/InfoPlist.strings
+t1307761112
+s202
+
+N/Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Resources/English.lproj/MainMenu.nib
+t1307761114
+s15560
+
+N/Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Resources/center_icon.png
+t1307761114
+s354
+
+N/Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Resources/main.py
+t1307761111
+s415
+
+N/Users/thomasstephens/Documents/ColorMask/center_icon.png
+c000000004DF2D9B40000000000000162
+t1307761076
+s354
+
+N/Users/thomasstephens/Documents/ColorMask/main.m
+c000000004DF2D9B4000000000000071A
+t1307761076
+s1818
+i<Python/Python.h>
+i<Cocoa/Cocoa.h>
+
+N/Users/thomasstephens/Documents/ColorMask/main.py
+c000000004DF2D9B4000000000000019F
+t1307761076
+s415
+
+N/var/folders/Of/OffUW+PtHi0U0XlRSYTfUE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ColorMask_Prefix-cslofdfuxiwruudaahgnabmisjqf/ColorMask_Prefix.pch.gch
+t1307761120
+s54002064
+
+NInfo.plist
+c000000004DF2D9B40000000000000813
+t1307761076
+s2067
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies329453911#329453911#0(0"0(0#1#0"3343187568374212096#0"0#
+
+CCompileC build/ColorMask.build/Debug/ColorMask.build/Objects-normal/i386/main.o /Users/thomasstephens/Documents/ColorMask/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s329453920.261239
+e329453920.701519
+r1
+xCompileC
+xbuild/ColorMask.build/Debug/ColorMask.build/Objects-normal/i386/main.o
+x/Users/thomasstephens/Documents/ColorMask/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@56"Compile /Users/thomasstephens/Documents/ColorMask/main.m329453920#329453920#0(0"0(0#0#48"/Users/thomasstephens/Documents/ColorMask/main.m8605145056#1115"    cd /Users/thomasstephens/Documents/ColorMask    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -I/Users/thomasstephens/Documents/ColorMask/build/ColorMask.build/Debug/ColorMask.build/ColorMask.hmap -F/Users/thomasstephens/Documents/ColorMask/build/Debug -I/Users/thomasstephens/Documents/ColorMask/build/Debug/include -I/Users/thomasstephens/Documents/ColorMask/build/ColorMask.build/Debug/ColorMask.build/DerivedSources/i386 -I/Users/thomasstephens/Documents/ColorMask/build/ColorMask.build/Debug/ColorMask.build/DerivedSources -include /var/folders/Of/OffUW+PtHi0U0XlRSYTfUE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ColorMask_Prefix-cslofdfuxiwruudaahgnabmisjqf/ColorMask_Prefix.pch -c /Users/thomasstephens/Documents/ColorMask/main.m -o /Users/thomasstephens/Documents/ColorMask/build/ColorMask.build/Debug/ColorMask.build/Objects-normal/i386/main.o0#
+
+CCompileXIB /Users/thomasstephens/Documents/ColorMask/ColorMaskView.xib
+s329453914.305252
+e329453914.649144
+r1
+xCompileXIB
+x/Users/thomasstephens/Documents/ColorMask/ColorMaskView.xib
+o/* com.apple.ibtool.document.notices */
+o/Users/thomasstephens/Documents/ColorMask/ColorMaskView.xib:32: note: This view is clipping its content.
+lSLF07#2@28"CompileXIB ColorMaskView.xib329453914#329453914#0(145"/* com.apple.ibtool.document.notices *//Users/thomasstephens/Documents/ColorMask/ColorMaskView.xib:32: note: This view is clipping its content.1(13@34"This view is clipping its content.329453914#18446744073709551615#0#0(6@59"/Users/thomasstephens/Documents/ColorMask/ColorMaskView.xib329453876#32#0#32#0#0"0(0#0#59"/Users/thomasstephens/Documents/ColorMask/ColorMaskView.xib8605295232#357"    cd /Users/thomasstephens/Documents/ColorMask    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Resources/ColorMaskView.nib /Users/thomasstephens/Documents/ColorMask/ColorMaskView.xib --sdk /Developer/SDKs/MacOSX10.5.sdk0#
+
+CCompileXIB /Users/thomasstephens/Documents/ColorMask/English.lproj/ColorMaskDocument.xib
+s329453912.834393
+e329453914.510840
+r1
+xCompileXIB
+x/Users/thomasstephens/Documents/ColorMask/English.lproj/ColorMaskDocument.xib
+o/* com.apple.ibtool.document.warnings */
+o/Users/thomasstephens/Documents/ColorMask/English.lproj/ColorMaskDocument.xib:5: warning: Interface Builder does not support values other than "Autosize" for NSWindow's "Bottom Content Border" property on Mac OS X versions prior to 10.6.
+lSLF07#2@46"CompileXIB English.lproj/ColorMaskDocument.xib329453912#329453914#0(279"/* com.apple.ibtool.document.warnings *//Users/thomasstephens/Documents/ColorMask/English.lproj/ColorMaskDocument.xib:5: warning: Interface Builder does not support values other than "Autosize" for NSWindow's "Bottom Content Border" property on Mac OS X versions prior to 10.6.1(22@147"Interface Builder does not support values other than "Autosize" for NSWindow's "Bottom Content Border" property on Mac OS X versions prior to 10.6.329453914#18446744073709551615#0#0(6@77"/Users/thomasstephens/Documents/ColorMask/English.lproj/ColorMaskDocument.xib329453876#5#0#5#0#0"0(0#0#77"/Users/thomasstephens/Documents/ColorMask/English.lproj/ColorMaskDocument.xib8605349440#393"    cd /Users/thomasstephens/Documents/ColorMask    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Resources/English.lproj/ColorMaskDocument.nib /Users/thomasstephens/Documents/ColorMask/English.lproj/ColorMaskDocument.xib --sdk /Developer/SDKs/MacOSX10.5.sdk0#
+
+CCompileXIB /Users/thomasstephens/Documents/ColorMask/English.lproj/MainMenu.xib
+s329453911.856980
+e329453914.305110
+r1
+xCompileXIB
+x/Users/thomasstephens/Documents/ColorMask/English.lproj/MainMenu.xib
+lSLF07#2@37"CompileXIB English.lproj/MainMenu.xib329453911#329453914#0(0"0(0#0#68"/Users/thomasstephens/Documents/ColorMask/English.lproj/MainMenu.xib8604894624#375"    cd /Users/thomasstephens/Documents/ColorMask    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Resources/English.lproj/MainMenu.nib /Users/thomasstephens/Documents/ColorMask/English.lproj/MainMenu.xib --sdk /Developer/SDKs/MacOSX10.5.sdk0#
+
+CCopyStringsFile /Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
+s329453911.736270
+e329453912.834259
+r1
+xCopyStringsFile
+x/Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Resources/English.lproj/InfoPlist.strings
+xEnglish.lproj/InfoPlist.strings
+lSLF07#2@36"Copy English.lproj/InfoPlist.strings329453911#329453912#0(0"0(0#0#73"/Users/thomasstephens/Documents/ColorMask/English.lproj/InfoPlist.strings8605516512#374"    cd /Users/thomasstephens/Documents/ColorMask    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-16 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir /Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Resources/English.lproj0#
+
+CCpResource build/Debug/ColorMask.app/Contents/Resources/ColorMaskDocument.py ColorMaskDocument.py
+s329453911.856434
+e329453911.900218
+r1
+xCpResource
+xbuild/Debug/ColorMask.app/Contents/Resources/ColorMaskDocument.py
+xColorMaskDocument.py
+lSLF07#2@25"Copy ColorMaskDocument.py329453911#329453911#0(0"0(0#0#62"/Users/thomasstephens/Documents/ColorMask/ColorMaskDocument.py8604941088#361"    cd /Users/thomasstephens/Documents/ColorMask    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/thomasstephens/Documents/ColorMask/ColorMaskDocument.py /Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Resources0#
+
+CCpResource build/Debug/ColorMask.app/Contents/Resources/ColorMaskIcon.icns ColorMaskIcon.icns
+s329453914.510933
+e329453914.524211
+r1
+xCpResource
+xbuild/Debug/ColorMask.app/Contents/Resources/ColorMaskIcon.icns
+xColorMaskIcon.icns
+lSLF07#2@23"Copy ColorMaskIcon.icns329453914#329453914#0(0"0(0#0#60"/Users/thomasstephens/Documents/ColorMask/ColorMaskIcon.icns27303403460886640#359"    cd /Users/thomasstephens/Documents/ColorMask    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/thomasstephens/Documents/ColorMask/ColorMaskIcon.icns /Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Resources0#
+
+CCpResource build/Debug/ColorMask.app/Contents/Resources/ColorMaskItems.py ColorMaskItems.py
+s329453914.512591
+e329453914.523667
+r1
+xCpResource
+xbuild/Debug/ColorMask.app/Contents/Resources/ColorMaskItems.py
+xColorMaskItems.py
+lSLF07#2@22"Copy ColorMaskItems.py329453914#329453914#0(0"0(0#0#59"/Users/thomasstephens/Documents/ColorMask/ColorMaskItems.py8605103200#358"    cd /Users/thomasstephens/Documents/ColorMask    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/thomasstephens/Documents/ColorMask/ColorMaskItems.py /Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Resources0#
+
+CCpResource build/Debug/ColorMask.app/Contents/Resources/English.lproj/Credits.rtf English.lproj/Credits.rtf
+s329453911.711049
+e329453911.855723
+r1
+xCpResource
+xbuild/Debug/ColorMask.app/Contents/Resources/English.lproj/Credits.rtf
+xEnglish.lproj/Credits.rtf
+lSLF07#2@30"Copy English.lproj/Credits.rtf329453911#329453911#0(0"0(0#0#67"/Users/thomasstephens/Documents/ColorMask/English.lproj/Credits.rtf8604719168#380"    cd /Users/thomasstephens/Documents/ColorMask    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/thomasstephens/Documents/ColorMask/English.lproj/Credits.rtf /Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Resources/English.lproj0#
+
+CCpResource build/Debug/ColorMask.app/Contents/Resources/center_icon.png center_icon.png
+s329453914.514223
+e329453914.523826
+r1
+xCpResource
+xbuild/Debug/ColorMask.app/Contents/Resources/center_icon.png
+xcenter_icon.png
+lSLF07#2@20"Copy center_icon.png329453914#329453914#0(0"0(0#0#57"/Users/thomasstephens/Documents/ColorMask/center_icon.png8605034016#356"    cd /Users/thomasstephens/Documents/ColorMask    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/thomasstephens/Documents/ColorMask/center_icon.png /Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Resources0#
+
+CCpResource build/Debug/ColorMask.app/Contents/Resources/main.py main.py
+s329453911.855813
+e329453911.872157
+r1
+xCpResource
+xbuild/Debug/ColorMask.app/Contents/Resources/main.py
+xmain.py
+lSLF07#2@12"Copy main.py329453911#329453911#0(0"0(0#0#49"/Users/thomasstephens/Documents/ColorMask/main.py8604988896#348"    cd /Users/thomasstephens/Documents/ColorMask    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/thomasstephens/Documents/ColorMask/main.py /Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Resources0#
+
+CDataModelVersionCompile /Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Resources/ColorMaskDocument.momd /Users/thomasstephens/Documents/ColorMask/ColorMaskDocument.xcdatamodeld
+s329453920.260510
+e329453920.467034
+r1
+xDataModelVersionCompile
+x/Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Resources/ColorMaskDocument.momd
+x/Users/thomasstephens/Documents/ColorMask/ColorMaskDocument.xcdatamodeld
+lSLF07#2@122"DataModelVersionCompile build/Debug/ColorMask.app/Contents/Resources/ColorMaskDocument.momd ColorMaskDocument.xcdatamodeld329453920#329453920#0(0"0(0#0#72"/Users/thomasstephens/Documents/ColorMask/ColorMaskDocument.xcdatamodeld8605205312#289"    cd /Users/thomasstephens/Documents/ColorMask    /Developer/usr/bin/momc -XD_MOMC_TARGET_VERSION=10.5 /Users/thomasstephens/Documents/ColorMask/ColorMaskDocument.xcdatamodeld /Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Resources/ColorMaskDocument.momd0#
+
+CLd /Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/MacOS/ColorMask normal i386
+s329453920.701710
+e329453921.680196
+r1
+xLd
+x/Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/MacOS/ColorMask
+xnormal
+xi386
+lSLF07#2@97"Link /Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/MacOS/ColorMask329453920#329453921#0(0"0(0#0#0"8603994400#581"    cd /Users/thomasstephens/Documents/ColorMask    setenv MACOSX_DEPLOYMENT_TARGET 10.5    /Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -L/Users/thomasstephens/Documents/ColorMask/build/Debug -F/Users/thomasstephens/Documents/ColorMask/build/Debug -filelist /Users/thomasstephens/Documents/ColorMask/build/ColorMask.build/Debug/ColorMask.build/Objects-normal/i386/ColorMask.LinkFileList -mmacosx-version-min=10.5 -framework Cocoa -framework Python -o /Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/MacOS/ColorMask0#
+
+CProcessInfoPlistFile /Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Info.plist Info.plist
+s329453911.666712
+e329453911.710920
+r1
+xProcessInfoPlistFile
+x/Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Info.plist
+xInfo.plist
+lSLF07#2@18"Process Info.plist329453911#329453911#0(0"0(0#0#52"/Users/thomasstephens/Documents/ColorMask/Info.plist18859025309827188#315"    cd /Users/thomasstephens/Documents/ColorMask    builtin-infoPlistUtility Info.plist -genpkginfo /Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app/Contents/Info.plist0#
+
+CProcessPCH /var/folders/Of/OffUW+PtHi0U0XlRSYTfUE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ColorMask_Prefix-cslofdfuxiwruudaahgnabmisjqf/ColorMask_Prefix.pch.gch ColorMask_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s329453914.649360
+e329453920.260333
+r1
+xProcessPCH
+x/var/folders/Of/OffUW+PtHi0U0XlRSYTfUE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ColorMask_Prefix-cslofdfuxiwruudaahgnabmisjqf/ColorMask_Prefix.pch.gch
+xColorMask_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@31"Precompile ColorMask_Prefix.pch329453914#329453920#0(0"0(0#0#62"/Users/thomasstephens/Documents/ColorMask/ColorMask_Prefix.pch8604861888#1018"    cd /Users/thomasstephens/Documents/ColorMask    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -I/Users/thomasstephens/Documents/ColorMask/build/ColorMask.build/Debug/ColorMask.build/ColorMask.hmap -F/Users/thomasstephens/Documents/ColorMask/build/Debug -I/Users/thomasstephens/Documents/ColorMask/build/Debug/include -I/Users/thomasstephens/Documents/ColorMask/build/ColorMask.build/Debug/ColorMask.build/DerivedSources/i386 -I/Users/thomasstephens/Documents/ColorMask/build/ColorMask.build/Debug/ColorMask.build/DerivedSources -c /Users/thomasstephens/Documents/ColorMask/ColorMask_Prefix.pch -o /var/folders/Of/OffUW+PtHi0U0XlRSYTfUE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ColorMask_Prefix-cslofdfuxiwruudaahgnabmisjqf/ColorMask_Prefix.pch.gch0#
+
+CTouch /Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app
+s329453921.680335
+e329453921.716767
+r1
+xTouch
+x/Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app
+lSLF07#2@73"Touch /Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app329453921#329453921#0(0"0(0#0#0"8605339296#139"    cd /Users/thomasstephens/Documents/ColorMask    /usr/bin/touch -c /Users/thomasstephens/Documents/ColorMask/build/Debug/ColorMask.app0#
+
