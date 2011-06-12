@@ -144,6 +144,11 @@ class MaskItem(ItemWithImage):
     invert = objc.IBOutlet()
     
     halftone_menu = objc.IBOutlet()
+    halftone_angle = objc.IBOutlet()
+    halftone_width = objc.IBOutlet()
+    halftone_sharpness = objc.IBOutlet()
+    halftone_x = objc.IBOutlet()
+    halftone_y = objc.IBOutlet()
     
     view_controller = objc.IBOutlet()
     tool_panel = objc.IBOutlet()
@@ -155,11 +160,20 @@ class MaskItem(ItemWithImage):
         
         self.colorTransformer = NSValueTransformer.valueTransformerForName_('CIColorToNSColorTransformer')
         
-        self.color_filter = self.createColorFilterWithCurrentSettings()
-        self.luminance_filter = self.createLuminanceFilterWithCurrentSettings()
-        self.perceptual_filter = self.createPerceptualFilterWithCurrentSettings()
+        self.selection_filters = [self.createFilterWithName('ColorDistance', 'colorDistance'), 
+                                self.createFilterWithName('LuminanceDistance', 'luminanceDistance'),
+                                self.createFilterWithName('PerceptualDistance', 'perceptualDistance')]
         
-        self.selection_filters = [self.color_filter, self.luminance_filter, self.perceptual_filter]
+        for filter in self.selection_filters:
+            self.updateSelectionFilterFromMask(filter)
+        
+        self.halftone_filters = [self.createFilterWithName('CIDotScreen','dotScreen'),
+                                self.createFilterWithName('CILineScreen', 'lineScreen'),
+                                self.createFilterWithName('CIHatchedScreen', 'hatchScreen'),
+                                self.createFilterWithName('CICircularScreen', 'circleScreen')]
+        
+        for filter in self.halftone_filters:
+            self.updateHalftoneFilterFromMask(filter)
         
         self.inverter = CIFilter.filterWithName_keysAndValues_('CIColorInvert',
             'name','inverter')
@@ -172,6 +186,13 @@ class MaskItem(ItemWithImage):
         self.mask.addObserver_forKeyPath_options_context_(self, 'falloff', 0, None)
         self.mask.addObserver_forKeyPath_options_context_(self, 'invert', 0, None)
         
+        self.mask.addObserver_forKeyPath_options_context_(self, 'halftoneMode', 0, None)
+        self.mask.addObserver_forKeyPath_options_context_(self, 'halftoneSharpness', 0, None)
+        self.mask.addObserver_forKeyPath_options_context_(self, 'halftoneWidth', 0, None)
+        self.mask.addObserver_forKeyPath_options_context_(self, 'halftoneAngle', 0, None)
+        self.mask.addObserver_forKeyPath_options_context_(self, 'halftoneCenterX', 0, None)
+        self.mask.addObserver_forKeyPath_options_context_(self, 'halftoneCenterY', 0, None)
+        
         self.name_input.bind_toObject_withKeyPath_options_('value', self.mask, 'name', None)
         self.chroma_slider.bind_toObject_withKeyPath_options_('value', self.mask, 'chromaTolerance', None)
         self.luminance_slider.bind_toObject_withKeyPath_options_('value', self.mask, 'luminanceTolerance', None)
@@ -179,35 +200,36 @@ class MaskItem(ItemWithImage):
         self.color_picker.bind_toObject_withKeyPath_options_('value', self.mask, 'color', None)
         self.invert.bind_toObject_withKeyPath_options_('value', self.mask, 'invert', None)
         
+        self.halftone_menu.bind_toObject_withKeyPath_options_('tag', self.mask, 'halftoneMode', None)
+        self.halftone_angle.bind_toObject_withKeyPath_options_('value', self.mask, 'halftoneAngle', None)
+        self.halftone_width.bind_toObject_withKeyPath_options_('value', self.mask, 'halftoneWidth', None)
+        self.halftone_sharpness.bind_toObject_withKeyPath_options_('value', self.mask, 'halftoneSharpness', None)
+        self.halftone_x.bind_toObject_withKeyPath_options_('intValue', self.mask, 'halftoneCenterX', None)
+        self.halftone_y.bind_toObject_withKeyPath_options_('intValue', self.mask, 'halftoneCenterY', None)
+        
         self.updateImage()
     
     def awakeFromNib(self):
         # lets the ColorMaskList item get at the instance created in the Nib
         self.view_controller.setRepresentedObject_(self)
     
-    def createColorFilterWithCurrentSettings(self):
-        filter = CIFilter.filterWithName_keysAndValues_('ColorDistance',
-            'name', 'colorDistance', None)
-        self.updateSelectionFilterFromMask(filter)
-        return filter
-    
-    def createLuminanceFilterWithCurrentSettings(self):
-        filter = CIFilter.filterWithName_keysAndValues_('LuminanceDistance',
-            'name', 'luminanceDistance', None)
-        self.updateSelectionFilterFromMask(filter)
-        return filter
-    
-    def createPerceptualFilterWithCurrentSettings(self):
-        filter = CIFilter.filterWithName_keysAndValues_('PerceptualDistance',
-            'name', 'perceptualDistance', None)
-        self.updateSelectionFilterFromMask(filter)
-        return filter
+    def createFilterWithName(self, className, filterName):
+        return CIFilter.filterWithName_keysAndValues_(className, 
+            'name', filterName, None)
     
     def updateSelectionFilterFromMask(self, filter):
         self.updateFilterKeyValues(filter, 'inputColor', self.colorTransformer.transformedValue_(self.mask.valueForKey_('color')))
         self.updateFilterKeyValues(filter, 'inputChromaTolerance', self.mask.valueForKey_('chromaTolerance'))
         self.updateFilterKeyValues(filter, 'inputLuminanceTolerance', self.mask.valueForKey_('luminanceTolerance'))
         self.updateFilterKeyValues(filter, 'inputFalloff', self.mask.valueForKey_('falloff'))
+    
+    def updateHalftoneFilterFromMask(self, filter):
+        self.updateFilterKeyValues(filter, 'inputWidth', self.mask.valueForKey_('halftoneWidth'))
+        self.updateFilterKeyValues(filter, 'inputAngle', self.mask.valueForKey_('halftoneAngle'))
+        self.updateFilterKeyValues(filter, 'inputSharpness', self.mask.valueForKey_('halftoneSharpness'))
+        self.updateFilterKeyValues(filter, 'inputCenter', 
+                                CIVector.vectorWithX_Y_(self.mask.valueForKey_('halftoneCenterX'), 
+                                                        self.mask.valueForKey_('halftoneCenterY')))
     
     def updateFilterKeyValues(self,filter,key,value):
         if key in filter.attributes():
@@ -216,21 +238,28 @@ class MaskItem(ItemWithImage):
                 self.layer.setValue_forKeyPath_(value, 'backgroundFilters.{0}.{1}'.format(filter.valueForKey_('name'),key))
     
     def observeValueForKeyPath_ofObject_change_context_(self,keyPath, object, change, context):
-        selectedFilter = self.selection_filters[self.selection_menu.selectedItem().tag()]
+        selection_filter = self.selection_filters[self.selection_menu.selectedItem().tag()]
+        
         # The background filters array in the layer object is a copy of our filters array, 
         # so changes to the filters in the layer don't affect our copy of the filters.
         if keyPath == 'color':
             color = self.colorTransformer.transformedValue_(self.mask.valueForKey_('color'))
-            self.updateFilterKeyValues(selectedFilter, 'inputColor',color)
+            self.updateFilterKeyValues(selection_filter, 'inputColor',color)
         elif keyPath == 'chromaTolerance':
-            self.updateFilterKeyValues(selectedFilter, 'inputChromaTolerance',self.mask.valueForKey_('chromaTolerance'))
+            self.updateFilterKeyValues(selection_filter, 'inputChromaTolerance',self.mask.valueForKey_('chromaTolerance'))
         elif keyPath == 'luminanceTolerance':
-            self.updateFilterKeyValues(selectedFilter, 'inputLuminanceTolerance',self.mask.valueForKey_('luminanceTolerance'))
+            self.updateFilterKeyValues(selection_filter, 'inputLuminanceTolerance',self.mask.valueForKey_('luminanceTolerance'))
         elif keyPath == 'falloff':
             falloff = self.mask.valueForKey_('falloff')
             if falloff == 0:
                 falloff = 0.0000001
-            self.updateFilterKeyValues(selectedFilter, 'inputFalloff',falloff)
+            self.updateFilterKeyValues(selection_filter, 'inputFalloff',falloff)
+        elif keyPath.startswith('halftone'):
+            halftone_mode = self.halftone_menu.selectedItem().tag()
+            if halftone_mode > -1:
+                halftone_filter = self.halftone_filters[halftone_mode]
+                
+                self.updateFilterKeyValues(halftone_filter, keyPath.replace('halftone','input'), self.mask.valueForKey_(keyPath))
         elif keyPath == 'name':
             self.name = self.mask.valueForKey_('name')
             self.doc.source_list.reloadItem_(self)
@@ -272,6 +301,10 @@ class MaskItem(ItemWithImage):
     def selectionModeChanged_(self,sender):
         self.updateImage()
     
+    @objc.IBAction
+    def halftoneModeChanged_(self,sender):
+        self.updateImage()
+    
     def updateImage(self):
         if self.show_source.state() == NSOnState:
             self.filters = []
@@ -283,6 +316,14 @@ class MaskItem(ItemWithImage):
             
             if self.invert.state() == NSOnState:
                 self.filters.append(self.inverter)
+            
+            halftone_mode = self.halftone_menu.selectedItem().tag()
+            
+            if halftone_mode > -1:
+                halftone_filter = self.halftone_filters[halftone_mode]
+                
+                self.updateHalftoneFilterFromMask(halftone_filter)
+                self.filters.append(halftone_filter)
 
         super(MaskItem,self).updateImage()
 
