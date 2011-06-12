@@ -202,46 +202,6 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
-				<string>FAA9898413A447F1007A3D93</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>Description.plist</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>FAA9898513A447F1007A3D93</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>Description.plist</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>FAA98A1913A45D30007A3D93</string>
-						<key>history</key>
-						<array>
-							<string>FAA9897813A44774007A3D93</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {779, 511}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>462 200 779 552 0 0 1280 778 </string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
 				<string>FAA9894713A44583007A3D93</string>
 				<key>PBXProjectModuleLabel</key>
 				<string>MaskingFilters.m</string>
@@ -256,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>FAA98A1A13A45D30007A3D93</string>
+						<string>FAA98A8113A469D3007A3D93</string>
 						<key>history</key>
 						<array>
 							<string>FAA989CF13A45015007A3D93</string>
@@ -411,7 +371,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>FAA98A1813A45D30007A3D93</string>
+										<string>FAA98A8013A469D3007A3D93</string>
 										<key>history</key>
 										<array>
 											<string>FAA988C613A3C507007A3D93</string>
@@ -620,10 +580,9 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/MaskingPlugins.xcodeproj</string>
 		<string>FAA9894713A44583007A3D93</string>
-		<string>FAA9898413A447F1007A3D93</string>
 		<string>FAA988B613A3C232007A3D93</string>
+		<string>/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/MaskingPlugins.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>306 204 788 504 0 0 1280 778 </string>

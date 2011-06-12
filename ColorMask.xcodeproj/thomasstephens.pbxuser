@@ -156,6 +156,20 @@
 			FAA98A7813A4672A007A3D93 /* PBXTextBookmark */ = FAA98A7813A4672A007A3D93 /* PBXTextBookmark */;
 			FAA98A7C13A468AE007A3D93 /* PBXTextBookmark */ = FAA98A7C13A468AE007A3D93 /* PBXTextBookmark */;
 			FAA98A7D13A468AE007A3D93 /* PBXTextBookmark */ = FAA98A7D13A468AE007A3D93 /* PBXTextBookmark */;
+			FAA98A8213A4736E007A3D93 /* PBXTextBookmark */ = FAA98A8213A4736E007A3D93 /* PBXTextBookmark */;
+			FAA98A8313A4736E007A3D93 /* PBXTextBookmark */ = FAA98A8313A4736E007A3D93 /* PBXTextBookmark */;
+			FAA98A8413A473E9007A3D93 /* PBXTextBookmark */ = FAA98A8413A473E9007A3D93 /* PBXTextBookmark */;
+			FAA98A8513A473E9007A3D93 /* PBXTextBookmark */ = FAA98A8513A473E9007A3D93 /* PBXTextBookmark */;
+			FAA98A8613A47422007A3D93 /* PBXTextBookmark */ = FAA98A8613A47422007A3D93 /* PBXTextBookmark */;
+			FAA98A8713A47422007A3D93 /* PBXTextBookmark */ = FAA98A8713A47422007A3D93 /* PBXTextBookmark */;
+			FAA98A8813A47533007A3D93 /* PBXTextBookmark */ = FAA98A8813A47533007A3D93 /* PBXTextBookmark */;
+			FAA98A8913A47533007A3D93 /* PBXTextBookmark */ = FAA98A8913A47533007A3D93 /* PBXTextBookmark */;
+			FAA98A8F13A475B0007A3D93 /* PBXTextBookmark */ = FAA98A8F13A475B0007A3D93 /* PBXTextBookmark */;
+			FAA98A9013A475B0007A3D93 /* PBXTextBookmark */ = FAA98A9013A475B0007A3D93 /* PBXTextBookmark */;
+			FAA98A9413A475D1007A3D93 /* PBXTextBookmark */ = FAA98A9413A475D1007A3D93 /* PBXTextBookmark */;
+			FAA98A9513A475D1007A3D93 /* PBXTextBookmark */ = FAA98A9513A475D1007A3D93 /* PBXTextBookmark */;
+			FAA98A9713A4763D007A3D93 /* PBXTextBookmark */ = FAA98A9713A4763D007A3D93 /* PBXTextBookmark */;
+			FAA98A9813A4763D007A3D93 /* PBXTextBookmark */ = FAA98A9813A4763D007A3D93 /* PBXTextBookmark */;
 			FAC05FD2135FCE560028CBDD = FAC05FD2135FCE560028CBDD /* PBXTextBookmark */;
 			FAE4487E139C79EE001A8051 = FAE4487E139C79EE001A8051 /* PBXTextBookmark */;
 			FAE44884139C79EE001A8051 = FAE44884139C79EE001A8051 /* PBXTextBookmark */;
@@ -366,9 +380,9 @@
 	};
 	FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {901, 3575}}";
-			sepNavSelRange = "{10266, 0}";
-			sepNavVisRange = "{9396, 1192}";
+			sepNavIntBoundsRect = "{{0, 0}, {922, 3497}}";
+			sepNavSelRange = "{7433, 0}";
+			sepNavVisRange = "{8317, 1753}";
 			sepNavWindowFrame = "{{213, 170}, {779, 608}}";
 		};
 	};
@@ -986,7 +1000,7 @@
 		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
 		name = "ColorMaskItems.py: 190";
 		rLen = 0;
-		rLoc = 6597;
+		rLoc = 6421;
 		rType = 0;
 		vrLen = 2151;
 		vrLoc = 5125;
@@ -1159,7 +1173,7 @@
 		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
 		name = "ColorMaskItems.py: 190";
 		rLen = 0;
-		rLoc = 6653;
+		rLoc = 6485;
 		rType = 0;
 		vrLen = 2199;
 		vrLoc = 4849;
@@ -1505,7 +1519,7 @@
 		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
 		name = "ColorMaskItems.py: 191";
 		rLen = 0;
-		rLoc = 6653;
+		rLoc = 6485;
 		rType = 0;
 		vrLen = 2235;
 		vrLoc = 4728;
@@ -1678,7 +1692,7 @@
 		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
 		name = "ColorMaskItems.py: 191";
 		rLen = 0;
-		rLoc = 6653;
+		rLoc = 6485;
 		rType = 0;
 		vrLen = 2128;
 		vrLoc = 4728;
@@ -1851,7 +1865,7 @@
 		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
 		name = "ColorMaskItems.py: 191";
 		rLen = 0;
-		rLoc = 6653;
+		rLoc = 6485;
 		rType = 0;
 		vrLen = 2140;
 		vrLoc = 4728;
@@ -2024,7 +2038,7 @@
 		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
 		name = "ColorMaskItems.py: 191";
 		rLen = 0;
-		rLoc = 6653;
+		rLoc = 6485;
 		rType = 0;
 		vrLen = 2218;
 		vrLoc = 5271;
@@ -2201,7 +2215,7 @@
 		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
 		name = "ColorMaskItems.py: 186";
 		rLen = 0;
-		rLoc = 6311;
+		rLoc = 6313;
 		rType = 0;
 		vrLen = 2141;
 		vrLoc = 5375;
@@ -2893,7 +2907,7 @@
 		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
 		name = "ColorMaskItems.py: 232";
 		rLen = 0;
-		rLoc = 9837;
+		rLoc = 9955;
 		rType = 0;
 		vrLen = 1498;
 		vrLoc = 7207;
@@ -3066,7 +3080,7 @@
 		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
 		name = "ColorMaskItems.py: 231";
 		rLen = 0;
-		rLoc = 9837;
+		rLoc = 9955;
 		rType = 0;
 		vrLen = 1432;
 		vrLoc = 7207;
@@ -3239,7 +3253,7 @@
 		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
 		name = "ColorMaskItems.py: 232";
 		rLen = 0;
-		rLoc = 9837;
+		rLoc = 9955;
 		rType = 0;
 		vrLen = 1466;
 		vrLoc = 7207;
@@ -3412,7 +3426,7 @@
 		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
 		name = "ColorMaskItems.py: 232";
 		rLen = 0;
-		rLoc = 9837;
+		rLoc = 9955;
 		rType = 0;
 		vrLen = 1360;
 		vrLoc = 7417;
@@ -3941,7 +3955,7 @@
 		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
 		name = "ColorMaskItems.py: 210";
 		rLen = 0;
-		rLoc = 7619;
+		rLoc = 7624;
 		rType = 0;
 		vrLen = 2167;
 		vrLoc = 6723;
@@ -3951,7 +3965,7 @@
 		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
 		name = "ColorMaskItems.py: 268";
 		rLen = 0;
-		rLoc = 10486;
+		rLoc = 10743;
 		rType = 0;
 		vrLen = 1141;
 		vrLoc = 9637;
@@ -3971,7 +3985,7 @@
 		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
 		name = "ColorMaskItems.py: 211";
 		rLen = 0;
-		rLoc = 7574;
+		rLoc = 7624;
 		rType = 0;
 		vrLen = 2165;
 		vrLoc = 4012;
@@ -3991,7 +4005,7 @@
 		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
 		name = "ColorMaskItems.py: 228";
 		rLen = 0;
-		rLoc = 8829;
+		rLoc = 8947;
 		rType = 0;
 		vrLen = 2101;
 		vrLoc = 7096;
@@ -4011,7 +4025,7 @@
 		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
 		name = "ColorMaskItems.py: 200";
 		rLen = 0;
-		rLoc = 6977;
+		rLoc = 6679;
 		rType = 0;
 		vrLen = 2078;
 		vrLoc = 6050;
@@ -4031,7 +4045,7 @@
 		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
 		name = "ColorMaskItems.py: 194";
 		rLen = 0;
-		rLoc = 6645;
+		rLoc = 6421;
 		rType = 0;
 		vrLen = 2097;
 		vrLoc = 6177;
@@ -4216,7 +4230,7 @@
 		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
 		name = "ColorMaskItems.py: 194";
 		rLen = 0;
-		rLoc = 6645;
+		rLoc = 6421;
 		rType = 0;
 		vrLen = 2190;
 		vrLoc = 7021;
@@ -4226,7 +4240,7 @@
 		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
 		name = "ColorMaskItems.py: 230";
 		rLen = 0;
-		rLoc = 8782;
+		rLoc = 8884;
 		rType = 0;
 		vrLen = 2180;
 		vrLoc = 7152;
@@ -4246,7 +4260,7 @@
 		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
 		name = "ColorMaskItems.py: 230";
 		rLen = 0;
-		rLoc = 8782;
+		rLoc = 8884;
 		rType = 0;
 		vrLen = 2061;
 		vrLoc = 7152;
@@ -4266,7 +4280,7 @@
 		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
 		name = "ColorMaskItems.py: 231";
 		rLen = 0;
-		rLoc = 8782;
+		rLoc = 8884;
 		rType = 0;
 		vrLen = 2039;
 		vrLoc = 7152;
@@ -4286,7 +4300,7 @@
 		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
 		name = "ColorMaskItems.py: 218";
 		rLen = 0;
-		rLoc = 7858;
+		rLoc = 7822;
 		rType = 0;
 		vrLen = 2153;
 		vrLoc = 7021;
@@ -4306,7 +4320,7 @@
 		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
 		name = "ColorMaskItems.py: 216";
 		rLen = 0;
-		rLoc = 7858;
+		rLoc = 7822;
 		rType = 0;
 		vrLen = 2150;
 		vrLoc = 7021;
@@ -4326,7 +4340,7 @@
 		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
 		name = "ColorMaskItems.py: 218";
 		rLen = 0;
-		rLoc = 7858;
+		rLoc = 7822;
 		rType = 0;
 		vrLen = 2154;
 		vrLoc = 7021;
@@ -4346,7 +4360,7 @@
 		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
 		name = "ColorMaskItems.py: 218";
 		rLen = 0;
-		rLoc = 7858;
+		rLoc = 7822;
 		rType = 0;
 		vrLen = 2159;
 		vrLoc = 7021;
@@ -4366,7 +4380,7 @@
 		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
 		name = "ColorMaskItems.py: 211";
 		rLen = 0;
-		rLoc = 7555;
+		rLoc = 7624;
 		rType = 0;
 		vrLen = 2157;
 		vrLoc = 7021;
@@ -4386,7 +4400,7 @@
 		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
 		name = "ColorMaskItems.py: 236";
 		rLen = 0;
-		rLoc = 8983;
+		rLoc = 9101;
 		rType = 0;
 		vrLen = 2016;
 		vrLoc = 7835;
@@ -4406,7 +4420,7 @@
 		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
 		name = "ColorMaskItems.py: 270";
 		rLen = 0;
-		rLoc = 10266;
+		rLoc = 10384;
 		rType = 0;
 		vrLen = 1192;
 		vrLoc = 9396;
@@ -4426,7 +4440,7 @@
 		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
 		name = "ColorMaskItems.py: 270";
 		rLen = 0;
-		rLoc = 10266;
+		rLoc = 10384;
 		rType = 0;
 		vrLen = 1140;
 		vrLoc = 9396;
@@ -4446,10 +4460,150 @@
 		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
 		name = "ColorMaskItems.py: 270";
 		rLen = 0;
-		rLoc = 10266;
+		rLoc = 10384;
 		rType = 0;
 		vrLen = 1192;
 		vrLoc = 9396;
+	};
+	FAA98A8213A4736E007A3D93 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
+		name = "ColorMaskItems.py: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 144;
+		vrLoc = 0;
+	};
+	FAA98A8313A4736E007A3D93 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
+		name = "ColorMaskItems.py: 218";
+		rLen = 0;
+		rLoc = 7715;
+		rType = 0;
+		vrLen = 2399;
+		vrLoc = 6917;
+	};
+	FAA98A8413A473E9007A3D93 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
+		name = "ColorMaskItems.py: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 144;
+		vrLoc = 0;
+	};
+	FAA98A8513A473E9007A3D93 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
+		name = "ColorMaskItems.py: 235";
+		rLen = 0;
+		rLoc = 8940;
+		rType = 0;
+		vrLen = 2580;
+		vrLoc = 6659;
+	};
+	FAA98A8613A47422007A3D93 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
+		name = "ColorMaskItems.py: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 144;
+		vrLoc = 0;
+	};
+	FAA98A8713A47422007A3D93 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
+		name = "ColorMaskItems.py: 216";
+		rLen = 0;
+		rLoc = 7589;
+		rType = 0;
+		vrLen = 2494;
+		vrLoc = 6368;
+	};
+	FAA98A8813A47533007A3D93 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
+		name = "ColorMaskItems.py: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 144;
+		vrLoc = 0;
+	};
+	FAA98A8913A47533007A3D93 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
+		name = "ColorMaskItems.py: 279";
+		rLen = 0;
+		rLoc = 10697;
+		rType = 0;
+		vrLen = 1097;
+		vrLoc = 9733;
+	};
+	FAA98A8F13A475B0007A3D93 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
+		name = "ColorMaskItems.py: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 143;
+		vrLoc = 0;
+	};
+	FAA98A9013A475B0007A3D93 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
+		name = "ColorMaskItems.py: 202";
+		rLen = 0;
+		rLoc = 6923;
+		rType = 0;
+		vrLen = 1790;
+		vrLoc = 5850;
+	};
+	FAA98A9413A475D1007A3D93 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
+		name = "ColorMaskItems.py: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 143;
+		vrLoc = 0;
+	};
+	FAA98A9513A475D1007A3D93 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
+		name = "ColorMaskItems.py: 210";
+		rLen = 0;
+		rLoc = 7433;
+		rType = 0;
+		vrLen = 2028;
+		vrLoc = 6078;
+	};
+	FAA98A9713A4763D007A3D93 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
+		name = "ColorMaskItems.py: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 144;
+		vrLoc = 0;
+	};
+	FAA98A9813A4763D007A3D93 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
+		name = "ColorMaskItems.py: 210";
+		rLen = 0;
+		rLoc = 7433;
+		rType = 0;
+		vrLen = 1753;
+		vrLoc = 8317;
 	};
 	FAC05FD2135FCE560028CBDD /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;

@@ -102,59 +102,18 @@
 			PBXWorkspaceStateSaveDate = 329532714;
 		};
 		perUserProjectItems = {
-			FAA988C613A3C507007A3D93 = FAA988C613A3C507007A3D93 /* PBXTextBookmark */;
-			FAA988C713A3C507007A3D93 = FAA988C713A3C507007A3D93 /* PBXTextBookmark */;
-			FAA988C813A3C507007A3D93 = FAA988C813A3C507007A3D93 /* PBXBookmark */;
-			FAA988D113A3C8C6007A3D93 = FAA988D113A3C8C6007A3D93 /* PBXTextBookmark */;
-			FAA9895513A44678007A3D93 /* PBXBookmark */ = FAA9895513A44678007A3D93 /* PBXBookmark */;
-			FAA9895813A4469B007A3D93 /* XCBuildMessageTextBookmark */ = FAA9895813A4469B007A3D93 /* XCBuildMessageTextBookmark */;
+			FAA988C613A3C507007A3D93 /* PBXTextBookmark */ = FAA988C613A3C507007A3D93 /* PBXTextBookmark */;
+			FAA988C713A3C507007A3D93 /* PBXTextBookmark */ = FAA988C713A3C507007A3D93 /* PBXTextBookmark */;
 			FAA9895D13A446AF007A3D93 /* PBXTextBookmark */ = FAA9895D13A446AF007A3D93 /* PBXTextBookmark */;
 			FAA9895E13A446AF007A3D93 /* PBXTextBookmark */ = FAA9895E13A446AF007A3D93 /* PBXTextBookmark */;
-			FAA9896013A446AF007A3D93 /* PBXTextBookmark */ = FAA9896013A446AF007A3D93 /* PBXTextBookmark */;
-			FAA9896113A446AF007A3D93 /* PBXTextBookmark */ = FAA9896113A446AF007A3D93 /* PBXTextBookmark */;
-			FAA9896513A446AF007A3D93 /* PBXTextBookmark */ = FAA9896513A446AF007A3D93 /* PBXTextBookmark */;
-			FAA9896813A446AF007A3D93 /* PBXTextBookmark */ = FAA9896813A446AF007A3D93 /* PBXTextBookmark */;
-			FAA9897813A44774007A3D93 /* PBXBookmark */ = FAA9897813A44774007A3D93 /* PBXBookmark */;
-			FAA9898113A447F1007A3D93 /* PBXTextBookmark */ = FAA9898113A447F1007A3D93 /* PBXTextBookmark */;
-			FAA9898213A447F1007A3D93 /* PBXTextBookmark */ = FAA9898213A447F1007A3D93 /* PBXTextBookmark */;
-			FAA9898313A447F1007A3D93 /* PBXTextBookmark */ = FAA9898313A447F1007A3D93 /* PBXTextBookmark */;
-			FAA9898613A447F1007A3D93 /* PlistBookmark */ = FAA9898613A447F1007A3D93 /* PlistBookmark */;
-			FAA9898713A447F1007A3D93 /* PBXTextBookmark */ = FAA9898713A447F1007A3D93 /* PBXTextBookmark */;
-			FAA9898813A447F1007A3D93 /* PBXTextBookmark */ = FAA9898813A447F1007A3D93 /* PBXTextBookmark */;
 			FAA989A413A44BA0007A3D93 /* PBXTextBookmark */ = FAA989A413A44BA0007A3D93 /* PBXTextBookmark */;
-			FAA989A513A44BA0007A3D93 /* PBXTextBookmark */ = FAA989A513A44BA0007A3D93 /* PBXTextBookmark */;
-			FAA989A613A44BA0007A3D93 /* PBXTextBookmark */ = FAA989A613A44BA0007A3D93 /* PBXTextBookmark */;
-			FAA989A713A44BA0007A3D93 /* PBXTextBookmark */ = FAA989A713A44BA0007A3D93 /* PBXTextBookmark */;
-			FAA989A813A44BA0007A3D93 /* PBXTextBookmark */ = FAA989A813A44BA0007A3D93 /* PBXTextBookmark */;
-			FAA989A913A44BA0007A3D93 /* PlistBookmark */ = FAA989A913A44BA0007A3D93 /* PlistBookmark */;
-			FAA989B413A44CEE007A3D93 /* PBXTextBookmark */ = FAA989B413A44CEE007A3D93 /* PBXTextBookmark */;
-			FAA989B513A44CEE007A3D93 /* PBXTextBookmark */ = FAA989B513A44CEE007A3D93 /* PBXTextBookmark */;
-			FAA989B613A44CEE007A3D93 /* PBXTextBookmark */ = FAA989B613A44CEE007A3D93 /* PBXTextBookmark */;
-			FAA989B713A44CEE007A3D93 /* PlistBookmark */ = FAA989B713A44CEE007A3D93 /* PlistBookmark */;
-			FAA989CD13A45015007A3D93 /* PBXTextBookmark */ = FAA989CD13A45015007A3D93 /* PBXTextBookmark */;
-			FAA989CE13A45015007A3D93 /* PBXTextBookmark */ = FAA989CE13A45015007A3D93 /* PBXTextBookmark */;
 			FAA989CF13A45015007A3D93 /* PBXTextBookmark */ = FAA989CF13A45015007A3D93 /* PBXTextBookmark */;
-			FAA989D013A45015007A3D93 /* PBXTextBookmark */ = FAA989D013A45015007A3D93 /* PBXTextBookmark */;
-			FAA989D113A45015007A3D93 /* PBXTextBookmark */ = FAA989D113A45015007A3D93 /* PBXTextBookmark */;
-			FAA989D213A45015007A3D93 /* PlistBookmark */ = FAA989D213A45015007A3D93 /* PlistBookmark */;
-			FAA989DB13A451D5007A3D93 /* PBXTextBookmark */ = FAA989DB13A451D5007A3D93 /* PBXTextBookmark */;
-			FAA989DC13A451D5007A3D93 /* PBXTextBookmark */ = FAA989DC13A451D5007A3D93 /* PBXTextBookmark */;
-			FAA989DD13A451D5007A3D93 /* PlistBookmark */ = FAA989DD13A451D5007A3D93 /* PlistBookmark */;
-			FAA989E413A452E4007A3D93 /* PBXTextBookmark */ = FAA989E413A452E4007A3D93 /* PBXTextBookmark */;
-			FAA989E513A452E4007A3D93 /* PBXTextBookmark */ = FAA989E513A452E4007A3D93 /* PBXTextBookmark */;
-			FAA989E613A452E4007A3D93 /* PBXTextBookmark */ = FAA989E613A452E4007A3D93 /* PBXTextBookmark */;
-			FAA989E713A452E4007A3D93 /* PBXTextBookmark */ = FAA989E713A452E4007A3D93 /* PBXTextBookmark */;
-			FAA989E813A452E4007A3D93 /* PlistBookmark */ = FAA989E813A452E4007A3D93 /* PlistBookmark */;
 			FAA98A0313A4584F007A3D93 /* PBXTextBookmark */ = FAA98A0313A4584F007A3D93 /* PBXTextBookmark */;
 			FAA98A0413A4584F007A3D93 /* PBXTextBookmark */ = FAA98A0413A4584F007A3D93 /* PBXTextBookmark */;
-			FAA98A0513A4584F007A3D93 /* PBXTextBookmark */ = FAA98A0513A4584F007A3D93 /* PBXTextBookmark */;
 			FAA98A0613A4584F007A3D93 /* PBXTextBookmark */ = FAA98A0613A4584F007A3D93 /* PBXTextBookmark */;
 			FAA98A0713A4584F007A3D93 /* PBXTextBookmark */ = FAA98A0713A4584F007A3D93 /* PBXTextBookmark */;
-			FAA98A0813A4584F007A3D93 /* PBXTextBookmark */ = FAA98A0813A4584F007A3D93 /* PBXTextBookmark */;
-			FAA98A0913A4584F007A3D93 /* PlistBookmark */ = FAA98A0913A4584F007A3D93 /* PlistBookmark */;
-			FAA98A1813A45D30007A3D93 /* PBXTextBookmark */ = FAA98A1813A45D30007A3D93 /* PBXTextBookmark */;
-			FAA98A1913A45D30007A3D93 /* PlistBookmark */ = FAA98A1913A45D30007A3D93 /* PlistBookmark */;
-			FAA98A1A13A45D30007A3D93 /* PBXTextBookmark */ = FAA98A1A13A45D30007A3D93 /* PBXTextBookmark */;
+			FAA98A8013A469D3007A3D93 /* PBXTextBookmark */ = FAA98A8013A469D3007A3D93 /* PBXTextBookmark */;
+			FAA98A8113A469D3007A3D93 /* PBXTextBookmark */ = FAA98A8113A469D3007A3D93 /* PBXTextBookmark */;
 		};
 		sourceControlManager = FA24CEEB139B2B40009F0B92 /* Source Control */;
 		userBuildSettings = {
@@ -204,20 +163,6 @@
 		vrLen = 332;
 		vrLoc = 0;
 	};
-	FAA988C813A3C507007A3D93 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = FAE44768139BE4D6001A8051 /* ColorDistance.cikernel */;
-	};
-	FAA988D113A3C8C6007A3D93 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FAE44768139BE4D6001A8051 /* ColorDistance.cikernel */;
-		name = "ColorDistance.cikernel: 16";
-		rLen = 0;
-		rLoc = 631;
-		rType = 0;
-		vrLen = 844;
-		vrLoc = 3;
-	};
 	FAA9894113A44540007A3D93 /* MaskingFilters.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {751, 507}}";
@@ -228,23 +173,11 @@
 	};
 	FAA9894213A44540007A3D93 /* MaskingFilters.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1104, 2665}}";
-			sepNavSelRange = "{174, 0}";
-			sepNavVisRange = "{0, 1109}";
+			sepNavIntBoundsRect = "{{0, 0}, {1104, 2652}}";
+			sepNavSelRange = "{151, 0}";
+			sepNavVisRange = "{88, 309}";
+			sepNavWindowFrame = "{{66, 144}, {810, 607}}";
 		};
-	};
-	FAA9895513A44678007A3D93 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = FAA9894113A44540007A3D93 /* MaskingFilters.h */;
-	};
-	FAA9895813A4469B007A3D93 /* XCBuildMessageTextBookmark */ = {
-		isa = PBXTextBookmark;
-		comments = "'_ColorMaskFilterFilterKernel' undeclared (first use in this function)";
-		fRef = FAA9894213A44540007A3D93 /* MaskingFilters.m */;
-		fallbackIsa = XCBuildMessageTextBookmark;
-		rLen = 1;
-		rLoc = 18;
-		rType = 1;
 	};
 	FAA9895D13A446AF007A3D93 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -272,114 +205,6 @@
 		path = /Users/thomasstephens/Documents/ColorMaskFilter/ColorMaskFilterFilter.h;
 		sourceTree = "<absolute>";
 	};
-	FAA9896013A446AF007A3D93 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FAA9894113A44540007A3D93 /* MaskingFilters.h */;
-		name = "ColorDistance.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 368;
-		vrLoc = 0;
-	};
-	FAA9896113A446AF007A3D93 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FAA9894113A44540007A3D93 /* MaskingFilters.h */;
-		name = "ColorDistance.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 368;
-		vrLoc = 0;
-	};
-	FAA9896513A446AF007A3D93 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FAA9894213A44540007A3D93 /* MaskingFilters.m */;
-		name = "ColorDistance.m: 19";
-		rLen = 0;
-		rLoc = 382;
-		rType = 0;
-		vrLen = 1108;
-		vrLoc = 0;
-	};
-	FAA9896813A446AF007A3D93 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FAA9894113A44540007A3D93 /* MaskingFilters.h */;
-		name = "ColorDistance.h: 20";
-		rLen = 0;
-		rLoc = 768;
-		rType = 0;
-		vrLen = 373;
-		vrLoc = 0;
-	};
-	FAA9897813A44774007A3D93 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = 01EF2743065982E90035FD02 /* Description.plist */;
-	};
-	FAA9898113A447F1007A3D93 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FAA9894113A44540007A3D93 /* MaskingFilters.h */;
-		name = "ColorDistance.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 368;
-		vrLoc = 0;
-	};
-	FAA9898213A447F1007A3D93 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 01EF28710659A5A50035FD02 /* English */;
-		name = "Description.strings: 8";
-		rLen = 0;
-		rLoc = 1215;
-		rType = 0;
-		vrLen = 1253;
-		vrLoc = 0;
-	};
-	FAA9898313A447F1007A3D93 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 01EF28710659A5A50035FD02 /* English */;
-		name = "Description.strings: 8";
-		rLen = 0;
-		rLoc = 1215;
-		rType = 0;
-		vrLen = 1253;
-		vrLoc = 0;
-	};
-	FAA9898613A447F1007A3D93 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 01EF2743065982E90035FD02 /* Description.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-			CIPlugInFilterList,
-			ColorDistance,
-			CIHasCustomInterface,
-		);
-		name = /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/Description.plist;
-		rLen = 0;
-		rLoc = 9223372036854775807;
-	};
-	FAA9898713A447F1007A3D93 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FAA9894213A44540007A3D93 /* MaskingFilters.m */;
-		name = "ColorDistance.m: 19";
-		rLen = 0;
-		rLoc = 382;
-		rType = 0;
-		vrLen = 1108;
-		vrLoc = 0;
-	};
-	FAA9898813A447F1007A3D93 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FAA9894113A44540007A3D93 /* MaskingFilters.h */;
-		name = "ColorDistance.h: 20";
-		rLen = 0;
-		rLoc = 768;
-		rType = 0;
-		vrLen = 373;
-		vrLoc = 0;
-	};
 	FAA989A413A44BA0007A3D93 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 01EF28710659A5A50035FD02 /* English */;
@@ -388,124 +213,6 @@
 		rLoc = 1215;
 		rType = 0;
 		vrLen = 1253;
-		vrLoc = 0;
-	};
-	FAA989A513A44BA0007A3D93 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FAA9894113A44540007A3D93 /* MaskingFilters.h */;
-		name = "ColorDistance.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 368;
-		vrLoc = 0;
-	};
-	FAA989A613A44BA0007A3D93 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FAA9894113A44540007A3D93 /* MaskingFilters.h */;
-		name = "ColorDistance.h: 20";
-		rLen = 0;
-		rLoc = 768;
-		rType = 0;
-		vrLen = 373;
-		vrLoc = 0;
-	};
-	FAA989A713A44BA0007A3D93 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FAA9894213A44540007A3D93 /* MaskingFilters.m */;
-		name = "ColorDistance.m: 50";
-		rLen = 0;
-		rLoc = 1798;
-		rType = 0;
-		vrLen = 1583;
-		vrLoc = 294;
-	};
-	FAA989A813A44BA0007A3D93 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FAA9894213A44540007A3D93 /* MaskingFilters.m */;
-		name = "ColorDistance.m: 62";
-		rLen = 0;
-		rLoc = 2169;
-		rType = 0;
-		vrLen = 1422;
-		vrLoc = 878;
-	};
-	FAA989A913A44BA0007A3D93 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 01EF2743065982E90035FD02 /* Description.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-			CIPlugInFilterList,
-			ColorDistance,
-			CIHasCustomInterface,
-		);
-		name = /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/Description.plist;
-		rLen = 0;
-		rLoc = 9223372036854775807;
-	};
-	FAA989B413A44CEE007A3D93 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FAA9894113A44540007A3D93 /* MaskingFilters.h */;
-		name = "ColorDistance.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 368;
-		vrLoc = 0;
-	};
-	FAA989B513A44CEE007A3D93 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FAA9894213A44540007A3D93 /* MaskingFilters.m */;
-		name = "ColorDistance.m: 62";
-		rLen = 0;
-		rLoc = 2169;
-		rType = 0;
-		vrLen = 1643;
-		vrLoc = 295;
-	};
-	FAA989B613A44CEE007A3D93 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FAA9894113A44540007A3D93 /* MaskingFilters.h */;
-		name = "ColorDistance.h: 20";
-		rLen = 0;
-		rLoc = 768;
-		rType = 0;
-		vrLen = 373;
-		vrLoc = 0;
-	};
-	FAA989B713A44CEE007A3D93 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 01EF2743065982E90035FD02 /* Description.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-			CIPlugInFilterList,
-			ColorDistance,
-			CIHasCustomInterface,
-		);
-		name = /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/Description.plist;
-		rLen = 0;
-		rLoc = 9223372036854775807;
-	};
-	FAA989CD13A45015007A3D93 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FAA9894113A44540007A3D93 /* MaskingFilters.h */;
-		name = "ColorDistance.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 350;
-		vrLoc = 23;
-	};
-	FAA989CE13A45015007A3D93 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FAA9894113A44540007A3D93 /* MaskingFilters.h */;
-		name = "ColorDistance.h: 20";
-		rLen = 0;
-		rLoc = 768;
-		rType = 0;
-		vrLen = 373;
 		vrLoc = 0;
 	};
 	FAA989CF13A45015007A3D93 /* PBXTextBookmark */ = {
@@ -517,128 +224,6 @@
 		rType = 0;
 		vrLen = 889;
 		vrLoc = 0;
-	};
-	FAA989D013A45015007A3D93 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FAA9894213A44540007A3D93 /* MaskingFilters.m */;
-		name = "ColorDistance.m: 64";
-		rLen = 0;
-		rLoc = 2200;
-		rType = 0;
-		vrLen = 1422;
-		vrLoc = 878;
-	};
-	FAA989D113A45015007A3D93 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FAA9894213A44540007A3D93 /* MaskingFilters.m */;
-		name = "ColorDistance.m: 36";
-		rLen = 0;
-		rLoc = 1027;
-		rType = 0;
-		vrLen = 1422;
-		vrLoc = 878;
-	};
-	FAA989D213A45015007A3D93 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 01EF2743065982E90035FD02 /* Description.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-			CIPlugInFilterList,
-			ColorDistance,
-			CIHasCustomInterface,
-		);
-		name = /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/Description.plist;
-		rLen = 0;
-		rLoc = 9223372036854775807;
-	};
-	FAA989DB13A451D5007A3D93 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FAA9894113A44540007A3D93 /* MaskingFilters.h */;
-		name = "ColorDistance.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 350;
-		vrLoc = 23;
-	};
-	FAA989DC13A451D5007A3D93 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FAA9894213A44540007A3D93 /* MaskingFilters.m */;
-		name = "ColorDistance.m: 36";
-		rLen = 0;
-		rLoc = 1027;
-		rType = 0;
-		vrLen = 1563;
-		vrLoc = 535;
-	};
-	FAA989DD13A451D5007A3D93 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 01EF2743065982E90035FD02 /* Description.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-			CIPlugInFilterList,
-			ColorDistance,
-			CIHasCustomInterface,
-		);
-		name = /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/Description.plist;
-		rLen = 0;
-		rLoc = 9223372036854775807;
-	};
-	FAA989E413A452E4007A3D93 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FAA9894113A44540007A3D93 /* MaskingFilters.h */;
-		name = "ColorDistance.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 365;
-		vrLoc = 23;
-	};
-	FAA989E513A452E4007A3D93 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FAA9894113A44540007A3D93 /* MaskingFilters.h */;
-		name = "ColorDistance.h: 18";
-		rLen = 0;
-		rLoc = 373;
-		rType = 0;
-		vrLen = 388;
-		vrLoc = 0;
-	};
-	FAA989E613A452E4007A3D93 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FAA9894213A44540007A3D93 /* MaskingFilters.m */;
-		name = "ColorDistance.m: 64";
-		rLen = 0;
-		rLoc = 2271;
-		rType = 0;
-		vrLen = 1452;
-		vrLoc = 878;
-	};
-	FAA989E713A452E4007A3D93 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FAA9894213A44540007A3D93 /* MaskingFilters.m */;
-		name = "ColorDistance.m: 64";
-		rLen = 0;
-		rLoc = 2271;
-		rType = 0;
-		vrLen = 1643;
-		vrLoc = 341;
-	};
-	FAA989E813A452E4007A3D93 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 01EF2743065982E90035FD02 /* Description.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-			CIPlugInFilterList,
-			ColorDistance,
-			CIHasCustomInterface,
-		);
-		name = /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/Description.plist;
-		rLen = 0;
-		rLoc = 9223372036854775807;
 	};
 	FAA98A0313A4584F007A3D93 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -660,16 +245,6 @@
 		vrLen = 1013;
 		vrLoc = 971;
 	};
-	FAA98A0513A4584F007A3D93 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FAA9894213A44540007A3D93 /* MaskingFilters.m */;
-		name = "MaskingFilters.m: 64";
-		rLen = 0;
-		rLoc = 2271;
-		rType = 0;
-		vrLen = 959;
-		vrLoc = 1028;
-	};
 	FAA98A0613A4584F007A3D93 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = FAA9894113A44540007A3D93 /* MaskingFilters.h */;
@@ -690,31 +265,7 @@
 		vrLen = 1643;
 		vrLoc = 341;
 	};
-	FAA98A0813A4584F007A3D93 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FAA9894213A44540007A3D93 /* MaskingFilters.m */;
-		name = "MaskingFilters.m: 9";
-		rLen = 0;
-		rLoc = 174;
-		rType = 0;
-		vrLen = 1109;
-		vrLoc = 0;
-	};
-	FAA98A0913A4584F007A3D93 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 01EF2743065982E90035FD02 /* Description.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-			CIPlugInFilterList,
-			ColorDistance,
-			CIHasCustomInterface,
-		);
-		name = /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/Description.plist;
-		rLen = 0;
-		rLoc = 9223372036854775807;
-	};
-	FAA98A1813A45D30007A3D93 /* PBXTextBookmark */ = {
+	FAA98A8013A469D3007A3D93 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = FAA9894213A44540007A3D93 /* MaskingFilters.m */;
 		name = "MaskingFilters.m: 64";
@@ -724,22 +275,7 @@
 		vrLen = 959;
 		vrLoc = 1028;
 	};
-	FAA98A1913A45D30007A3D93 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 01EF2743065982E90035FD02 /* Description.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-			CIPlugInFilterList,
-			LuminanceDistance,
-			CIFilterAttributes,
-			CIAttributeFilterCategories,
-		);
-		name = /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/Description.plist;
-		rLen = 0;
-		rLoc = 9223372036854775807;
-	};
-	FAA98A1A13A45D30007A3D93 /* PBXTextBookmark */ = {
+	FAA98A8113A469D3007A3D93 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = FAA9894213A44540007A3D93 /* MaskingFilters.m */;
 		name = "MaskingFilters.m: 9";
