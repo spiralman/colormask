@@ -39,17 +39,12 @@ class ItemWithImage(NSObject):
     
     def selected(self):
         if self.doc.image != None:
-            print 'selected', self.layer, self.filters
             self.doc.image_view.setOverlay_forType_(self.layer, IKOverlayTypeImage)
     
     def unselected(self):
         pass
     
     def updateImage(self):
-        print 'update', self.layer, self.filters
-        if self.doc.image != None:
-            self.layer.setFrame_(self.doc.image_view.convertImageRectToViewRect_(self.doc.image.extent()))
-            print 'frame',self.layer.frame()
         self.layer.setBackgroundFilters_(self.filters)
         self.layer.setNeedsDisplay()
         
@@ -144,6 +139,7 @@ class MaskItem(ItemWithImage):
     selection_menu = objc.IBOutlet()
     color_picker = objc.IBOutlet()
     chroma_slider = objc.IBOutlet()
+    luminance_slider = objc.IBOutlet()
     falloff_slider = objc.IBOutlet()
     invert = objc.IBOutlet()
     
@@ -159,8 +155,12 @@ class MaskItem(ItemWithImage):
         
         self.colorTransformer = NSValueTransformer.valueTransformerForName_('CIColorToNSColorTransformer')
         
-        self.mask_filter = self.createColorFilterWithCurrentSettings()
+        self.color_filter = self.createColorFilterWithCurrentSettings()
         self.luminance_filter = self.createLuminanceFilterWithCurrentSettings()
+        self.perceptual_filter = self.createPerceptualFilterWithCurrentSettings()
+        
+        self.selection_filters = [self.color_filter, self.luminance_filter, self.perceptual_filter]
+        
         self.inverter = CIFilter.filterWithName_keysAndValues_('CIColorInvert',
             'name','inverter')
         
@@ -168,11 +168,14 @@ class MaskItem(ItemWithImage):
         self.mask.addObserver_forKeyPath_options_context_(self, 'selectionMode', 0, None)
         self.mask.addObserver_forKeyPath_options_context_(self, 'color', 0, None)
         self.mask.addObserver_forKeyPath_options_context_(self, 'chromaTolerance', 0, None)
+        self.mask.addObserver_forKeyPath_options_context_(self, 'luminanceTolerance', 0, None)
+        self.mask.addObserver_forKeyPath_options_context_(self, 'falloff', 0, None)
         self.mask.addObserver_forKeyPath_options_context_(self, 'invert', 0, None)
         
         self.name_input.bind_toObject_withKeyPath_options_('value', self.mask, 'name', None)
-        self.selection_menu.bind_toObject_withKeyPath_options_('tag', self.mask, 'selectionMode', None)
         self.chroma_slider.bind_toObject_withKeyPath_options_('value', self.mask, 'chromaTolerance', None)
+        self.luminance_slider.bind_toObject_withKeyPath_options_('value', self.mask, 'luminanceTolerance', None)
+        self.falloff_slider.bind_toObject_withKeyPath_options_('value', self.mask, 'falloff', None)
         self.color_picker.bind_toObject_withKeyPath_options_('value', self.mask, 'color', None)
         self.invert.bind_toObject_withKeyPath_options_('value', self.mask, 'invert', None)
         
@@ -185,42 +188,63 @@ class MaskItem(ItemWithImage):
     def createColorFilterWithCurrentSettings(self):
         return CIFilter.filterWithName_keysAndValues_('ColorDistance',
             'name', 'colorDistance',
-            'color', self.colorTransformer.transformedValue_(self.mask.valueForKey_('color')),
-            'chromaTolerance', self.mask.valueForKey_('chromaTolerance'), 
-            'falloff', 0.001, None)
+            'inputColor', self.colorTransformer.transformedValue_(self.mask.valueForKey_('color')),
+            'inputChromaTolerance', self.mask.valueForKey_('chromaTolerance'), 
+            'inputFalloff', self.mask.valueForKey_('falloff'), None)
     
     def createLuminanceFilterWithCurrentSettings(self):
         return CIFilter.filterWithName_keysAndValues_('LuminanceDistance',
             'name', 'luminanceDistance',
-            'blackPoint', self.mask.valueForKey_('luminanceTolerance'), None)
+            'inputLuminanceTolerance', self.mask.valueForKey_('luminanceTolerance'), 
+            'inputFalloff', self.mask.valueForKey_('falloff'), None)
+    
+    def createPerceptualFilterWithCurrentSettings(self):
+        return CIFilter.filterWithName_keysAndValues_('PerceptualDistance',
+            'name', 'colorDistance',
+            'inputColor', self.colorTransformer.transformedValue_(self.mask.valueForKey_('color')),
+            'inputChromaTolerance', self.mask.valueForKey_('chromaTolerance'),
+            'inputLuminanceTolerance', self.mask.valueForKey_('luminanceTolerance'), 
+            'inputFalloff', self.mask.valueForKey_('falloff'), None)
+    
+    def updateFilterKeyValues(self,key,value):
+        for filter in self.selection_filters:
+            if key in filter.attributes():
+                filter.setValue_forKey_(value, key)
+                if filter in self.filters:
+                    self.layer.setValue_forKeyPath_(value, 'backgroundFilters.{0}.{1}'.format(filter.valueForKey_('name'),key))
     
     def observeValueForKeyPath_ofObject_change_context_(self,keyPath, object, change, context):
         # The background filters array in the layer object is a copy of our filters array, 
         # so changes to the filters in the layer don't affect our copy of the filters.
         if keyPath == 'color':
             color = self.colorTransformer.transformedValue_(self.mask.valueForKey_('color'))
-            if len(self.filters) > 0:
-                self.layer.setValue_forKeyPath_(color, 'backgroundFilters.colorDistance.color')
-            self.mask_filter.setValue_forKey_(color, 'color')
+            self.updateFilterKeyValues('inputColor',color)
         elif keyPath == 'chromaTolerance':
-            if len(self.filters) > 0:
-                self.layer.setValue_forKeyPath_(self.mask.valueForKey_('chromaTolerance'), 'backgroundFilters.colorDistance.chromaTolerance')
-            self.mask_filter.setValue_forKey_(self.mask.valueForKey_('chromaTolerance'), 'chromaTolerance')
+            self.updateFilterKeyValues('inputChromaTolerance',self.mask.valueForKey_('chromaTolerance'))
+        elif keyPath == 'luminanceTolerance':
+            self.updateFilterKeyValues('inputLuminanceTolerance',self.mask.valueForKey_('luminanceTolerance'))
+        elif keyPath == 'falloff':
+            falloff = self.mask.valueForKey_('falloff')
+            if falloff == 0:
+                falloff = 0.0000001
+            self.updateFilterKeyValues('inputFalloff',falloff)
         elif keyPath == 'name':
             self.name = self.mask.valueForKey_('name')
             self.doc.source_list.reloadItem_(self)
-        elif keyPath == 'selectionMode':
-            self.updateImage()
     
     def unbind(self):
         self.mask.removeObserver_forKeyPath_(self, 'name')
         self.mask.removeObserver_forKeyPath_(self, 'color')
         self.mask.removeObserver_forKeyPath_(self, 'chromaTolerance')
+        self.mask.removeObserver_forKeyPath_(self, 'luminanceTolerance')
+        self.mask.removeObserver_forKeyPath_(self, 'falloff')
         self.mask.removeObserver_forKeyPath_(self, 'invert')
         self.mask.removeObserver_forKeyPath_(self, 'selectionMode')
         
         self.name_input.unbind_('value')
         self.chroma_slider.unbind_('value')
+        self.luminance_slider.unbind_('value')
+        self.falloff_slider.unbind_('value')
         self.color_picker.unbind_('value')
         self.invert.unbind_('value')
         self.selection_menu.unbind_('tag')
@@ -241,11 +265,15 @@ class MaskItem(ItemWithImage):
     def invertChanged_(self,sender):
         self.updateImage()
     
+    @objc.IBAction
+    def selectionModeChanged_(self,sender):
+        self.updateImage()
+    
     def updateImage(self):
         if self.show_source.state() == NSOnState:
             self.filters = []
         else:
-            self.filters = [self.mask_filter]
+            self.filters = [self.selection_filters[self.selection_menu.selectedItem().tag()]]
             if self.invert.state() == NSOnState:
                 self.filters.append(self.inverter)
 

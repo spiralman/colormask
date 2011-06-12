@@ -212,8 +212,8 @@
 								<string key="NSContents"/>
 								<reference key="NSControlView" ref="207710302"/>
 								<double key="NSMaxValue">1</double>
-								<double key="NSMinValue">0.0</double>
-								<double key="NSValue">0.26543209876543211</double>
+								<double key="NSMinValue">9.9999999999988987e-05</double>
+								<double key="NSValue">0.29999999999999999</double>
 								<double key="NSAltIncValue">0.0</double>
 								<int key="NSNumberOfTickMarks">0</int>
 								<int key="NSTickMarkPosition">0</int>
@@ -469,7 +469,6 @@
 								<int key="NSPeriodicInterval">75</int>
 								<object class="NSMenuItem" key="NSMenuItem" id="216829926">
 									<reference key="NSMenu" ref="971523113"/>
-									<bool key="NSIsHidden">YES</bool>
 									<string key="NSTitle">Color</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSKeyEquivModMask">1048576</int>
@@ -522,8 +521,6 @@
 										<int key="NSfFlags">1044</int>
 									</object>
 								</object>
-								<int key="NSSelectedIndex">2</int>
-								<bool key="NSPullDown">YES</bool>
 								<int key="NSPreferredEdge">1</int>
 								<bool key="NSUsesItemFromMenu">YES</bool>
 								<bool key="NSAltersState">YES</bool>
@@ -913,7 +910,23 @@
 						<reference key="source" ref="894021120"/>
 						<reference key="destination" ref="90352861"/>
 					</object>
-					<int key="connectionID">106</int>
+					<int key="connectionID">112</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">luminance_slider</string>
+						<reference key="source" ref="894021120"/>
+						<reference key="destination" ref="954490473"/>
+					</object>
+					<int key="connectionID">113</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">selectionModeChanged:</string>
+						<reference key="source" ref="894021120"/>
+						<reference key="destination" ref="90352861"/>
+					</object>
+					<int key="connectionID">114</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1699,10 +1712,10 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABDEAAAw68AAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABC2AAAw5uAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{156, 349}, {128, 54}}</string>
+					<string>{{294, 459}, {128, 54}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -1854,7 +1867,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">111</int>
+			<int key="maxID">114</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1875,10 +1888,12 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>invertChanged:</string>
+							<string>selectionModeChanged:</string>
 							<string>showSourceChanged:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 						</object>
@@ -1888,12 +1903,17 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>invertChanged:</string>
+							<string>selectionModeChanged:</string>
 							<string>showSourceChanged:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBActionInfo">
 								<string key="name">invertChanged:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">selectionModeChanged:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
@@ -1911,6 +1931,7 @@
 							<string>falloff_slider</string>
 							<string>halftone_menu</string>
 							<string>invert</string>
+							<string>luminance_slider</string>
 							<string>name_input</string>
 							<string>selection_menu</string>
 							<string>show_source</string>
@@ -1919,6 +1940,7 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -1940,6 +1962,7 @@
 							<string>falloff_slider</string>
 							<string>halftone_menu</string>
 							<string>invert</string>
+							<string>luminance_slider</string>
 							<string>name_input</string>
 							<string>selection_menu</string>
 							<string>show_source</string>
@@ -1966,6 +1989,10 @@
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">invert</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">luminance_slider</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBToOneOutletInfo">
