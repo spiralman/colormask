@@ -17,7 +17,7 @@ class ItemWithImage(NSObject):
     def init(self):
         self = super(ItemWithImage,self).init()
         
-        self.layer = CALayer.layer()
+        self.layer = None
         self.filters = []
         
         return self
@@ -25,6 +25,7 @@ class ItemWithImage(NSObject):
     def initFromDoc_(self,doc):
         self = self.init()
         self.doc = doc
+        self.layer = self.doc.image_view.content_layer
         
         return self
         
@@ -38,15 +39,18 @@ class ItemWithImage(NSObject):
         return True
     
     def selected(self):
-        if self.doc.image != None:
-            self.doc.image_view.setOverlay_forType_(self.layer, IKOverlayTypeImage)
+        pass
     
     def unselected(self):
         pass
     
+    def zoomChanged(self,zoomFactor):
+        pass
+    
     def updateImage(self):
-        self.layer.setBackgroundFilters_(self.filters)
-        self.layer.setNeedsDisplay()
+        if self.layer != None:
+            self.layer.setBackgroundFilters_(self.filters)
+            self.layer.setNeedsDisplay()
         
     def renderImage(self):
         cur_image = self.doc.image
@@ -155,6 +159,7 @@ class MaskItem(ItemWithImage):
     
     def setDoc_Mask_(self,doc,mask):
         self.doc = doc
+        self.layer = self.doc.image_view.content_layer
         self.mask = mask
         self.name = self.mask.valueForKey_('name')
         
@@ -259,7 +264,12 @@ class MaskItem(ItemWithImage):
             if halftone_mode > -1:
                 halftone_filter = self.halftone_filters[halftone_mode]
                 
-                self.updateFilterKeyValues(halftone_filter, keyPath.replace('halftone','input'), self.mask.valueForKey_(keyPath))
+                if keyPath == 'halftoneWidth':
+                    width = self.mask.valueForKey_('halftoneWidth')
+                    halftone_filter.setValue_forKey_(width, 'inputWidth')
+                    self.layer.setValue_forKeyPath_(width * self.doc.image_view.zoomFactor(), 'backgroundFilters.{0}.inputWidth'.format(halftone_filter.valueForKey_('name')))
+                else:
+                    self.updateFilterKeyValues(halftone_filter, keyPath.replace('halftone','input'), self.mask.valueForKey_(keyPath))
         elif keyPath == 'name':
             self.name = self.mask.valueForKey_('name')
             self.doc.source_list.reloadItem_(self)
@@ -304,6 +314,14 @@ class MaskItem(ItemWithImage):
     @objc.IBAction
     def halftoneModeChanged_(self,sender):
         self.updateImage()
+    
+    def zoomChanged(self,zoomFactor):
+        halftone_mode = self.halftone_menu.selectedItem().tag()
+        if halftone_mode > -1:
+            halftone_filter = self.halftone_filters[halftone_mode]
+            width = self.mask.valueForKey_('halftoneWidth')
+            self.layer.setValue_forKeyPath_(width * zoomFactor, 'backgroundFilters.{0}.inputWidth'.format(halftone_filter.valueForKey_('name')))
+                    
     
     def updateImage(self):
         if self.show_source.state() == NSOnState:

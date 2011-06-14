@@ -19,6 +19,7 @@
 		FA24CE9F139AFAD7009F0B92 /* center_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA24CE9E139AFAD7009F0B92 /* center_icon.png */; };
 		FA24CEAC139B162E009F0B92 /* ColorMaskDocument.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA24CEAB139B162E009F0B92 /* ColorMaskDocument.xcdatamodeld */; };
 		FA6401941368EE2D00C7CC78 /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6400D11368E62E00C7CC78 /* Python.framework */; };
+		FAAB3CE613A58B4400B3F724 /* MaskLayerView.py in Resources */ = {isa = PBXBuildFile; fileRef = FAAB3CE513A58B4400B3F724 /* MaskLayerView.py */; };
 		FAAE0FA1136460E4006C8064 /* ColorMaskIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = FAAE0FA0136460E4006C8064 /* ColorMaskIcon.icns */; };
 		FAC354F513513586005E8A1C /* ColorMaskView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC354F413513586005E8A1C /* ColorMaskView.xib */; };
 /* End PBXBuildFile section */
@@ -45,6 +46,7 @@
 		FA24CEAD139B162E009F0B92 /* ColorMaskDocument 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "ColorMaskDocument 2.xcdatamodel"; sourceTree = "<group>"; };
 		FA64006D1368E0FA00C7CC78 /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = /Library/Frameworks/Python.framework; sourceTree = "<absolute>"; };
 		FA6400D11368E62E00C7CC78 /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = System/Library/Frameworks/Python.framework; sourceTree = SDKROOT; };
+		FAAB3CE513A58B4400B3F724 /* MaskLayerView.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = MaskLayerView.py; sourceTree = "<group>"; };
 		FAAE0FA0136460E4006C8064 /* ColorMaskIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ColorMaskIcon.icns; sourceTree = "<group>"; };
 		FAAE0FA2136460FA006C8064 /* ColorMaskIcon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ColorMaskIcon.svg; sourceTree = "<group>"; };
 		FAC354F413513586005E8A1C /* ColorMaskView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorMaskView.xib; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			children = (
 				7791B6CD0C2C702F0002D3F1 /* ColorMaskDocument.py */,
 				FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */,
+				FAAB3CE513A58B4400B3F724 /* MaskLayerView.py */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				FAAE0FA1136460E4006C8064 /* ColorMaskIcon.icns in Resources */,
 				FA24CE8A139AE35E009F0B92 /* ColorMaskItems.py in Resources */,
 				FA24CE9F139AFAD7009F0B92 /* center_icon.png in Resources */,
+				FAAB3CE613A58B4400B3F724 /* MaskLayerView.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,6 +18,7 @@ from AppKit import *
 from Quartz import *
 
 from ColorMaskItems import *
+from MaskLayerView import *
 
 class ColorMaskDocument(NSPersistentDocument):
     window = objc.IBOutlet()
@@ -155,8 +156,6 @@ class ColorMaskDocument(NSPersistentDocument):
         super(ColorMaskDocument, self).windowControllerDidLoadNib_(aController)
         # user interface preparation code
         
-        self.image_view.setAutohidesScrollers_(True)
-        
         # fetch the project, if we were loaded from a file
         if self.project == None:
             context = self.managedObjectContext()
@@ -195,8 +194,8 @@ class ColorMaskDocument(NSPersistentDocument):
         url = self.project.valueForKeyPath_('sourceURL')
         if url != '':
             self.image_view.setHidden_(False)
-            self.image = CIImage.imageWithContentsOfURL_(NSURL.URLWithString_(url))
             self.image_view.setImageWithURL_(NSURL.URLWithString_(url))
+            self.image = self.image_view.image
             self.updateZoomSliderFromImageView()
         else:
             self.image_view.setHidden_(True)
@@ -252,11 +251,15 @@ class ColorMaskDocument(NSPersistentDocument):
         self.updateZoomSliderFromImageView()
     
     def updateZoomSliderFromImageView(self):
+        if self.selected != None:
+            self.selected.zoomChanged(self.image_view.zoomFactor())
         self.zoom_slider.setFloatValue_(math.sqrt(math.sqrt(self.image_view.zoomFactor())))
     
     @objc.IBAction
     def zoomSliderMoved_(self,sender):
         self.image_view.setZoomFactor_(sender.floatValue()**4)
+        if self.selected != None:
+            self.selected.zoomChanged(self.image_view.zoomFactor())
     
     @objc.IBAction
     def sourceToolsClicked_(self,sender):
