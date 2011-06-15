@@ -73,6 +73,7 @@ class MaskLayerView(NSView):
     
     def onBoundsChanged_(self,notification):
         self.root_layer.setBounds_(self.bounds())
+        self.applyAnchorWithinBounds(self.content_layer.anchorPoint())
     
     def centerImageAnchor(self):
         center = CGPoint()
@@ -91,6 +92,7 @@ class MaskLayerView(NSView):
         factor = max(0.001,factor)
         self.zoom_factor = factor
         self.updateTransform()
+        self.applyAnchorWithinBounds(self.content_layer.anchorPoint())
     
     def zoomFactor(self):
         return self.zoom_factor
@@ -108,6 +110,29 @@ class MaskLayerView(NSView):
     
     def zoomOut_(self,sender):
         self.setZoomFactor_(self.zoom_factor - (0.2 * self.zoom_factor))
+        
+    def applyAnchorWithinBounds(self,anchorPoint):
+        current_size = self.bounds().size
+        image_size = self.image.extent().size
+        
+        x_margin = (current_size.width / 2) / self.zoom_factor / image_size.width
+        y_margin = (current_size.height / 2) / self.zoom_factor / image_size.height
+        
+        x_margin = min(x_margin,0.5)
+        y_margin = min(y_margin,0.5)
+        
+        if anchorPoint.x < x_margin:
+            anchorPoint.x = x_margin
+        elif anchorPoint.x > 1.0 - x_margin:
+            anchorPoint.x = 1.0 - x_margin
+        
+        if anchorPoint.y < y_margin:
+            anchorPoint.y = y_margin
+        elif anchorPoint.y > 1.0 - y_margin:
+            anchorPoint.y = 1.0 - y_margin
+        
+        self.content_layer.setAnchorPoint_(anchorPoint)
+        self.centerImageAnchor()
     
     def mouseDown_(self,event):
         self.mouse_last_pos = event.locationInWindow()
@@ -118,8 +143,8 @@ class MaskLayerView(NSView):
         anchorPoint = self.content_layer.anchorPoint()
         anchorPoint.x = anchorPoint.x - (((cur_pos.x - self.mouse_last_pos.x) / self.zoom_factor) / self.image.extent().size.width)
         anchorPoint.y = anchorPoint.y - (((cur_pos.y - self.mouse_last_pos.y) / self.zoom_factor) / self.image.extent().size.height)
-        self.content_layer.setAnchorPoint_(anchorPoint)
-        self.centerImageAnchor()
+        
+        self.applyAnchorWithinBounds(anchorPoint)
         
         self.mouse_last_pos = cur_pos
     
