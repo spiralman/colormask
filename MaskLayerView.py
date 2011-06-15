@@ -150,3 +150,9 @@ class MaskLayerView(NSView):
     
     def mouseUp_(self,event):
         self.mouse_last_pos = None
+        
+    def scrollWheel_(self,event):
+        anchorPoint = self.content_layer.anchorPoint()
+        anchorPoint.x = anchorPoint.x - (event.deltaX() / self.zoom_factor / self.image.extent().size.width)
+        anchorPoint.y = anchorPoint.y + (event.deltaY() / self.zoom_factor / self.image.extent().size.height)
+        self.applyAnchorWithinBounds(anchorPoint)
