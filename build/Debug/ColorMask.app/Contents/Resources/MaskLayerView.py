@@ -20,13 +20,9 @@ class MaskLayerView(NSView):
             self.setPostsFrameChangedNotifications_(True)
             
             self.rendered = None
-            self.affine_transform = CGAffineTransform()
-            self.affine_transform.a = 1.0
-            self.affine_transform.b = 0.0
-            self.affine_transform.c = 0.0
-            self.affine_transform.d = 1.0
-            self.affine_transform.tx = 0.0
-            self.affine_transform.ty = 0.0
+            
+            self.zoom_factor = 1.0
+            self.translation = (0.0,0.0)
             
             self.root_layer = CALayer.layer()
             self.root_layer.setNeedsDisplayOnBoundsChange_(True)
@@ -52,7 +48,8 @@ class MaskLayerView(NSView):
         return True
 
     def awakeFromNib(self):
-        self.window().makeFirstResponder_(self)
+        #self.window().makeFirstResponder_(self)
+        pass
     
     def displayLayer_(self,layer):
         if self.rendered != None:
@@ -70,25 +67,33 @@ class MaskLayerView(NSView):
         
         self.content_layer.setBounds_(self.image.extent())
         
+        self.centerImageAnchor()
+        
+        self.zoomImageToFit_(self)
+    
+    def onBoundsChanged_(self,notification):
+        self.root_layer.setBounds_(self.bounds())
+    
+    def centerImageAnchor(self):
         center = CGPoint()
         center.x = self.bounds().size.width / 2
         center.y = self.bounds().size.height / 2
             
         self.content_layer.setPosition_(center)
         
-        self.zoomImageToFit_(self)
-    
-    def onBoundsChanged_(self,notification):
-        self.root_layer.setBounds_(self.bounds())
+    def updateTransform(self):
+        transform = CATransform3DMakeScale(self.zoom_factor, self.zoom_factor, 1.0)
+        
+        self.content_layer.setTransform_(transform)
+        self.setNeedsDisplay_(True)
         
     def setZoomFactor_(self,factor):
-        self.affine_transform.a = factor
-        self.affine_transform.d = factor
-        self.content_layer.setAffineTransform_(self.affine_transform)
-        self.setNeedsDisplay_(True)
+        factor = max(0.001,factor)
+        self.zoom_factor = factor
+        self.updateTransform()
     
     def zoomFactor(self):
-        return self.affine_transform.a
+        return self.zoom_factor
     
     def zoomImageToFit_(self,sender):
         width_scale = self.bounds().size.width / self.image.extent().size.width
@@ -97,3 +102,26 @@ class MaskLayerView(NSView):
     
     def zoomImageToActualSize_(self,sender):
         self.setZoomFactor_(1.0)
+    
+    def zoomIn_(self,sender):
+        self.setZoomFactor_(self.zoom_factor + (0.2 * self.zoom_factor))
+    
+    def zoomOut_(self,sender):
+        self.setZoomFactor_(self.zoom_factor - (0.2 * self.zoom_factor))
+    
+    def mouseDown_(self,event):
+        self.mouse_last_pos = event.locationInWindow()
+    
+    def mouseDragged_(self,event):
+        cur_pos = event.locationInWindow()
+        
+        anchorPoint = self.content_layer.anchorPoint()
+        anchorPoint.x = anchorPoint.x - (((cur_pos.x - self.mouse_last_pos.x) / self.zoom_factor) / self.image.extent().size.width)
+        anchorPoint.y = anchorPoint.y - (((cur_pos.y - self.mouse_last_pos.y) / self.zoom_factor) / self.image.extent().size.height)
+        self.content_layer.setAnchorPoint_(anchorPoint)
+        self.centerImageAnchor()
+        
+        self.mouse_last_pos = cur_pos
+    
+    def mouseUp_(self,event):
+        self.mouse_last_pos = None

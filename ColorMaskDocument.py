@@ -251,15 +251,11 @@ class ColorMaskDocument(NSPersistentDocument):
         self.updateZoomSliderFromImageView()
     
     def updateZoomSliderFromImageView(self):
-        if self.selected != None:
-            self.selected.zoomChanged(self.image_view.zoomFactor())
         self.zoom_slider.setFloatValue_(math.sqrt(math.sqrt(self.image_view.zoomFactor())))
     
     @objc.IBAction
     def zoomSliderMoved_(self,sender):
         self.image_view.setZoomFactor_(sender.floatValue()**4)
-        if self.selected != None:
-            self.selected.zoomChanged(self.image_view.zoomFactor())
     
     @objc.IBAction
     def sourceToolsClicked_(self,sender):
