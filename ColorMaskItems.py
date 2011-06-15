@@ -13,6 +13,8 @@ from CoreData import *
 from AppKit import *
 from Quartz import *
 
+import pdb
+
 class ItemWithImage(NSObject):
     def init(self):
         self = super(ItemWithImage,self).init()
@@ -39,7 +41,7 @@ class ItemWithImage(NSObject):
         return True
     
     def selected(self):
-        pass
+        self.updateImage()
     
     def unselected(self):
         pass
@@ -237,6 +239,7 @@ class MaskItem(ItemWithImage):
         if key in filter.attributes():
             filter.setValue_forKey_(value, key)
             if filter in self.filters:
+                #pdb.set_trace()
                 self.layer.setValue_forKeyPath_(value, 'filters.{0}.{1}'.format(filter.valueForKey_('name'),key))
     
     def observeValueForKeyPath_ofObject_change_context_(self,keyPath, object, change, context):
@@ -283,7 +286,6 @@ class MaskItem(ItemWithImage):
         self.selection_menu.unbind_('tag')
     
     def selected(self):
-        self.updateImage()
         self.tool_panel.makeKeyAndOrderFront_(self)
         super(MaskItem,self).selected()
     
@@ -310,6 +312,8 @@ class MaskItem(ItemWithImage):
         if self.show_source.state() == NSOnState:
             self.filters = []
         else:
+            self.filters = []
+            
             selection_filter = self.selection_filters[self.selection_menu.selectedItem().tag()]
             self.updateSelectionFilterFromMask(selection_filter)
             
