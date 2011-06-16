@@ -172,6 +172,7 @@ class MaskItem(ItemWithImage):
     
     halftone_x = objc.IBOutlet()
     halftone_y = objc.IBOutlet()
+    halftone_center_picker = objc.IBOutlet()
     
     view_controller = objc.IBOutlet()
     tool_panel = objc.IBOutlet()
@@ -248,8 +249,8 @@ class MaskItem(ItemWithImage):
         self.halftone_sharpness_text.bind_toObject_withKeyPath_options_('value', self.mask, 'halftoneSharpness', None)
         self.halftone_sharpness_stepper.bind_toObject_withKeyPath_options_('value', self.mask, 'halftoneSharpness', None)
         
-        self.halftone_x.bind_toObject_withKeyPath_options_('intValue', self.mask, 'halftoneCenterX', None)
-        self.halftone_y.bind_toObject_withKeyPath_options_('intValue', self.mask, 'halftoneCenterY', None)
+        self.halftone_x.bind_toObject_withKeyPath_options_('value', self.mask, 'halftoneCenterX', None)
+        self.halftone_y.bind_toObject_withKeyPath_options_('value', self.mask, 'halftoneCenterY', None)
         
         self.updateImage()
     
@@ -279,7 +280,6 @@ class MaskItem(ItemWithImage):
         if key in filter.attributes():
             filter.setValue_forKey_(value, key)
             if filter in self.filters:
-                #pdb.set_trace()
                 self.layer.setValue_forKeyPath_(value, 'filters.{0}.{1}'.format(filter.valueForKey_('name'),key))
     
     def observeValueForKeyPath_ofObject_change_context_(self,keyPath, object, change, context):
@@ -303,7 +303,15 @@ class MaskItem(ItemWithImage):
             halftone_mode = self.halftone_menu.selectedItem().tag()
             if halftone_mode > -1:
                 halftone_filter = self.halftone_filters[halftone_mode]
-                self.updateFilterKeyValues(halftone_filter, keyPath.replace('halftone','input'), self.mask.valueForKey_(keyPath))
+                value = self.mask.valueForKey_(keyPath)
+                filter_key =  keyPath.replace('halftone','input')
+                if keyPath == 'halftoneCenterX':
+                    value = CIVector.vectorWithX_Y_(value, self.mask.valueForKey_('halftoneCenterY'))
+                    filter_key = 'inputCenter'
+                elif keyPath == 'halftoneCenterY':
+                    value = CIVector.vectorWithX_Y_(self.mask.valueForKey_('halftoneCenterX'), value)
+                    filter_key = 'inputCenter'
+                self.updateFilterKeyValues(halftone_filter,filter_key, value)
         elif keyPath == 'name':
             self.name = self.mask.valueForKey_('name')
             self.doc.source_list.reloadItem_(self)
@@ -331,6 +339,15 @@ class MaskItem(ItemWithImage):
     
     def unselected(self):
         self.tool_panel.orderOut_(self)
+    
+    @objc.IBAction
+    def selectHalftoneCenterPushed_(self,sender):
+        self.doc.image_view.selectPoint(self.halftoneCenterSelected)
+    
+    def halftoneCenterSelected(self,point):
+        self.mask.setValue_forKey_(point.x, 'halftoneCenterX')
+        self.mask.setValue_forKey_(point.y, 'halftoneCenterY')
+        self.halftone_center_picker.setState_(NSOffState)
     
     @objc.IBAction
     def showSourceChanged_(self,sender):

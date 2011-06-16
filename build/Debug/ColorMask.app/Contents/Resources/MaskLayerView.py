@@ -19,6 +19,7 @@ class MaskLayerView(NSView):
             NSNotificationCenter.defaultCenter().addObserver_selector_name_object_(self, self.onBoundsChanged_, NSViewFrameDidChangeNotification, self)
             self.setPostsFrameChangedNotifications_(True)
             
+            self.point_callback = None
             self.rendered = None
             
             self.zoom_factor = 1.0
@@ -54,7 +55,7 @@ class MaskLayerView(NSView):
     def displayLayer_(self,layer):
         if self.rendered != None:
             layer.setContents_(self.rendered)
-        
+    
     def setImageWithURL_(self,url):        
         self.image = CIImage.imageWithContentsOfURL_(url)
         
@@ -70,6 +71,9 @@ class MaskLayerView(NSView):
         self.centerImageAnchor()
         
         self.zoomImageToFit_(self)
+    
+    def selectPoint(self, callback):
+        self.point_callback = callback
     
     def onBoundsChanged_(self,notification):
         self.root_layer.setBounds_(self.bounds())
@@ -135,21 +139,29 @@ class MaskLayerView(NSView):
         self.centerImageAnchor()
     
     def mouseDown_(self,event):
-        self.mouse_last_pos = event.locationInWindow()
+        if self.point_callback == None:
+            self.mouse_last_pos = event.locationInWindow()
     
     def mouseDragged_(self,event):
-        cur_pos = event.locationInWindow()
+        if self.point_callback == None:
+            cur_pos = event.locationInWindow()
         
-        anchorPoint = self.content_layer.anchorPoint()
-        anchorPoint.x = anchorPoint.x - (((cur_pos.x - self.mouse_last_pos.x) / self.zoom_factor) / self.image.extent().size.width)
-        anchorPoint.y = anchorPoint.y - (((cur_pos.y - self.mouse_last_pos.y) / self.zoom_factor) / self.image.extent().size.height)
+            anchorPoint = self.content_layer.anchorPoint()
+            anchorPoint.x = anchorPoint.x - (((cur_pos.x - self.mouse_last_pos.x) / self.zoom_factor) / self.image.extent().size.width)
+            anchorPoint.y = anchorPoint.y - (((cur_pos.y - self.mouse_last_pos.y) / self.zoom_factor) / self.image.extent().size.height)
         
-        self.applyAnchorWithinBounds(anchorPoint)
+            self.applyAnchorWithinBounds(anchorPoint)
         
-        self.mouse_last_pos = cur_pos
+            self.mouse_last_pos = cur_pos
     
     def mouseUp_(self,event):
-        self.mouse_last_pos = None
+        if self.point_callback == None:
+            self.mouse_last_pos = None
+        else:
+            local_point = self.convertPoint_fromView_(event.locationInWindow(),None)
+            image_point = self.root_layer.convertPoint_toLayer_(local_point, self.content_layer)
+            self.point_callback(image_point)
+            self.point_callback = None
         
     def scrollWheel_(self,event):
         anchorPoint = self.content_layer.anchorPoint()
