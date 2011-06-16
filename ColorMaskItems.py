@@ -183,6 +183,11 @@ class MaskItem(ItemWithImage):
         self.mask = mask
         self.name = self.mask.valueForKey_('name')
         
+        tool_panel_controller = NSWindowController.alloc().initWithWindow_(self.tool_panel)
+        
+        self.doc.addWindowController_(tool_panel_controller)
+        self.tool_panel.setWindowController_(tool_panel_controller)
+        
         self.colorTransformer = NSValueTransformer.valueTransformerForName_('CIColorToNSColorTransformer')
         
         self.selection_filters = [self.createFilterWithName('ColorDistance', 'colorDistance'), 

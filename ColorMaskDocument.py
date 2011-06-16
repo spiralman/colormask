@@ -26,8 +26,6 @@ class ColorMaskDocument(NSPersistentDocument):
     image_view = objc.IBOutlet()
     zoom_slider = objc.IBOutlet()
     
-    mask_tool_window = objc.IBOutlet()
-    
     ZOOM_OUT = 0
     ZOOM_IN = 1
     ZOOM_ACTUAL_SIZE = 2
@@ -155,6 +153,8 @@ class ColorMaskDocument(NSPersistentDocument):
     def windowControllerDidLoadNib_(self, aController):
         super(ColorMaskDocument, self).windowControllerDidLoadNib_(aController)
         # user interface preparation code
+        
+        aController.setShouldCloseDocument_(True)
         
         # fetch the project, if we were loaded from a file
         if self.project == None:
