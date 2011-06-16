@@ -141,15 +141,35 @@ class MaskItem(ItemWithImage):
     
     selection_menu = objc.IBOutlet()
     color_picker = objc.IBOutlet()
+    
     chroma_slider = objc.IBOutlet()
+    chroma_text = objc.IBOutlet()
+    chroma_stepper = objc.IBOutlet()
+    
     luminance_slider = objc.IBOutlet()
+    luminance_text = objc.IBOutlet()
+    luminance_stepper = objc.IBOutlet()
+    
     falloff_slider = objc.IBOutlet()
+    falloff_text = objc.IBOutlet()
+    falloff_stepper = objc.IBOutlet()
+    
     invert = objc.IBOutlet()
     
     halftone_menu = objc.IBOutlet()
+    
     halftone_angle = objc.IBOutlet()
+    halftone_angle_text = objc.IBOutlet()
+    halftone_angle_stepper = objc.IBOutlet()
+    
     halftone_width = objc.IBOutlet()
+    halftone_width_text = objc.IBOutlet()
+    halftone_width_stepper = objc.IBOutlet()
+    
     halftone_sharpness = objc.IBOutlet()
+    halftone_sharpness_text = objc.IBOutlet()
+    halftone_sharpness_stepper = objc.IBOutlet()
+    
     halftone_x = objc.IBOutlet()
     halftone_y = objc.IBOutlet()
     
@@ -198,16 +218,36 @@ class MaskItem(ItemWithImage):
         self.mask.addObserver_forKeyPath_options_context_(self, 'halftoneCenterY', 0, None)
         
         self.name_input.bind_toObject_withKeyPath_options_('value', self.mask, 'name', None)
+        
         self.chroma_slider.bind_toObject_withKeyPath_options_('value', self.mask, 'chromaTolerance', None)
+        self.chroma_text.bind_toObject_withKeyPath_options_('value', self.mask, 'chromaTolerance', None)
+        self.chroma_stepper.bind_toObject_withKeyPath_options_('value', self.mask, 'chromaTolerance', None)
+        
         self.luminance_slider.bind_toObject_withKeyPath_options_('value', self.mask, 'luminanceTolerance', None)
+        self.luminance_text.bind_toObject_withKeyPath_options_('value', self.mask, 'luminanceTolerance', None)
+        self.luminance_stepper.bind_toObject_withKeyPath_options_('value', self.mask, 'luminanceTolerance', None)
+        
         self.falloff_slider.bind_toObject_withKeyPath_options_('value', self.mask, 'falloff', None)
+        self.falloff_text.bind_toObject_withKeyPath_options_('value', self.mask, 'falloff', None)
+        self.falloff_stepper.bind_toObject_withKeyPath_options_('value', self.mask, 'falloff', None)
+        
         self.color_picker.bind_toObject_withKeyPath_options_('value', self.mask, 'color', None)
         self.invert.bind_toObject_withKeyPath_options_('value', self.mask, 'invert', None)
         
         self.halftone_menu.bind_toObject_withKeyPath_options_('tag', self.mask, 'halftoneMode', None)
+        
         self.halftone_angle.bind_toObject_withKeyPath_options_('value', self.mask, 'halftoneAngle', None)
+        self.halftone_angle_text.bind_toObject_withKeyPath_options_('value', self.mask, 'halftoneAngle', None)
+        self.halftone_angle_stepper.bind_toObject_withKeyPath_options_('value', self.mask, 'halftoneAngle', None)
+        
         self.halftone_width.bind_toObject_withKeyPath_options_('value', self.mask, 'halftoneWidth', None)
+        self.halftone_width_text.bind_toObject_withKeyPath_options_('value', self.mask, 'halftoneWidth', None)
+        self.halftone_width_stepper.bind_toObject_withKeyPath_options_('value', self.mask, 'halftoneWidth', None)
+        
         self.halftone_sharpness.bind_toObject_withKeyPath_options_('value', self.mask, 'halftoneSharpness', None)
+        self.halftone_sharpness_text.bind_toObject_withKeyPath_options_('value', self.mask, 'halftoneSharpness', None)
+        self.halftone_sharpness_stepper.bind_toObject_withKeyPath_options_('value', self.mask, 'halftoneSharpness', None)
+        
         self.halftone_x.bind_toObject_withKeyPath_options_('intValue', self.mask, 'halftoneCenterX', None)
         self.halftone_y.bind_toObject_withKeyPath_options_('intValue', self.mask, 'halftoneCenterY', None)
         
