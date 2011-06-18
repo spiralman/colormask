@@ -2,7 +2,7 @@
 {
 	2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
 		activeArchitecturePreference = i386;
-		activeBuildConfigurationName = Debug;
+		activeBuildConfigurationName = Release;
 		activeExecutable = FA8E7A4B13400C32000CFDB5 /* ColorMask */;
 		activeTarget = 8D15AC270486D014006FF6A4 /* ColorMask */;
 		addToTargets = (
@@ -73,23 +73,23 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 329871842;
-			PBXWorkspaceStateSaveDate = 329871842;
+			PBXPerProjectTemplateStateSaveDate = 330055127;
+			PBXWorkspaceStateSaveDate = 330055127;
 		};
 		perUserProjectItems = {
-			FA24CEF4139B34A0009F0B92 = FA24CEF4139B34A0009F0B92 /* PlistBookmark */;
-			FA24CEF6139B34A0009F0B92 = FA24CEF6139B34A0009F0B92 /* PBXTextBookmark */;
-			FAA98A2B13A45E81007A3D93 = FAA98A2B13A45E81007A3D93 /* XDModelBookmark */;
-			FAAB3D7513A5BA3700B3F724 = FAAB3D7513A5BA3700B3F724 /* PBXTextBookmark */;
-			FAAB3D7713A5BA3700B3F724 = FAAB3D7713A5BA3700B3F724 /* PBXTextBookmark */;
-			FAAB3D7A13A5BA3700B3F724 = FAAB3D7A13A5BA3700B3F724 /* XDModelBookmark */;
-			FAAB3D7B13A5BA3700B3F724 = FAAB3D7B13A5BA3700B3F724 /* PBXTextBookmark */;
-			FAC05FD2135FCE560028CBDD = FAC05FD2135FCE560028CBDD /* PBXTextBookmark */;
-			FAE4487E139C79EE001A8051 = FAE4487E139C79EE001A8051 /* PBXTextBookmark */;
-			FAF3654C13A6F2FC0022C470 = FAF3654C13A6F2FC0022C470 /* PBXTextBookmark */;
-			FAF3654D13A6F2FC0022C470 = FAF3654D13A6F2FC0022C470 /* PBXTextBookmark */;
-			FAF365D213A705CB0022C470 = FAF365D213A705CB0022C470 /* PBXTextBookmark */;
-			FAF365D313A705CB0022C470 = FAF365D313A705CB0022C470 /* PBXTextBookmark */;
+			FA24CEF4139B34A0009F0B92 /* PlistBookmark */ = FA24CEF4139B34A0009F0B92 /* PlistBookmark */;
+			FA24CEF6139B34A0009F0B92 /* PBXTextBookmark */ = FA24CEF6139B34A0009F0B92 /* PBXTextBookmark */;
+			FA9DA68F13AC54BB00521A36 /* PBXTextBookmark */ = FA9DA68F13AC54BB00521A36 /* PBXTextBookmark */;
+			FA9DA69013AC54BB00521A36 /* PBXTextBookmark */ = FA9DA69013AC54BB00521A36 /* PBXTextBookmark */;
+			FA9DA69113AC54BB00521A36 /* PBXTextBookmark */ = FA9DA69113AC54BB00521A36 /* PBXTextBookmark */;
+			FA9DA69213AC54BB00521A36 /* PBXTextBookmark */ = FA9DA69213AC54BB00521A36 /* PBXTextBookmark */;
+			FA9DA69313AC54BB00521A36 /* PBXTextBookmark */ = FA9DA69313AC54BB00521A36 /* PBXTextBookmark */;
+			FAA98A2B13A45E81007A3D93 /* XDModelBookmark */ = FAA98A2B13A45E81007A3D93 /* XDModelBookmark */;
+			FAAB3D7513A5BA3700B3F724 /* PBXTextBookmark */ = FAAB3D7513A5BA3700B3F724 /* PBXTextBookmark */;
+			FAAB3D7A13A5BA3700B3F724 /* XDModelBookmark */ = FAAB3D7A13A5BA3700B3F724 /* XDModelBookmark */;
+			FAC05FD2135FCE560028CBDD /* PBXTextBookmark */ = FAC05FD2135FCE560028CBDD /* PBXTextBookmark */;
+			FADBCE6413A9AD9D00B84BEA /* PBXTextBookmark */ = FADBCE6413A9AD9D00B84BEA /* PBXTextBookmark */;
+			FAE4487E139C79EE001A8051 /* PBXTextBookmark */ = FAE4487E139C79EE001A8051 /* PBXTextBookmark */;
 		};
 		sourceControlManager = FA8E7A5913400C53000CFDB5 /* Source Control */;
 		userBuildSettings = {
@@ -271,9 +271,9 @@
 	};
 	7791B6CD0C2C702F0002D3F1 /* ColorMaskDocument.py */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {873, 4173}}";
-			sepNavSelRange = "{7145, 0}";
-			sepNavVisRange = "{6989, 1314}";
+			sepNavIntBoundsRect = "{{0, 0}, {1307, 3757}}";
+			sepNavSelRange = "{5243, 69}";
+			sepNavVisRange = "{3843, 1487}";
 			sepNavWindowFrame = "{{42, 167}, {779, 608}}";
 		};
 	};
@@ -290,9 +290,9 @@
 	};
 	FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1202, 5083}}";
-			sepNavSelRange = "{578, 0}";
-			sepNavVisRange = "{747, 1134}";
+			sepNavIntBoundsRect = "{{0, 0}, {1034, 5369}}";
+			sepNavSelRange = "{10197, 45}";
+			sepNavVisRange = "{8780, 2348}";
 			sepNavWindowFrame = "{{213, 170}, {779, 608}}";
 		};
 	};
@@ -549,6 +549,56 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
+	FA9DA68F13AC54BB00521A36 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAAB3CE513A58B4400B3F724 /* MaskLayerView.py */;
+		name = "MaskLayerView.py: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 35;
+		vrLoc = 0;
+	};
+	FA9DA69013AC54BB00521A36 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7791B6CD0C2C702F0002D3F1 /* ColorMaskDocument.py */;
+		name = "ColorMaskDocument.py: 144";
+		rLen = 69;
+		rLoc = 5243;
+		rType = 0;
+		vrLen = 1487;
+		vrLoc = 3843;
+	};
+	FA9DA69113AC54BB00521A36 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
+		name = "ColorMaskItems.py: 258";
+		rLen = 45;
+		rLoc = 10197;
+		rType = 0;
+		vrLen = 2348;
+		vrLoc = 8780;
+	};
+	FA9DA69213AC54BB00521A36 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAAB3CE513A58B4400B3F724 /* MaskLayerView.py */;
+		name = "MaskLayerView.py: 35";
+		rLen = 0;
+		rLoc = 1127;
+		rType = 0;
+		vrLen = 1665;
+		vrLoc = 4683;
+	};
+	FA9DA69313AC54BB00521A36 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAAB3CE513A58B4400B3F724 /* MaskLayerView.py */;
+		name = "MaskLayerView.py: 34";
+		rLen = 0;
+		rLoc = 1127;
+		rType = 0;
+		vrLen = 1402;
+		vrLoc = 256;
+	};
 	FAA98A2B13A45E81007A3D93 /* XDModelBookmark */ = {
 		isa = XDModelBookmark;
 		fRef = FA24CEAD139B162E009F0B92 /* ColorMaskDocument 2.xcdatamodel */;
@@ -556,9 +606,9 @@
 	};
 	FAAB3CE513A58B4400B3F724 /* MaskLayerView.py */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {617, 663}}";
+			sepNavIntBoundsRect = "{{0, 0}, {617, 2275}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 141}";
+			sepNavVisRange = "{0, 35}";
 			sepNavWindowFrame = "{{136, 170}, {779, 608}}";
 		};
 	};
@@ -572,30 +622,10 @@
 		vrLen = 143;
 		vrLoc = 0;
 	};
-	FAAB3D7713A5BA3700B3F724 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FAAB3CE513A58B4400B3F724 /* MaskLayerView.py */;
-		name = "MaskLayerView.py: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 143;
-		vrLoc = 0;
-	};
 	FAAB3D7A13A5BA3700B3F724 /* XDModelBookmark */ = {
 		isa = XDModelBookmark;
 		fRef = FA24CEAD139B162E009F0B92 /* ColorMaskDocument 2.xcdatamodel */;
 		fallbackIsa = PBXBookmark;
-	};
-	FAAB3D7B13A5BA3700B3F724 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FA24CE89139AE35E009F0B92 /* ColorMaskItems.py */;
-		name = "ColorMaskItems.py: 28";
-		rLen = 0;
-		rLoc = 578;
-		rType = 0;
-		vrLen = 1134;
-		vrLoc = 747;
 	};
 	FAC05FD2135FCE560028CBDD /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -607,6 +637,16 @@
 		vrLen = 128;
 		vrLoc = 2;
 	};
+	FADBCE6413A9AD9D00B84BEA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAAB3CE513A58B4400B3F724 /* MaskLayerView.py */;
+		name = "MaskLayerView.py: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 79;
+		vrLoc = 0;
+	};
 	FAE4487E139C79EE001A8051 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 7791B6CD0C2C702F0002D3F1 /* ColorMaskDocument.py */;
@@ -616,45 +656,5 @@
 		rType = 0;
 		vrLen = 392;
 		vrLoc = 882;
-	};
-	FAF3654C13A6F2FC0022C470 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 7791B6CD0C2C702F0002D3F1 /* ColorMaskDocument.py */;
-		name = "ColorMaskDocument.py: 196";
-		rLen = 0;
-		rLoc = 7145;
-		rType = 0;
-		vrLen = 1314;
-		vrLoc = 6989;
-	};
-	FAF3654D13A6F2FC0022C470 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FAAB3CE513A58B4400B3F724 /* MaskLayerView.py */;
-		name = "MaskLayerView.py: 49";
-		rLen = 0;
-		rLoc = 1429;
-		rType = 0;
-		vrLen = 803;
-		vrLoc = 640;
-	};
-	FAF365D213A705CB0022C470 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FAAB3CE513A58B4400B3F724 /* MaskLayerView.py */;
-		name = "MaskLayerView.py: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 141;
-		vrLoc = 0;
-	};
-	FAF365D313A705CB0022C470 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FAAB3CE513A58B4400B3F724 /* MaskLayerView.py */;
-		name = "MaskLayerView.py: 46";
-		rLen = 0;
-		rLoc = 1429;
-		rType = 0;
-		vrLen = 1186;
-		vrLoc = 257;
 	};
 }

@@ -1,0 +1,394 @@
+TMaskingPlugins
+v7
+r0
+t330057668.180207
+cCheck dependencies
+cProcessInfoPlistFile /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/Info.plist Info.plist
+cCpResource build/Release/MaskingPlugins.plugin/Contents/Resources/PerceptualDistance.cikernel PerceptualDistance.cikernel
+cCpResource build/Release/MaskingPlugins.plugin/Contents/Resources/ColorDistance.cikernel ColorDistance.cikernel
+cCpResource build/Release/MaskingPlugins.plugin/Contents/Resources/LuminanceDistance.cikernel LuminanceDistance.cikernel
+cCopyStringsFile /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
+cCopyPlistFile /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/Resources/Description.plist Description.plist
+cCopyStringsFile /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/Resources/English.lproj/Description.strings English.lproj/Description.strings
+cCpResource build/Release/MaskingPlugins.plugin/Contents/Resources/English.lproj/index.html English.lproj/index.html
+cCompileC build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/x86_64/MaskingPluginsLoader.o /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/MaskingPluginsLoader.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/x86_64/MaskingFilters.o /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/MaskingFilters.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/i386/MaskingPluginsLoader.o /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/MaskingPluginsLoader.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/x86_64/MaskingPlugins normal x86_64
+cCompileC build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/i386/MaskingFilters.o /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/MaskingFilters.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/i386/MaskingPlugins normal i386
+cCreateUniversalBinary /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/MacOS/MaskingPlugins normal "x86_64 i386"
+cGenerateDSYMFile /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin.dSYM /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/MacOS/MaskingPlugins
+cTouch /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin
+
+N/Developer/SDKs/MacOSX10.5.sdk
+c000000004D8D434E00000000000000EE
+t1301103438
+s238
+
+N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.h
+c0000000047BAEC060000000000000476
+t1203432454
+s1142
+
+N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
+c0000000040C4AA6800000000000001E5
+t1086630504
+s485
+
+N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004864A1C900000000000012EE
+t1214554569
+s4846
+
+N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CoreImage.h
+c000000004864B40000000000000002A4
+t1214559232
+s676
+
+N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.h
+c000000004864B3FC00000000000000BF
+t1214559228
+s191
+
+N/System/Library/Frameworks/ApplicationServices.framework/ApplicationServices
+c000000004A12050E0000000000022140
+t1242694926
+s139584
+
+N/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+c000000004CD606A40000000000781330
+t1289094820
+s7869232
+
+N/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004D5B397F0000000000B3E980
+t1297824127
+s11790720
+
+N/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c000000004D38F78C0000000000D00CA0
+t1295579020
+s13634720
+
+N/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/ColorDistance.cikernel
+c000000004DF3912A0000000000000379
+t1307808042
+s889
+
+N/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/Description.plist
+c000000004DF425A40000000000000754
+t1307846052
+s1876
+
+N/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/English.lproj/Description.strings
+c000000004DF2D9B400000000000009CC
+t1307761076
+s2508
+
+N/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/English.lproj/InfoPlist.strings
+c000000004DF2D9B40000000000000186
+t1307761076
+s390
+
+N/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/English.lproj/index.html
+c000000004DF2D9B400000000000002AF
+t1307761076
+s687
+
+N/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/LuminanceDistance.cikernel
+c000000004DF2D9B40000000000000246
+t1307761076
+s582
+
+N/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/MaskingFilters.h
+c000000004DF41FC00000000000000301
+t1307844544
+s769
+i<Cocoa/Cocoa.h>
+i<QuartzCore/QuartzCore.h>
+
+N/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/MaskingFilters.m
+c000000004DF420C60000000000001A76
+t1307844806
+s6774
+i"MaskingFilters.h"
+i<Foundation/Foundation.h>
+i<ApplicationServices/ApplicationServices.h>
+
+N/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/MaskingPluginsLoader.h
+c000000004DF2D9B40000000000000151
+t1307761076
+s337
+i<Foundation/Foundation.h>
+i<QuartzCore/CoreImage.h>
+
+N/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/MaskingPluginsLoader.m
+c000000004DF2D9B40000000000000153
+t1307761076
+s339
+i"MaskingPluginsLoader.h"
+
+N/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/PerceptualDistance.cikernel
+c000000004DF2D9B400000000000007BC
+t1307761076
+s1980
+
+N/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/i386/MaskingFilters.o
+t1308364868
+s21572
+
+N/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/i386/MaskingPlugins
+t1308364868
+s21196
+
+N/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/i386/MaskingPlugins.LinkFileList
+c000000004DFC10410000000000000132
+t1308364865
+s306
+
+N/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/i386/MaskingPluginsLoader.o
+t1308364867
+s5912
+
+N/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/x86_64/MaskingFilters.o
+t1308364867
+s28872
+
+N/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/x86_64/MaskingPlugins
+t1308364867
+s20760
+
+N/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/x86_64/MaskingPlugins.LinkFileList
+c000000004DFC10410000000000000136
+t1308364865
+s310
+
+N/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/x86_64/MaskingPluginsLoader.o
+t1308364866
+s7396
+
+N/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin
+t1308364868
+s102
+
+N/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin.dSYM
+t1308364868
+s102
+
+N/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/Info.plist
+t1308364865
+s1183
+
+N/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/MacOS/MaskingPlugins
+t1308364868
+s49868
+
+N/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/Resources/ColorDistance.cikernel
+t1308364865
+s889
+
+N/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/Resources/Description.plist
+t1308364865
+s1876
+
+N/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/Resources/English.lproj/Description.strings
+t1308364865
+s2508
+
+N/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/Resources/English.lproj/InfoPlist.strings
+t1308364865
+s390
+
+N/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/Resources/English.lproj/index.html
+t1308364865
+s687
+
+N/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/Resources/LuminanceDistance.cikernel
+t1308364865
+s582
+
+N/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/Resources/PerceptualDistance.cikernel
+t1308364865
+s1980
+
+NInfo.plist
+c000000004DF2D9B40000000000000354
+t1307761076
+s852
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies330057665#330057665#0(0"0(0#1#0"8615774688#0"0#
+
+CCompileC build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/i386/MaskingFilters.o /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/MaskingFilters.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s330057667.331440
+e330057668.096061
+r1
+xCompileC
+xbuild/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/i386/MaskingFilters.o
+x/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/MaskingFilters.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@81"Compile /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/MaskingFilters.m330057667#330057668#0(0"0(0#0#73"/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/MaskingFilters.m8619801472#1128"    cd /Users/thomasstephens/Documents/ColorMask/MaskingPlugins    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -gdwarf-2 -I/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/MaskingPlugins.hmap -F/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release -I/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/include -I/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/DerivedSources/i386 -I/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/DerivedSources -c /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/MaskingFilters.m -o /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/i386/MaskingFilters.o0#
+
+CCompileC build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/i386/MaskingPluginsLoader.o /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/MaskingPluginsLoader.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s330057666.782533
+e330057667.331238
+r1
+xCompileC
+xbuild/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/i386/MaskingPluginsLoader.o
+x/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/MaskingPluginsLoader.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@87"Compile /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/MaskingPluginsLoader.m330057666#330057667#0(0"0(0#0#79"/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/MaskingPluginsLoader.m8620774208#1140"    cd /Users/thomasstephens/Documents/ColorMask/MaskingPlugins    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -gdwarf-2 -I/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/MaskingPlugins.hmap -F/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release -I/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/include -I/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/DerivedSources/i386 -I/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/DerivedSources -c /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/MaskingPluginsLoader.m -o /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/i386/MaskingPluginsLoader.o0#
+
+CCompileC build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/x86_64/MaskingFilters.o /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/MaskingFilters.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s330057665.961686
+e330057667.075350
+r1
+xCompileC
+xbuild/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/x86_64/MaskingFilters.o
+x/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/MaskingFilters.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@81"Compile /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/MaskingFilters.m330057665#330057667#0(0"0(0#0#73"/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/MaskingFilters.m8619448640#1134"    cd /Users/thomasstephens/Documents/ColorMask/MaskingPlugins    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -gdwarf-2 -I/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/MaskingPlugins.hmap -F/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release -I/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/include -I/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/DerivedSources/x86_64 -I/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/DerivedSources -c /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/MaskingFilters.m -o /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/x86_64/MaskingFilters.o0#
+
+CCompileC build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/x86_64/MaskingPluginsLoader.o /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/MaskingPluginsLoader.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s330057665.960375
+e330057666.782432
+r1
+xCompileC
+xbuild/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/x86_64/MaskingPluginsLoader.o
+x/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/MaskingPluginsLoader.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@87"Compile /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/MaskingPluginsLoader.m330057665#330057666#0(0"0(0#0#79"/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/MaskingPluginsLoader.m8619538528#1146"    cd /Users/thomasstephens/Documents/ColorMask/MaskingPlugins    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -gdwarf-2 -I/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/MaskingPlugins.hmap -F/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release -I/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/include -I/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/DerivedSources/x86_64 -I/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/DerivedSources -c /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/MaskingPluginsLoader.m -o /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/x86_64/MaskingPluginsLoader.o0#
+
+CCopyPlistFile /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/Resources/Description.plist Description.plist
+s330057665.755314
+e330057665.960228
+r1
+xCopyPlistFile
+x/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/Resources/Description.plist
+xDescription.plist
+lSLF07#2@22"Copy Description.plist330057665#330057665#0(0"0(0#0#74"/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/Description.plist8620679744#294"    cd /Users/thomasstephens/Documents/ColorMask/MaskingPlugins    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copyplist Description.plist --outdir /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/Resources0#
+
+CCopyStringsFile /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/Resources/English.lproj/Description.strings English.lproj/Description.strings
+s330057665.872227
+e330057665.933181
+r1
+xCopyStringsFile
+x/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/Resources/English.lproj/Description.strings
+xEnglish.lproj/Description.strings
+lSLF07#2@38"Copy English.lproj/Description.strings330057665#330057665#0(0"0(0#0#90"/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/English.lproj/Description.strings8620428160#416"    cd /Users/thomasstephens/Documents/ColorMask/MaskingPlugins    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-16 --outputencoding UTF-16 English.lproj/Description.strings --outdir /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/Resources/English.lproj0#
+
+CCopyStringsFile /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
+s330057665.675173
+e330057665.872122
+r1
+xCopyStringsFile
+x/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/Resources/English.lproj/InfoPlist.strings
+xEnglish.lproj/InfoPlist.strings
+lSLF07#2@36"Copy English.lproj/InfoPlist.strings330057665#330057665#0(0"0(0#0#88"/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/English.lproj/InfoPlist.strings8618611200#414"    cd /Users/thomasstephens/Documents/ColorMask/MaskingPlugins    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-16 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/Resources/English.lproj0#
+
+CCpResource build/Release/MaskingPlugins.plugin/Contents/Resources/ColorDistance.cikernel ColorDistance.cikernel
+s330057665.671478
+e330057665.725475
+r1
+xCpResource
+xbuild/Release/MaskingPlugins.plugin/Contents/Resources/ColorDistance.cikernel
+xColorDistance.cikernel
+lSLF07#2@27"Copy ColorDistance.cikernel330057665#330057665#0(0"0(0#0#79"/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/ColorDistance.cikernel8620311616#439"    cd /Users/thomasstephens/Documents/ColorMask/MaskingPlugins    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/ColorDistance.cikernel /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/Resources0#
+
+CCpResource build/Release/MaskingPlugins.plugin/Contents/Resources/English.lproj/index.html English.lproj/index.html
+s330057665.933343
+e330057665.952976
+r1
+xCpResource
+xbuild/Release/MaskingPlugins.plugin/Contents/Resources/English.lproj/index.html
+xEnglish.lproj/index.html
+lSLF07#2@29"Copy English.lproj/index.html330057665#330057665#0(0"0(0#0#81"/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/English.lproj/index.html8619623360#455"    cd /Users/thomasstephens/Documents/ColorMask/MaskingPlugins    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/English.lproj/index.html /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/Resources/English.lproj0#
+
+CCpResource build/Release/MaskingPlugins.plugin/Contents/Resources/LuminanceDistance.cikernel LuminanceDistance.cikernel
+s330057665.673334
+e330057665.754195
+r1
+xCpResource
+xbuild/Release/MaskingPlugins.plugin/Contents/Resources/LuminanceDistance.cikernel
+xLuminanceDistance.cikernel
+lSLF07#2@31"Copy LuminanceDistance.cikernel330057665#330057665#0(0"0(0#0#83"/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/LuminanceDistance.cikernel8619336032#443"    cd /Users/thomasstephens/Documents/ColorMask/MaskingPlugins    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/LuminanceDistance.cikernel /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/Resources0#
+
+CCpResource build/Release/MaskingPlugins.plugin/Contents/Resources/PerceptualDistance.cikernel PerceptualDistance.cikernel
+s330057665.669485
+e330057665.755186
+r1
+xCpResource
+xbuild/Release/MaskingPlugins.plugin/Contents/Resources/PerceptualDistance.cikernel
+xPerceptualDistance.cikernel
+lSLF07#2@32"Copy PerceptualDistance.cikernel330057665#330057665#0(0"0(0#0#84"/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/PerceptualDistance.cikernel8616506720#444"    cd /Users/thomasstephens/Documents/ColorMask/MaskingPlugins    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/PerceptualDistance.cikernel /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/Resources0#
+
+CCreateUniversalBinary /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/MacOS/MaskingPlugins normal "x86_64 i386"
+s330057668.158013
+e330057668.161101
+r1
+xCreateUniversalBinary
+x/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/MacOS/MaskingPlugins
+xnormal
+xx86_64 i386
+lSLF07#2@108"CreateUniversalBinary build/Release/MaskingPlugins.plugin/Contents/MacOS/MaskingPlugins normal "x86_64 i386"330057668#330057668#0(0"0(0#0#68"/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/x86_64 i3868619593280#519"    cd /Users/thomasstephens/Documents/ColorMask/MaskingPlugins    /usr/bin/lipo -create /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/x86_64/MaskingPlugins /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/i386/MaskingPlugins -output /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/MacOS/MaskingPlugins0#
+
+CGenerateDSYMFile /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin.dSYM /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/MacOS/MaskingPlugins
+s330057668.161193
+e330057668.176959
+r1
+xGenerateDSYMFile
+x/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin.dSYM
+x/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/MacOS/MaskingPlugins
+lSLF07#2@123"GenerateDSYMFile build/Release/MaskingPlugins.plugin.dSYM build/Release/MaskingPlugins.plugin/Contents/MacOS/MaskingPlugins330057668#330057668#0(0"0(0#0#122"/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/MacOS/MaskingPlugins8619199712#320"    cd /Users/thomasstephens/Documents/ColorMask/MaskingPlugins    /Developer/usr/bin/dsymutil /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/MacOS/MaskingPlugins -o /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin.dSYM0#
+
+CLd /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/i386/MaskingPlugins normal i386
+s330057668.096159
+e330057668.157890
+r1
+xLd
+x/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/i386/MaskingPlugins
+xnormal
+xi386
+lSLF07#2@152"Link /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/i386/MaskingPlugins330057668#330057668#0(0"0(0#0#0"8620071360#791"    cd /Users/thomasstephens/Documents/ColorMask/MaskingPlugins    setenv MACOSX_DEPLOYMENT_TARGET 10.5    /Developer/usr/bin/gcc-4.2 -arch i386 -bundle -isysroot /Developer/SDKs/MacOSX10.5.sdk -L/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release -F/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release -filelist /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/i386/MaskingPlugins.LinkFileList -mmacosx-version-min=10.5 -framework CoreFoundation -framework QuartzCore -framework Foundation -framework ApplicationServices -o /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/i386/MaskingPlugins0#
+
+CLd /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/x86_64/MaskingPlugins normal x86_64
+s330057667.075764
+e330057667.457364
+r1
+xLd
+x/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/x86_64/MaskingPlugins
+xnormal
+xx86_64
+lSLF07#2@154"Link /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/x86_64/MaskingPlugins330057667#330057667#0(0"0(0#0#0"8608485856#797"    cd /Users/thomasstephens/Documents/ColorMask/MaskingPlugins    setenv MACOSX_DEPLOYMENT_TARGET 10.5    /Developer/usr/bin/gcc-4.2 -arch x86_64 -bundle -isysroot /Developer/SDKs/MacOSX10.5.sdk -L/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release -F/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release -filelist /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/x86_64/MaskingPlugins.LinkFileList -mmacosx-version-min=10.5 -framework CoreFoundation -framework QuartzCore -framework Foundation -framework ApplicationServices -o /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/MaskingPlugins.build/Release/MaskingPlugins.build/Objects-normal/x86_64/MaskingPlugins0#
+
+CProcessInfoPlistFile /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/Info.plist Info.plist
+s330057665.649919
+e330057665.669392
+r1
+xProcessInfoPlistFile
+x/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/Info.plist
+xInfo.plist
+lSLF07#2@18"Process Info.plist330057665#330057665#0(0"0(0#0#67"/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/Info.plist8618136224#258"    cd /Users/thomasstephens/Documents/ColorMask/MaskingPlugins    builtin-infoPlistUtility Info.plist -expandbuildsettings -platform macosx -o /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin/Contents/Info.plist0#
+
+CTouch /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin
+s330057668.177053
+e330057668.180160
+r1
+xTouch
+x/Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin
+lSLF07#2@98"Touch /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin330057668#330057668#0(0"0(0#0#0"8619055488#179"    cd /Users/thomasstephens/Documents/ColorMask/MaskingPlugins    /usr/bin/touch -c /Users/thomasstephens/Documents/ColorMask/MaskingPlugins/build/Release/MaskingPlugins.plugin0#
+
