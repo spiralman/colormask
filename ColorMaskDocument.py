@@ -124,10 +124,10 @@ class ColorMaskDocument(NSPersistentDocument):
  
         cgSource = CGImageSourceCreateWithURL(sourceURL, None)
         type = CGImageSourceGetType(cgSource)
-        metaData = self.image_view.imageProperties()
+        
         fileName = sourceURL.path().lastPathComponent()
         
-        saveOptions = IKSaveOptions.alloc().initWithImageProperties_imageUTType_(metaData, type)
+        saveOptions = IKSaveOptions.alloc().initWithImageProperties_imageUTType_(None, type)
         
         saveOptions.addSaveOptionsAccessoryViewToSavePanel_(savePanel)
         

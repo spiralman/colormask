@@ -1498,14 +1498,6 @@
 					<int key="connectionID">55</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">invertChanged:</string>
-						<reference key="source" ref="894021120"/>
-						<reference key="destination" ref="1021499149"/>
-					</object>
-					<int key="connectionID">56</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">falloff_slider</string>
 						<reference key="source" ref="894021120"/>
@@ -1528,14 +1520,6 @@
 						<reference key="destination" ref="954490473"/>
 					</object>
 					<int key="connectionID">113</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">selectionModeChanged:</string>
-						<reference key="source" ref="894021120"/>
-						<reference key="destination" ref="90352861"/>
-					</object>
-					<int key="connectionID">114</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -1568,14 +1552,6 @@
 						<reference key="destination" ref="30587299"/>
 					</object>
 					<int key="connectionID">130</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">halftoneModeChanged:</string>
-						<reference key="source" ref="894021120"/>
-						<reference key="destination" ref="964070038"/>
-					</object>
-					<int key="connectionID">133</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -3058,17 +3034,11 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>halftoneModeChanged:</string>
-							<string>invertChanged:</string>
 							<string>selectHalftoneCenterPushed:</string>
-							<string>selectionModeChanged:</string>
 							<string>showSourceChanged:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>id</string>
-							<string>id</string>
-							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 						</object>
@@ -3077,28 +3047,13 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>halftoneModeChanged:</string>
-							<string>invertChanged:</string>
 							<string>selectHalftoneCenterPushed:</string>
-							<string>selectionModeChanged:</string>
 							<string>showSourceChanged:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBActionInfo">
-								<string key="name">halftoneModeChanged:</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBActionInfo">
-								<string key="name">invertChanged:</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBActionInfo">
 								<string key="name">selectHalftoneCenterPushed:</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBActionInfo">
-								<string key="name">selectionModeChanged:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">

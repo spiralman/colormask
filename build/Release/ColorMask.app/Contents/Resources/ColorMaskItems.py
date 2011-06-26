@@ -224,6 +224,7 @@ class MaskItem(ItemWithImage):
         self.mask.addObserver_forKeyPath_options_context_(self, 'halftoneCenterY', 0, None)
         
         self.name_input.bind_toObject_withKeyPath_options_('value', self.mask, 'name', None)
+        self.selection_menu.bind_toObject_withKeyPath_options_('selectedTag', self.mask, 'selectionMode', None)
         
         self.chroma_slider.bind_toObject_withKeyPath_options_('value', self.mask, 'chromaTolerance', None)
         self.chroma_text.bind_toObject_withKeyPath_options_('value', self.mask, 'chromaTolerance', None)
@@ -240,7 +241,7 @@ class MaskItem(ItemWithImage):
         self.color_picker.bind_toObject_withKeyPath_options_('value', self.mask, 'color', None)
         self.invert.bind_toObject_withKeyPath_options_('value', self.mask, 'invert', None)
         
-        self.halftone_menu.bind_toObject_withKeyPath_options_('tag', self.mask, 'halftoneMode', None)
+        self.halftone_menu.bind_toObject_withKeyPath_options_('selectedTag', self.mask, 'halftoneMode', None)
         
         self.halftone_angle.bind_toObject_withKeyPath_options_('value', self.mask, 'halftoneAngle', None)
         self.halftone_angle_text.bind_toObject_withKeyPath_options_('value', self.mask, 'halftoneAngle', None)
@@ -304,6 +305,8 @@ class MaskItem(ItemWithImage):
             if falloff == 0:
                 falloff = 0.0000001
             self.updateFilterKeyValues(selection_filter, 'inputFalloff',falloff)
+        elif keyPath == 'selectionMode' or keyPath == 'halftoneMode' or keyPath == 'invert':
+            self.updateImage()
         elif keyPath.startswith('halftone'):
             halftone_mode = self.halftone_menu.selectedItem().tag()
             if halftone_mode > -1:
@@ -356,18 +359,6 @@ class MaskItem(ItemWithImage):
     
     @objc.IBAction
     def showSourceChanged_(self,sender):
-        self.updateImage()
-    
-    @objc.IBAction
-    def invertChanged_(self,sender):
-        self.updateImage()
-    
-    @objc.IBAction
-    def selectionModeChanged_(self,sender):
-        self.updateImage()
-    
-    @objc.IBAction
-    def halftoneModeChanged_(self,sender):
         self.updateImage()
     
     def updateImage(self):
