@@ -51,7 +51,7 @@ class ItemWithImage(NSObject):
             self.layer.setFilters_(self.filters)
             self.doc.image_view.setNeedsDisplay_(True)
         
-    def renderImage(self):
+    def renderImage(self, dest, properties):
         cur_image = self.doc.image
         
         sourceRect = cur_image.extent()
@@ -72,9 +72,9 @@ class ItemWithImage(NSObject):
         
         rendered = ciContext.createCGImage_fromRect_(cur_image,sourceRect)
         
-        del bitmapContext
+        CGImageDestinationAddImage(dest, rendered, properties)
         
-        return rendered
+        CGImageDestinationFinalize(dest)
 
 class OriginalItem(ItemWithImage):
     def initFromDoc_(self,doc):

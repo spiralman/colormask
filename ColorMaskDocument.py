@@ -25,6 +25,9 @@ class ColorMaskDocument(NSPersistentDocument):
     source_list = objc.IBOutlet()
     image_view = objc.IBOutlet()
     zoom_slider = objc.IBOutlet()
+    export_panel = objc.IBOutlet()
+    export_progress = objc.IBOutlet()
+    export_label = objc.IBOutlet() 
     
     ZOOM_OUT = 0
     ZOOM_IN = 1
@@ -134,22 +137,34 @@ class ColorMaskDocument(NSPersistentDocument):
         result = savePanel.runModal()
         
         if result == NSOKButton:
+            if self.export_panel is None:
+                NSBundle.loadNibNamed_owner_('ExportSheet',self)
+                
+            NSApp.beginSheet_modalForWindow_modalDelegate_didEndSelector_contextInfo_(self.export_panel,self.window,None,None,None)
+            
             baseURL = savePanel.URLs()[0]
             base,file = os.path.split(baseURL.absoluteString())
             file,ext = os.path.splitext(file)
             
-            for mask in self.maskList.masks:
-                mask_file = os.path.join(base, file + '-' + mask.name + ext)
+            session = NSApp.beginModalSessionForWindow_(self.export_panel)
+            
+            for index,mask in enumerate(self.maskList.masks):
+                self.export_progress.setDoubleValue_(float(index)/len(self.maskList.masks) * 100.0)
+                self.export_label.setStringValue_(''.join(['Exporting: ',mask.name]))
+                
+                NSApp.runModalSession_(session)
+                
+                mask_file = os.path.join(base, file + '-' + mask.name.replace(' ','_') + ext)
                 
                 dest = CGImageDestinationCreateWithURL(NSURL.URLWithString_(mask_file), saveOptions.imageUTType(), 1, None)
                 
-                image = mask.renderImage()
-                
-                CGImageDestinationAddImage(dest, image, saveOptions.imageProperties())
-                CGImageDestinationFinalize(dest)
-                del dest
+                mask.renderImage(dest, saveOptions.imageProperties())
             
-    
+            NSApp.endModalSession_(session)
+            
+            NSApp.endSheet_(self.export_panel)
+            self.export_panel.orderOut_(self)
+                
     def windowControllerDidLoadNib_(self, aController):
         super(ColorMaskDocument, self).windowControllerDidLoadNib_(aController)
         # user interface preparation code
@@ -232,7 +247,8 @@ class ColorMaskDocument(NSPersistentDocument):
         if self.selected != None:
             self.selected.unselected()
         self.selected = self.source_list.itemAtRow_(self.source_list.selectedRow())
-        self.selected.selected()
+        if self.selected != None:
+            self.selected.selected()
     
     def zoomOut_(self,sender):
         self.image_view.zoomOut_(self)

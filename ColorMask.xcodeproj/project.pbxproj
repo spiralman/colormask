@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 44;
+	objectVersion = 45;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,7 @@
 		FA24CE9F139AFAD7009F0B92 /* center_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA24CE9E139AFAD7009F0B92 /* center_icon.png */; };
 		FA24CEAC139B162E009F0B92 /* ColorMaskDocument.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA24CEAB139B162E009F0B92 /* ColorMaskDocument.xcdatamodeld */; };
 		FA6401941368EE2D00C7CC78 /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6400D11368E62E00C7CC78 /* Python.framework */; };
+		FA6C699E13EE116A0067C2D7 /* ExportSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6C699D13EE116A0067C2D7 /* ExportSheet.xib */; };
 		FAAB3CE613A58B4400B3F724 /* MaskLayerView.py in Resources */ = {isa = PBXBuildFile; fileRef = FAAB3CE513A58B4400B3F724 /* MaskLayerView.py */; };
 		FAAE0FA1136460E4006C8064 /* ColorMaskIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = FAAE0FA0136460E4006C8064 /* ColorMaskIcon.icns */; };
 		FAC354F513513586005E8A1C /* ColorMaskView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC354F413513586005E8A1C /* ColorMaskView.xib */; };
@@ -46,6 +47,7 @@
 		FA24CEAD139B162E009F0B92 /* ColorMaskDocument 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "ColorMaskDocument 2.xcdatamodel"; sourceTree = "<group>"; };
 		FA64006D1368E0FA00C7CC78 /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = /Library/Frameworks/Python.framework; sourceTree = "<absolute>"; };
 		FA6400D11368E62E00C7CC78 /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = System/Library/Frameworks/Python.framework; sourceTree = SDKROOT; };
+		FA6C699D13EE116A0067C2D7 /* ExportSheet.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExportSheet.xib; sourceTree = "<group>"; };
 		FAAB3CE513A58B4400B3F724 /* MaskLayerView.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = MaskLayerView.py; sourceTree = "<group>"; };
 		FAAE0FA0136460E4006C8064 /* ColorMaskIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ColorMaskIcon.icns; sourceTree = "<group>"; };
 		FAAE0FA2136460FA006C8064 /* ColorMaskIcon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ColorMaskIcon.svg; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				8D15AC360486D014006FF6A4 /* Info.plist */,
 				089C165FFE840EACC02AAC07 /* InfoPlist.strings */,
 				FAC354F413513586005E8A1C /* ColorMaskView.xib */,
+				FA6C699D13EE116A0067C2D7 /* ExportSheet.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				FA24CE8A139AE35E009F0B92 /* ColorMaskItems.py in Resources */,
 				FA24CE9F139AFAD7009F0B92 /* center_icon.png in Resources */,
 				FAAB3CE613A58B4400B3F724 /* MaskLayerView.py in Resources */,
+				FA6C699E13EE116A0067C2D7 /* ExportSheet.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +281,7 @@
 		26FC0AA60875C8B900E6366F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -288,6 +293,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = ColorMask;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
 			};
@@ -296,10 +302,8 @@
 		26FC0AA70875C8B900E6366F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				"COPY_PHASE_STRIP[sdk=*]" = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_MODEL_TUNING = G5;
@@ -308,6 +312,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = ColorMask;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
