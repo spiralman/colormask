@@ -190,3 +190,9 @@ class MaskLayerView(NSView):
         anchorPoint.x = anchorPoint.x - (event.deltaX() / self.zoom_factor / self.image.extent().size.width)
         anchorPoint.y = anchorPoint.y + (event.deltaY() / self.zoom_factor / self.image.extent().size.height)
         self.applyAnchorWithinBounds(anchorPoint)
+    
+    def magnifyWithEvent_(self,event):
+        transformAnimation = self.content_layer.animationForKey_('transform')
+        self.content_layer.removeAnimationForKey_('transform')
+        self.setZoomFactor_(self.zoom_factor * (1.0 + event.magnification()))
+        self.content_layer.addAnimation_forKey_(transformAnimation,'transform')
