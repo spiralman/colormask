@@ -27,7 +27,7 @@ class ColorMaskDocument(NSPersistentDocument):
     zoom_slider = objc.IBOutlet()
     export_panel = objc.IBOutlet()
     export_progress = objc.IBOutlet()
-    export_label = objc.IBOutlet() 
+    export_label = objc.IBOutlet()
     
     ZOOM_OUT = 0
     ZOOM_IN = 1
@@ -53,6 +53,8 @@ class ColorMaskDocument(NSPersistentDocument):
         
         self.selected = None
         self.image = None
+        
+        self.drawingMode = 'mask'
         
         return self
     
@@ -101,7 +103,14 @@ class ColorMaskDocument(NSPersistentDocument):
         return u"ColorMaskDocument"
     
     def validateUserInterfaceItem_(self,item):
-        if item.action() == 'exportMasks:':
+        if item.action() == 'showMask:' and self.drawingMode != 'mask':
+            item.setState_(NSOffState)
+        elif item.action() == 'showSource:' and self.drawingMode != 'source':
+            item.setState_(NSOffState)
+        elif item.action() == 'showStacked:' and self.drawingMode != 'stacked':
+            item.setState_(NSOffState)
+        
+        if item.action() == 'exportMasks:' or item.action() == 'showMask:' or item.action() == 'showStacked:':
             return self.image != None and len(self.maskList.masks) > 0
         
         return True
@@ -118,7 +127,21 @@ class ColorMaskDocument(NSPersistentDocument):
             selected_url = dialog.URLs()[0]
             self.project.setValue_forKeyPath_(selected_url.absoluteString(),'sourceURL')
             self.updateImage()
-            
+    
+    def showMask_(self,sender):
+        sender.setState_(NSOnState)
+        self.drawingMode = 'mask'
+        self.updateSelected()
+        
+    def showSource_(self,sender):
+        sender.setState_(NSOnState)
+        self.drawingMode = 'source'
+        self.updateSelected()
+    
+    def showStacked_(self,sender):
+        sender.setState_(NSOnState)
+        self.drawingMode = 'stacked'
+        self.updateSelected()
     
     def exportMasks_(self,sender):
         savePanel = NSSavePanel.savePanel()
@@ -181,9 +204,6 @@ class ColorMaskDocument(NSPersistentDocument):
         
             self.project = fetchResult.objectAtIndex_(0)
         
-        # Not supported yet
-            #StackedItem.alloc().initFromDoc_(self),
-            #FlattenedItem.alloc().initFromDoc_(self),
         self.root = [
             OriginalItem.alloc().initFromDoc_(self),
             ColorListItem.alloc().initFromDoc_(self)
@@ -197,10 +217,10 @@ class ColorMaskDocument(NSPersistentDocument):
             ]
         
         self.source_list.reloadData()
-        
         self.zoom_slider.setFloatValue_(1.0)
         
         self.updateImage()
+        
         self.updateZoomSliderFromImageView()
         
         self.source_list.expandItem_(self.maskList)
@@ -210,14 +230,55 @@ class ColorMaskDocument(NSPersistentDocument):
         if url != '':
             self.image_view.setHidden_(False)
             self.image_view.setImageWithURL_(NSURL.URLWithString_(url))
+            
+            self.root[0].imageSet()
+            for mask in self.maskList.masks:
+                mask.imageSet()
+            
             self.image = self.image_view.image
-            self.updateZoomSliderFromImageView()
+            
+            self.sourceLayer = self.image_view.getNewContentLayer()
+            
+            self.stackedLayer = self.image_view.getNewEmptyLayer()
+            
         else:
             self.image_view.setHidden_(True)
             self.image = CIImage.emptyImage()
         
+        self.updateSelected()
+        self.image_view.zoomImageToFit_(self)
+        self.updateZoomSliderFromImageView()
+    
+    def updateSelected(self):
         if self.selected != None:
-            self.selected.updateImage()
+            self.selected.selected()
+        
+            if self.drawingMode == 'mask':
+                if self.selected.layer != None:
+                    self.image_view.showLayer(self.selected.layer)
+            elif self.drawingMode == 'source':
+                self.image_view.showLayer(self.sourceLayer)
+            elif self.drawingMode == 'stacked':
+                anchor = CGPoint()
+                anchor.x = 0.5
+                anchor.y = 0.5
+                
+                position = CGPoint()
+                position.x = 0.0
+                position.y = 0.0
+                self.stackedLayer.setSublayers_(None)
+                layer = self.stackedLayer
+                
+                for mask in self.maskList.masks:
+                    #layer.setCompositingFilter_(CIFilter.filterWithName_keysAndValues_('CIDarkenBlendMode','name', 'compositeFilter', None))
+                    newLayer = self.image_view.getNewContentLayer()
+                    filters = mask.filters + [CIFilter.filterWithName_keysAndValues_('CIColorInvert', 'name', 'invertToMask', None), CIFilter.filterWithName_keysAndValues_('CIMaskToAlpha', 'name', 'mask', None), CIFilter.filterWithName_keysAndValues_('CIColorInvert', 'name', 'maskToBlack', None)]
+                    newLayer.setFilters_(filters)
+                    newLayer.setOpacity_(0.5)
+                    layer.addSublayer_(newLayer)
+                    #layer = mask.layer
+                
+                self.image_view.showLayer(self.stackedLayer)
     
     def outlineView_child_ofItem_(self,outlineView,index,item):
         if item == None:
@@ -247,8 +308,7 @@ class ColorMaskDocument(NSPersistentDocument):
         if self.selected != None:
             self.selected.unselected()
         self.selected = self.source_list.itemAtRow_(self.source_list.selectedRow())
-        if self.selected != None:
-            self.selected.selected()
+        self.updateSelected()
     
     def zoomOut_(self,sender):
         self.image_view.zoomOut_(self)

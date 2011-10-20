@@ -29,12 +29,6 @@ class MaskLayerView(NSView):
             self.root_layer.setNeedsDisplayOnBoundsChange_(True)
             self.root_layer.setMasksToBounds_(True)
             
-            self.content_layer = CALayer.layer()
-            self.content_layer.setDelegate_(self)
-            
-            self.content_layer.setAutoresizingMask_(kCALayerMinXMargin | kCALayerMaxXMargin | kCALayerMinYMargin | kCALayerMaxYMargin)
-            self.root_layer.addSublayer_(self.content_layer)
-        
             self.setLayer_(self.root_layer)
             self.setWantsLayer_(True)
         
@@ -42,7 +36,8 @@ class MaskLayerView(NSView):
             self.setLayerContentsRedrawPolicy_(1)
             # center.
             self.setLayerContentsPlacement_(3)
-            pass
+            
+            self.content_layer = None
         return self
     
     def acceptsFirstResponder(self):
@@ -59,18 +54,45 @@ class MaskLayerView(NSView):
     def setImageWithURL_(self,url):        
         self.image = CIImage.imageWithContentsOfURL_(url)
         
-        ciContext = CIContext.contextWithCGContext_options_(NSGraphicsContext.currentContext().graphicsPort(), None)
+        nsContext = NSGraphicsContext.graphicsContextWithAttributes_({'NSGraphicsContextDestinationAttributeName':'NSBitmapImageRep'})
+        ciContext = CIContext.contextWithCGContext_options_(nsContext.graphicsPort(), None)
         
         self.rendered = ciContext.createCGImage_fromRect_(self.image,self.image.extent())
         
-        CGImageRetain(self.rendered)
-        self.content_layer.setContents_(self.rendered)
-        
-        self.content_layer.setBounds_(self.image.extent())
+        self.content_layer = self.getNewEmptyLayer(centerLayer=False)
+        self.root_layer.addSublayer_(self.content_layer)
         
         self.centerImageAnchor()
         
-        self.zoomImageToFit_(self)
+        CGImageRetain(self.rendered)
+    
+    def getNewEmptyLayer(self, centerLayer=True):
+        newLayer = CALayer.layer()
+        newLayer.setDelegate_(self)
+            
+        newLayer.setAutoresizingMask_(kCALayerMinXMargin | kCALayerMaxXMargin | kCALayerMinYMargin | kCALayerMaxYMargin)
+        
+        newLayer.setBounds_(self.image.extent())
+        
+        if centerLayer:
+            center = CGPoint()
+            center.x = self.content_layer.bounds().size.width / 2
+            center.y = self.content_layer.bounds().size.height / 2
+            
+            newLayer.setPosition_(center)
+        
+        return newLayer
+    
+    def getNewContentLayer(self):
+        newLayer = self.getNewEmptyLayer()
+        
+        newLayer.setContents_(self.rendered)
+        
+        return newLayer
+    
+    def showLayer(self,layer):
+        self.content_layer.setSublayers_(None)
+        self.content_layer.addSublayer_(layer)
     
     def selectPoint(self, callback):
         self.point_callback = callback

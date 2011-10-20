@@ -27,7 +27,7 @@ class ItemWithImage(NSObject):
     def initFromDoc_(self,doc):
         self = self.init()
         self.doc = doc
-        self.layer = self.doc.image_view.content_layer
+        self.layer = None
         
         return self
         
@@ -40,8 +40,14 @@ class ItemWithImage(NSObject):
     def shouldSelect(self):
         return True
     
-    def selected(self):
+    def imageSet(self):
+        self.layer = self.doc.image_view.getNewContentLayer()
         self.updateImage()
+    
+    def selected(self):
+        if self.layer:
+            #self.doc.image_view.showLayer(self.layer)
+            self.updateImage()
     
     def unselected(self):
         pass
@@ -83,22 +89,6 @@ class OriginalItem(ItemWithImage):
         self.name = NSString.stringWithString_('Original Image')
         
         return self
-
-class StackedItem(ItemWithImage):
-    def initFromDoc_(self,doc):
-        self = super(StackedItem,self).initFromDoc_(doc)
-        
-        self.name = NSString.stringWithString_('Stacked')
-        
-        return self
-        
-class FlattenedItem(ItemWithImage):
-    def initFromDoc_(self,doc):
-        self = super(FlattenedItem,self).initFromDoc_(doc)
-        
-        self.name = NSString.stringWithString_('Flattened')
-        
-        return self
         
 class ColorListItem(NSObject):
     def initFromDoc_(self,doc):
@@ -137,7 +127,6 @@ class ColorListItem(NSObject):
 
 class MaskItem(ItemWithImage):
     name_input = objc.IBOutlet()
-    show_source = objc.IBOutlet()
     
     selection_menu = objc.IBOutlet()
     color_picker = objc.IBOutlet()
@@ -179,7 +168,7 @@ class MaskItem(ItemWithImage):
     
     def setDoc_Mask_(self,doc,mask):
         self.doc = doc
-        self.layer = self.doc.image_view.content_layer
+        
         self.mask = mask
         self.name = self.mask.valueForKey_('name')
         
@@ -257,8 +246,6 @@ class MaskItem(ItemWithImage):
         
         self.halftone_x.bind_toObject_withKeyPath_options_('value', self.mask, 'halftoneCenterX', None)
         self.halftone_y.bind_toObject_withKeyPath_options_('value', self.mask, 'halftoneCenterY', None)
-        
-        self.updateImage()
     
     def awakeFromNib(self):
         # lets the ColorMaskList item get at the instance created in the Nib
@@ -357,31 +344,24 @@ class MaskItem(ItemWithImage):
         self.mask.setValue_forKey_(point.y, 'halftoneCenterY')
         self.halftone_center_picker.setState_(NSOffState)
     
-    @objc.IBAction
-    def showSourceChanged_(self,sender):
-        self.updateImage()
-    
     def updateImage(self):
-        if self.show_source.state() == NSOnState:
-            self.filters = []
-        else:
-            self.filters = []
+        self.filters = []
             
-            selection_filter = self.selection_filters[self.selection_menu.selectedItem().tag()]
-            self.updateSelectionFilterFromMask(selection_filter)
+        selection_filter = self.selection_filters[self.selection_menu.selectedItem().tag()]
+        self.updateSelectionFilterFromMask(selection_filter)
             
-            self.filters = [selection_filter]
+        self.filters = [selection_filter]
             
-            if self.invert.state() == NSOnState:
-                self.filters.append(self.inverter)
+        if self.invert.state() == NSOnState:
+            self.filters.append(self.inverter)
             
-            halftone_mode = self.halftone_menu.selectedItem().tag()
+        halftone_mode = self.halftone_menu.selectedItem().tag()
             
-            if halftone_mode > -1:
-                halftone_filter = self.halftone_filters[halftone_mode]
+        if halftone_mode > -1:
+            halftone_filter = self.halftone_filters[halftone_mode]
                 
-                self.updateHalftoneFilterFromMask(halftone_filter)
-                self.filters.append(halftone_filter)
+            self.updateHalftoneFilterFromMask(halftone_filter)
+            self.filters.append(halftone_filter)
 
         super(MaskItem,self).updateImage()
 

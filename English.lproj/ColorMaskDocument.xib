@@ -309,7 +309,7 @@
 							<string key="NSFrame">{{20, 2}, {71, 25}}</string>
 							<reference key="NSSuperview" ref="489737312"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView" ref="965582666"/>
+							<reference key="NSNextKeyView"/>
 							<int key="NSViewLayerContentsRedrawPolicy">2</int>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSSegmentedCell" key="NSCell" id="135107908">
@@ -689,7 +689,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">100144</int>
+			<int key="maxID">100166</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
