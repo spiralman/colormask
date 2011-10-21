@@ -12,6 +12,8 @@ from AppKit import *
 from Quartz import *
 
 class MaskLayerView(NSView):
+    zoom_factor = objc.ivar()
+    
     def initWithFrame_(self, frame):
         self = super(MaskLayerView, self).initWithFrame_(frame)
         if self:
@@ -116,7 +118,7 @@ class MaskLayerView(NSView):
         
     def setZoomFactor_(self,factor):
         factor = max(0.001,factor)
-        self.zoom_factor = factor
+        self._.zoom_factor = factor
         self.updateTransform()
         self.applyAnchorWithinBounds(self.content_layer.anchorPoint())
     

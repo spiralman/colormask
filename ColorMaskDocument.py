@@ -221,7 +221,7 @@ class ColorMaskDocument(NSPersistentDocument):
         
         self.updateImage()
         
-        self.updateZoomSliderFromImageView()
+        self.image_view.addObserver_forKeyPath_options_context_(self, 'zoom_factor', NSKeyValueObservingOptionNew, None)
         
         self.source_list.expandItem_(self.maskList)
     
@@ -247,7 +247,6 @@ class ColorMaskDocument(NSPersistentDocument):
         
         self.updateSelected()
         self.image_view.zoomImageToFit_(self)
-        self.updateZoomSliderFromImageView()
     
     def updateSelected(self):
         if self.selected != None:
@@ -312,22 +311,19 @@ class ColorMaskDocument(NSPersistentDocument):
     
     def zoomOut_(self,sender):
         self.image_view.zoomOut_(self)
-        self.updateZoomSliderFromImageView()
         
     def zoomIn_(self,sender):
         self.image_view.zoomIn_(self)
-        self.updateZoomSliderFromImageView()
     
     def zoomActualSize_(self,sender):
         self.image_view.zoomImageToActualSize_(self)
-        self.updateZoomSliderFromImageView()
     
     def zoomToFit_(self,sender):
         self.image_view.zoomImageToFit_(self)
-        self.updateZoomSliderFromImageView()
     
-    def updateZoomSliderFromImageView(self):
-        self.zoom_slider.setFloatValue_(math.sqrt(math.sqrt(self.image_view.zoomFactor())))
+    def observeValueForKeyPath_ofObject_change_context_(self,key,object,change,context):
+        if key == 'zoom_factor' and object == self.image_view:
+            self.zoom_slider.setFloatValue_(math.sqrt(math.sqrt(change._.new)))
     
     @objc.IBAction
     def zoomSliderMoved_(self,sender):
