@@ -320,6 +320,13 @@ class MaskItem(ItemWithImage):
         self.mask.removeObserver_forKeyPath_(self, 'invert')
         self.mask.removeObserver_forKeyPath_(self, 'selectionMode')
         
+        self.mask.removeObserver_forKeyPath_(self, 'halftoneMode')
+        self.mask.removeObserver_forKeyPath_(self, 'halftoneSharpness')
+        self.mask.removeObserver_forKeyPath_(self, 'halftoneWidth')
+        self.mask.removeObserver_forKeyPath_(self, 'halftoneAngle')
+        self.mask.removeObserver_forKeyPath_(self, 'halftoneCenterX')
+        self.mask.removeObserver_forKeyPath_(self, 'halftoneCenterY')
+        
         self.name_input.unbind_('value')
         self.chroma_slider.unbind_('value')
         self.luminance_slider.unbind_('value')
@@ -327,6 +334,22 @@ class MaskItem(ItemWithImage):
         self.color_picker.unbind_('value')
         self.invert.unbind_('value')
         self.selection_menu.unbind_('tag')
+        
+        self.halftone_menu.unbind_('selectedTag')
+        
+        self.halftone_angle.unbind_('value')
+        self.halftone_angle_text.unbind_('value')
+        self.halftone_angle_stepper.unbind_('value')
+        
+        self.halftone_width.unbind_('value')
+        self.halftone_width_text.unbind_('value')
+        self.halftone_width_stepper.unbind_('value')
+        
+        self.halftone_sharpness.unbind_('value')
+        self.halftone_sharpness_text.unbind_('value')
+        self.halftone_sharpness_stepper.unbind_('value')
+        self.halftone_x.unbind_('value')
+        self.halftone_y.unbind_('value')
     
     def selected(self):
         self.tool_panel.makeKeyAndOrderFront_(self)

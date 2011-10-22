@@ -225,6 +225,9 @@ class ColorMaskDocument(NSPersistentDocument):
         
         self.source_list.expandItem_(self.maskList)
     
+    def windowWillClose_(self,notification):
+        self.image_view.removeObserver_forKeyPath_(self, 'zoom_factor')
+    
     def updateImage(self):
         url = self.project.valueForKeyPath_('sourceURL')
         if url != '':
@@ -241,15 +244,16 @@ class ColorMaskDocument(NSPersistentDocument):
             
             self.stackedLayer = self.image_view.getNewEmptyLayer()
             
+            self.updateSelected()
+            self.image_view.zoomImageToFit_(self)
         else:
             self.image_view.setHidden_(True)
             self.image = CIImage.emptyImage()
-        
-        self.updateSelected()
-        self.image_view.zoomImageToFit_(self)
     
     def updateSelected(self):
-        if self.selected != None:
+        if self.selected == None:
+            self.image_view.showLayer(self.sourceLayer)
+        else:
             self.selected.selected()
         
             if self.drawingMode == 'mask':
@@ -357,8 +361,8 @@ class ColorMaskDocument(NSPersistentDocument):
             objContext = self.managedObjectContext()
             
             toRemove = self.selected
-            toRemove.unselected()
             toRemove.unbind()
+            toRemove.unselected()
             
             self.selected = None
             
