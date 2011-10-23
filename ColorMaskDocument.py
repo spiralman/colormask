@@ -226,6 +226,8 @@ class ColorMaskDocument(NSPersistentDocument):
         self.source_list.expandItem_(self.maskList)
     
     def windowWillClose_(self,notification):
+        if self.selected != None:
+            self.selected.unselected()
         self.image_view.removeObserver_forKeyPath_(self, 'zoom_factor')
     
     def updateImage(self):
