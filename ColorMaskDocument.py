@@ -286,8 +286,6 @@ class ColorMaskDocument(NSPersistentDocument):
                     layer.addSublayer_(newLayer)
                 
                 self.image_view.showLayer(self.stackedLayer)
-        
-        self.image_view.root_layer.setNeedsDisplay()
     
     def outlineView_child_ofItem_(self,outlineView,index,item):
         if item == None:
@@ -356,6 +354,7 @@ class ColorMaskDocument(NSPersistentDocument):
         
         maskObjs.addObject_(newMask)
         newItem = self.maskList.addMaskWithMask_(newMask)
+        newItem.imageSet()
         
         self.source_list.reloadItem_reloadChildren_(self.maskList, True)
         

@@ -24,56 +24,55 @@ class MaskLayerView(NSView):
             self.point_callback = None
             self.rendered = None
             
+            self.root_layer = CALayer.layer()
+            self.root_layer.setNeedsDisplayOnBoundsChange_(True)
+            self.root_layer.setMasksToBounds_(True)
+            
+            self.root_layer._.empty = True
+            
+            self.setLayer_(self.root_layer)
+            self.setWantsLayer_(True)
+        
+            self.content_layer = None
+            
             self.zoom_factor = 1.0
             self.translation = (0.0,0.0)
         return self
     
     def acceptsFirstResponder(self):
         return True
-
-    def awakeFromNib(self):
-        #self.window().makeFirstResponder_(self)
-        self.root_layer = CALayer.layer()
-        self.root_layer.setNeedsDisplayOnBoundsChange_(True)
-        self.root_layer.setMasksToBounds_(True)
-            
-        self.setLayer_(self.root_layer)
-        self.setWantsLayer_(True)
-        
-        # redraw when requested
-        self.setLayerContentsRedrawPolicy_(1)
-        # center.
-        self.setLayerContentsPlacement_(3)
-            
-        self.content_layer = None
     
-    def setImageWithURL_(self,url): 
+    def setImageWithURL_(self,url):
         self.image = CIImage.imageWithContentsOfURL_(url)
         
-        nsContext = NSGraphicsContext.graphicsContextWithAttributes_({'NSGraphicsContextDestinationAttributeName':'NSBitmapImageRep'})
-        ciContext = CIContext.contextWithCGContext_options_(nsContext.graphicsPort(), None)
-        
-        self.rendered = ciContext.createCGImage_fromRect_(self.image,self.image.extent())
+        self.rendered = self.renderImage(self.image)
         
         self.content_layer = self.getNewEmptyLayer(centerLayer=False)
         self.root_layer.addSublayer_(self.content_layer)
         
         self.centerImageAnchor()
         
-        CGImageRetain(self.rendered)
+    def renderImage(self,image):
+        nsContext = NSGraphicsContext.graphicsContextWithAttributes_({'NSGraphicsContextDestinationAttributeName':'NSBitmapImageRep'})
+        ciContext = CIContext.contextWithCGContext_options_(nsContext.graphicsPort(), None)
+        
+        rendered = ciContext.createCGImage_fromRect_(image,image.extent())
+        
+        CGImageRetain(rendered)
+        
+        return rendered
     
     def getNewEmptyLayer(self, centerLayer=True):
         newLayer = CALayer.layer()
-        newLayer.setDelegate_(self)
-            
-        newLayer.setAutoresizingMask_(kCALayerMinXMargin | kCALayerMaxXMargin | kCALayerMinYMargin | kCALayerMaxYMargin)
+        
+        newLayer._.empty = True
         
         newLayer.setBounds_(self.image.extent())
         
         if centerLayer:
             center = CGPoint()
-            center.x = self.content_layer.bounds().size.width / 2
-            center.y = self.content_layer.bounds().size.height / 2
+            center.x = self.image.extent().size.width / 2
+            center.y = self.image.extent().size.height / 2
             
             newLayer.setPosition_(center)
         
@@ -81,11 +80,11 @@ class MaskLayerView(NSView):
     
     def getNewContentLayer(self):
         newLayer = self.getNewEmptyLayer()
-        
         newLayer.setContents_(self.rendered)
+        newLayer._.empty = False
         
         return newLayer
-    
+        
     def showLayer(self,layer):
         self.content_layer.setSublayers_(None)
         self.content_layer.addSublayer_(layer)
@@ -108,7 +107,6 @@ class MaskLayerView(NSView):
         transform = CATransform3DMakeScale(self.zoom_factor, self.zoom_factor, 1.0)
         
         self.content_layer.setTransform_(transform)
-        self.setNeedsDisplay_(True)
         
     def setZoomFactor_(self,factor):
         factor = max(0.001,factor)
