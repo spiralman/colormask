@@ -20,6 +20,8 @@ from Quartz import *
 from ColorMaskItems import *
 from MaskLayerView import *
 
+import traceback
+
 class ColorMaskDocument(NSPersistentDocument):
     window = objc.IBOutlet()
     source_list = objc.IBOutlet()
@@ -256,10 +258,9 @@ class ColorMaskDocument(NSPersistentDocument):
         if self.selected == None:
             self.image_view.showLayer(self.sourceLayer)
         else:
-            self.selected.selected()
-        
             if self.drawingMode == 'mask':
                 if self.selected.layer != None:
+                    self.selected.displayedLayer = self.selected.layer
                     self.image_view.showLayer(self.selected.layer)
             elif self.drawingMode == 'source':
                 self.image_view.showLayer(self.sourceLayer)
@@ -275,15 +276,18 @@ class ColorMaskDocument(NSPersistentDocument):
                 layer = self.stackedLayer
                 
                 for mask in self.maskList.masks:
-                    #layer.setCompositingFilter_(CIFilter.filterWithName_keysAndValues_('CIDarkenBlendMode','name', 'compositeFilter', None))
                     newLayer = self.image_view.getNewContentLayer()
                     filters = mask.filters + [CIFilter.filterWithName_keysAndValues_('CIColorInvert', 'name', 'invertToMask', None), CIFilter.filterWithName_keysAndValues_('CIMaskToAlpha', 'name', 'mask', None), CIFilter.filterWithName_keysAndValues_('CIColorInvert', 'name', 'maskToBlack', None)]
                     newLayer.setFilters_(filters)
                     newLayer.setOpacity_(0.5)
+                    
+                    mask.displayedLayer = newLayer
+                    
                     layer.addSublayer_(newLayer)
-                    #layer = mask.layer
                 
                 self.image_view.showLayer(self.stackedLayer)
+        
+        self.image_view.root_layer.setNeedsDisplay()
     
     def outlineView_child_ofItem_(self,outlineView,index,item):
         if item == None:
@@ -313,6 +317,7 @@ class ColorMaskDocument(NSPersistentDocument):
         if self.selected != None:
             self.selected.unselected()
         self.selected = self.source_list.itemAtRow_(self.source_list.selectedRow())
+        self.selected.selected()
         self.updateSelected()
     
     def zoomOut_(self,sender):

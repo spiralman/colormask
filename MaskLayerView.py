@@ -26,20 +26,6 @@ class MaskLayerView(NSView):
             
             self.zoom_factor = 1.0
             self.translation = (0.0,0.0)
-            
-            self.root_layer = CALayer.layer()
-            self.root_layer.setNeedsDisplayOnBoundsChange_(True)
-            self.root_layer.setMasksToBounds_(True)
-            
-            self.setLayer_(self.root_layer)
-            self.setWantsLayer_(True)
-        
-            # redraw when requested
-            self.setLayerContentsRedrawPolicy_(1)
-            # center.
-            self.setLayerContentsPlacement_(3)
-            
-            self.content_layer = None
         return self
     
     def acceptsFirstResponder(self):
@@ -47,13 +33,21 @@ class MaskLayerView(NSView):
 
     def awakeFromNib(self):
         #self.window().makeFirstResponder_(self)
-        pass
+        self.root_layer = CALayer.layer()
+        self.root_layer.setNeedsDisplayOnBoundsChange_(True)
+        self.root_layer.setMasksToBounds_(True)
+            
+        self.setLayer_(self.root_layer)
+        self.setWantsLayer_(True)
+        
+        # redraw when requested
+        self.setLayerContentsRedrawPolicy_(1)
+        # center.
+        self.setLayerContentsPlacement_(3)
+            
+        self.content_layer = None
     
-    def displayLayer_(self,layer):
-        if self.rendered != None:
-            layer.setContents_(self.rendered)
-    
-    def setImageWithURL_(self,url):        
+    def setImageWithURL_(self,url): 
         self.image = CIImage.imageWithContentsOfURL_(url)
         
         nsContext = NSGraphicsContext.graphicsContextWithAttributes_({'NSGraphicsContextDestinationAttributeName':'NSBitmapImageRep'})

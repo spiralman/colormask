@@ -42,11 +42,11 @@ class ItemWithImage(NSObject):
     
     def imageSet(self):
         self.layer = self.doc.image_view.getNewContentLayer()
+        self.displayedLayer = self.layer
         self.updateImage()
     
     def selected(self):
         if self.layer:
-            #self.doc.image_view.showLayer(self.layer)
             self.updateImage()
     
     def unselected(self):
@@ -55,7 +55,7 @@ class ItemWithImage(NSObject):
     def updateImage(self):
         if self.layer != None:
             self.layer.setFilters_(self.filters)
-            self.doc.image_view.setNeedsDisplay_(True)
+            self.doc.updateSelected()
         
     def renderImage(self, dest, properties):
         cur_image = self.doc.image
@@ -273,7 +273,7 @@ class MaskItem(ItemWithImage):
         if key in filter.attributes():
             filter.setValue_forKey_(value, key)
             if filter in self.filters:
-                self.layer.setValue_forKeyPath_(value, 'filters.{0}.{1}'.format(filter.valueForKey_('name'),key))
+                self.displayedLayer.setValue_forKeyPath_(value, 'filters.{0}.{1}'.format(filter.valueForKey_('name'),key))
     
     def observeValueForKeyPath_ofObject_change_context_(self,keyPath, object, change, context):
         selection_filter = self.selection_filters[self.selection_menu.selectedItem().tag()]
