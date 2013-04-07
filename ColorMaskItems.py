@@ -30,7 +30,10 @@ class ItemWithImage(NSObject):
         self.layer = None
         
         return self
-        
+    
+    def log(self, message):
+        print self.name, message
+    
     def numChildren(self):
         return 0
     
@@ -48,6 +51,7 @@ class ItemWithImage(NSObject):
     def selected(self):
         if self.layer:
             self.updateImage()
+            self.log('done selecting')
     
     def unselected(self):
         pass
@@ -56,7 +60,7 @@ class ItemWithImage(NSObject):
         if self.layer != None:
             self.layer.setFilters_(self.filters)
             self.doc.updateSelected()
-        
+
     def renderImage(self, dest, properties):
         cur_image = self.doc.image
         
@@ -256,6 +260,7 @@ class MaskItem(ItemWithImage):
             'name', filterName, None)
     
     def updateSelectionFilterFromMask(self, filter):
+        self.log('update selection filter')
         self.updateFilterKeyValues(filter, 'inputColor', self.colorTransformer.transformedValue_(self.mask.valueForKey_('color')))
         self.updateFilterKeyValues(filter, 'inputChromaTolerance', self.mask.valueForKey_('chromaTolerance'))
         self.updateFilterKeyValues(filter, 'inputLuminanceTolerance', self.mask.valueForKey_('luminanceTolerance'))
@@ -270,10 +275,19 @@ class MaskItem(ItemWithImage):
                                                         self.mask.valueForKey_('halftoneCenterY')))
     
     def updateFilterKeyValues(self,filter,key,value):
-        if key in filter.attributes():
+        if key in map(lambda a: str(a), filter.attributes()):
             filter.setValue_forKey_(value, key)
             if filter in self.filters:
+                self.log('setting {0} on {1} to {2}'.format(key, filter, value))
                 self.displayedLayer.setValue_forKeyPath_(value, 'filters.{0}.{1}'.format(filter.valueForKey_('name'),key))
+            else:
+                self.log('filter {0} not in filters'.format(filter))
+        else:
+            self.log('key {0} not in filters attributes'.format(key))
+            self.log('attributes are:')
+            for attribute in filter.attributes():
+                if attribute == key:
+                    print 'found', attribute
     
     def observeValueForKeyPath_ofObject_change_context_(self,keyPath, object, change, context):
         selection_filter = self.selection_filters[self.selection_menu.selectedItem().tag()]
