@@ -162,15 +162,17 @@ class ColorMaskDocument(NSPersistentDocument):
         result = savePanel.runModal()
         
         if result == NSOKButton:
+            
             if self.export_panel is None:
                 NSBundle.loadNibNamed_owner_('ExportSheet',self)
-                
+        
+            
             NSApp.beginSheet_modalForWindow_modalDelegate_didEndSelector_contextInfo_(self.export_panel,self.window,None,None,None)
             
-            baseURL = savePanel.URLs()[0]
+            baseURL = savePanel.URL()
             base,file = os.path.split(baseURL.absoluteString())
             file,ext = os.path.splitext(file)
-            
+        
             session = NSApp.beginModalSessionForWindow_(self.export_panel)
             
             for index,mask in enumerate(self.maskList.masks):
